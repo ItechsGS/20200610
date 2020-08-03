@@ -1,0 +1,44 @@
+[
+  {
+    "id": "36997",
+    "pages_id": "12984",
+    "seq_id": "1",
+    "name": "Iliac Crest"
+  },
+  {
+    "id": "36998",
+    "pages_id": "12984",
+    "seq_id": "2",
+    "name": "Placenta"
+  },
+  {
+    "id": "36999",
+    "pages_id": "12984",
+    "seq_id": "3",
+    "name": "Pubic Bone"
+  },
+  {
+    "id": "37000",
+    "pages_id": "12984",
+    "seq_id": "4",
+    "name": "Spine"
+  },
+  {
+    "id": "37001",
+    "pages_id": "12984",
+    "seq_id": "5",
+    "name": "Umbilical Cord"
+  },
+  {
+    "id": "37002",
+    "pages_id": "12984",
+    "seq_id": "6",
+    "name": "Urinary Bladder"
+  },
+  {
+    "id": "37003",
+    "pages_id": "12984",
+    "seq_id": "7",
+    "name": "Uterus"
+  }
+]

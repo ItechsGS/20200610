@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/Vagina.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/Intestinal-Veins.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+    <svg height="743" pointer-events="none" style="left: -37px; top: -62px;"
+         viewBox="-37 -62 439 743" width="439">
+        <g>
+            <path class="leaflet-interactive"
+                  d="M48 113L42 117L48 120L48 128L43 141L38 146L41 147L42 152L38 167L36 171L30 176L34 176L35 179L35 192L31 201L24 206L32 210L35 224L33 233L28 238L32 240L39 258L39 270L36 274L45 291L47 302L47 310L45 312L48 321L49 332L47 343L40 360L32 370L23 376L9 381L7 383L6 405L11 409L19 411L30 423L38 427L41 406L45 398L52 387L77 364L115 307L143 250L154 244L155 236L149 205L152 204L152 187L159 160L159 151L156 143L159 137L168 137L172 139L174 145L174 171L179 185L179 188L176 190L179 194L178 202L181 203L183 206L180 223L180 243L177 252L190 265L229 310L236 321L240 331L256 337L270 346L274 352L288 355L293 359L294 362L301 358L308 360L309 354L315 350L322 349L322 341L330 331L328 325L329 320L334 311L330 300L331 294L336 286L331 273L331 244L326 233L327 211L320 198L320 187L322 183L322 178L317 175L308 162L308 147L302 131L302 122L306 110L302 105L301 99L291 101L287 107L280 112L269 114L259 112L257 116L252 119L239 121L227 119L223 116L220 116L218 120L212 123L205 124L193 122L188 120L185 116L183 116L175 122L156 121L150 119L146 115L133 120L127 120L115 117L112 110L105 117L91 118L83 115L80 112L79 106L72 109L67 109L55 105L53 102L50 110z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+        </g>
+    </svg>
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+
+</div>
+</body>
+</html>

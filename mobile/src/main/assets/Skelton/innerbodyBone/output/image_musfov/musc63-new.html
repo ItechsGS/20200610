@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/Flexor-Retinaculum-of-Foot.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+    <svg height="743" pointer-events="none" style="left: -37px; top: -62px;"
+         viewBox="-37 -62 439 743" width="439">
+        <g>
+            <path class="leaflet-interactive" d="M243 41L256 76L261 95L256 91L244 88L243 44z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive" d="M123 136L119 139L119 134L123 136z" fill="#038103"
+                  fill-opacity="0" fill-rule="evenodd" stroke="#038103" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-opacity="0" stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M295 49L306 71L314 96L316 116L315 126L311 136L310 107L305 94L299 88L296 68z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M254 0L270 38L277 58L274 60L277 59L284 84L285 104L277 113L272 71L260 35L243 0z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive" d="M301 99L304 107L302 114L300 105L301 102z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M156 -4L160 36L153 37L149 55L128 86L136 79L156 67L156 71L153 87L142 115L133 125L126 118L122 110L120 115L118 89L110 41L107 2L108 -5L143 -5z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M95 39L89 65L87 81L94 129L96 134L103 140L104 112L98 59z" fill="#038103"
+                  fill-opacity="0" fill-rule="evenodd" stroke="#038103" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-opacity="0" stroke-width="0"></path>
+        </g>
+    </svg>
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+
+</div>
+</body>
+</html>

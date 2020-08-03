@@ -1,0 +1,80 @@
+[
+  {
+    "pages_id": "1012",
+    "seq_id": "1",
+    "name": "Anterior Inferior Iliac Spine",
+    "id": "31160"
+  },
+  {
+    "pages_id": "1012",
+    "seq_id": "2",
+    "name": "Anterior Superior Iliac Spine",
+    "id": "31161"
+  },
+  {
+    "pages_id": "1012",
+    "seq_id": "3",
+    "name": "Greater Trochanter",
+    "id": "31162"
+  },
+  {
+    "pages_id": "1012",
+    "seq_id": "4",
+    "name": "Iliac Crest",
+    "id": "31163"
+  },
+  {
+    "pages_id": "1012",
+    "seq_id": "5",
+    "name": "Inferior Ramus of Ischium",
+    "id": "31164"
+  },
+  {
+    "pages_id": "1012",
+    "seq_id": "6",
+    "name": "Lesser Trochanter",
+    "id": "31165"
+  },
+  {
+    "pages_id": "1012",
+    "seq_id": "7",
+    "name": "Sacroiliac Joint",
+    "id": "31166"
+  },
+  {
+    "pages_id": "1012",
+    "seq_id": "8",
+    "name": "Sacrospinous Ligament",
+    "id": "31167"
+  },
+  {
+    "pages_id": "1012",
+    "seq_id": "9",
+    "name": "Sacrospinous Ligament",
+    "id": "31168"
+  },
+  {
+    "pages_id": "1012",
+    "seq_id": "10",
+    "name": "Sacrotuberous Ligament",
+    "id": "31169"
+  },
+  {
+    "pages_id": "1012",
+    "seq_id": "11",
+    "name": "Sacrotuberous Ligament",
+    "id": "31170"
+  },
+  {
+    "pages_id": "1012",
+    "seq_id": "12",
+    "name": "Sacrotuberous Ligament",
+    "id": "31171"
+  },
+  {
+    "pages_id": "1012",
+    "seq_id": "13",
+    "name": "Superior Ramus of Ischium",
+    "id": "31172"
+  }
+]

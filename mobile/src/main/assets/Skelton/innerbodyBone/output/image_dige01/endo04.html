@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/Thyroid-Gland.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+    <svg height="743" pointer-events="none" style="left: -37px; top: -62px;"
+         viewBox="-37 -62 439 743" width="439">
+        <g>
+            <path class="leaflet-interactive"
+                  d="M90 482L86 486L86 492L92 499L96 499L99 495L98 486L94 482L90 482z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M310 339L308 339L303 346L304 354L306 356L310 356L315 350L314 341L310 339z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M273 482L268 487L267 490L267 494L271 499L275 499L279 495L281 490L280 485L277 482L273 482z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M57 339L55 339L52 342L51 347L52 352L56 356L60 356L63 353L64 348L63 343L59 339L57 339z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+        </g>
+    </svg>
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+
+</div>
+</body>
+</html>

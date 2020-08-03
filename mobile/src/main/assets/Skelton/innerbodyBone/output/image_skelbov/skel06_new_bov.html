@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/Skull.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+    <svg height="743" pointer-events="none" style="left: -37px; top: -62px;"
+         viewBox="-37 -62 439 743" width="439">
+        <g>
+            <path class="leaflet-interactive"
+                  d="M126 360L133 365L147 368L154 376L146 466L145 511L133 554L132 563L124 561L115 561L98 550L89 540L83 540L71 547L67 544L65 537L68 530L71 528L83 528L83 525L92 515L94 505L92 503L93 499L100 484L99 477L103 472L100 469L100 466L108 452L109 445L106 442L107 437L113 430L110 411L117 398L115 385L116 382L113 375L115 369z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M190 2L169 5L143 12L117 26L82 48L55 71L40 88L27 115L21 166L26 215L30 231L42 266L56 287L71 299L79 303L86 311L92 310L96 301L110 303L113 322L121 351L128 361L137 366L162 373L179 382L219 397L238 402L257 405L289 405L300 403L306 393L310 380L306 340L303 349L297 347L294 348L288 344L286 347L283 347L278 344L275 347L272 347L267 344L262 348L252 345L245 349L241 343L233 345L227 342L220 343L183 337L170 330L154 305L151 286L159 290L169 291L170 301L173 305L193 312L203 313L207 315L213 312L219 315L225 311L233 314L236 310L242 310L247 316L250 316L253 311L259 311L261 316L264 316L267 312L274 310L279 316L282 316L287 310L290 309L294 317L299 311L302 313L308 311L309 306L306 294L313 283L321 278L329 277L338 253L337 212L342 168L336 143L335 126L327 95L315 67L296 44L272 25L253 14L220 4z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M199 413L188 485L175 549L176 558L189 543L189 538L194 528L199 525L206 524L207 519L203 515L212 512L215 507L214 502L208 499L208 494L199 488L196 483L197 477L200 479L203 478L205 473L208 473L211 470L211 467L201 457L203 447L208 449L213 448L215 443L213 434L204 430L207 413L206 411z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+        </g>
+    </svg>
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+
+</div>
+</body>
+</html>

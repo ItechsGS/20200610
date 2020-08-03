@@ -1,0 +1,68 @@
+[
+  {
+    "id": "37039",
+    "pages_id": "12986",
+    "seq_id": "1",
+    "name": "Anterior Fontanelle"
+  },
+  {
+    "id": "37040",
+    "pages_id": "12986",
+    "seq_id": "2",
+    "name": "Bregma"
+  },
+  {
+    "id": "37041",
+    "pages_id": "12986",
+    "seq_id": "3",
+    "name": "Sagittal Suture"
+  },
+  {
+    "id": "37042",
+    "pages_id": "12986",
+    "seq_id": "4",
+    "name": "Lambda"
+  },
+  {
+    "id": "37043",
+    "pages_id": "12986",
+    "seq_id": "5",
+    "name": "Lambdoid Suture"
+  },
+  {
+    "id": "37044",
+    "pages_id": "12986",
+    "seq_id": "6",
+    "name": "Occipital Bone"
+  },
+  {
+    "id": "37045",
+    "pages_id": "12986",
+    "seq_id": "7",
+    "name": "Coronal Suture"
+  },
+  {
+    "id": "37046",
+    "pages_id": "12986",
+    "seq_id": "8",
+    "name": "Frontal Bone"
+  },
+  {
+    "id": "37047",
+    "pages_id": "12986",
+    "seq_id": "9",
+    "name": "Parietal Bone"
+  },
+  {
+    "id": "37048",
+    "pages_id": "12986",
+    "seq_id": "10",
+    "name": "Posterior Fontanelle"
+  },
+  {
+    "id": "37049",
+    "pages_id": "12986",
+    "seq_id": "11",
+    "name": "Parietal Foramen"
+  }
+]

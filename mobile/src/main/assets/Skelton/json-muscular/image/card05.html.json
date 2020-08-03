@@ -1,0 +1,68 @@
+[
+  {
+    "pages_id": "1481",
+    "seq_id": "1",
+    "name": "Endothelium (Artery)",
+    "id": "34048"
+  },
+  {
+    "pages_id": "1481",
+    "seq_id": "2",
+    "name": "Atherosclerotic (Fat) Plaque",
+    "id": "34049"
+  },
+  {
+    "pages_id": "1481",
+    "seq_id": "3",
+    "name": "Tunica Adventitia (Vein)",
+    "id": "34050"
+  },
+  {
+    "pages_id": "1481",
+    "seq_id": "4",
+    "name": "Smooth Muscle",
+    "id": "34051"
+  },
+  {
+    "pages_id": "1481",
+    "seq_id": "5",
+    "name": "Tunica Adventitia (Artery)",
+    "id": "34052"
+  },
+  {
+    "pages_id": "1481",
+    "seq_id": "6",
+    "name": "Endothelium (Vein)",
+    "id": "34053"
+  },
+  {
+    "pages_id": "1481",
+    "seq_id": "7",
+    "name": "Tunica Intima (Vein)",
+    "id": "34054"
+  },
+  {
+    "pages_id": "1481",
+    "seq_id": "8",
+    "name": "Tunica Intima (Artery)",
+    "id": "34055"
+  },
+  {
+    "pages_id": "1481",
+    "seq_id": "9",
+    "name": "Tunica Media (Artery)",
+    "id": "34056"
+  },
+  {
+    "pages_id": "1481",
+    "seq_id": "10",
+    "name": "Tunica Media (Vein)",
+    "id": "34057"
+  },
+  {
+    "pages_id": "1481",
+    "seq_id": "11",
+    "name": "Valve of Vein",
+    "id": "34058"
+  }
+]

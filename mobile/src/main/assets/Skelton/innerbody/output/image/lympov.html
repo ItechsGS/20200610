@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/immune_lymphatic_systems.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+    <svg height="743" pointer-events="none" style="left: -37px; top: -62px;"
+         viewBox="-37 -62 439 743" width="439">
+        <g>
+            <path class="leaflet-interactive"
+                  d="M247 309L248 320L246 354L244 372L236 407L233 438L235 467L226 553L225 599L227 610L234 623L233 628L217 632L213 630L209 633L203 633L201 624L202 606L200 588L203 579L203 567L200 527L195 488L197 448L190 329L218 319z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M119 309L120 351L133 421L132 456L142 595L141 604L132 627L134 629L142 631L154 631L162 633L166 626L165 605L167 590L164 578L164 559L172 496L169 452L176 330z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M233 90L245 96L255 108L257 113L259 206L276 309L285 321L293 340L289 340L286 338L284 334L287 364L285 367L281 360L277 343L276 368L274 370L272 368L269 342L267 342L266 364L264 365L262 363L260 342L258 341L258 358L255 358L253 334L257 310L234 206L232 176L234 137z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M131 91L116 100L111 109L109 122L108 203L96 278L91 308L80 324L77 335L73 341L79 340L83 334L79 364L81 366L84 364L89 343L91 369L94 369L95 367L98 342L100 342L100 363L102 365L104 363L106 341L109 341L108 357L109 359L111 359L112 357L113 333L111 307L132 209L135 187L133 126z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M140 209L138 227L129 250L123 277L119 305L178 324L183 322L186 324L247 307L243 276L235 244L228 225L226 212L227 208z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M150 77L156 80L212 79L218 30L214 6L205 -7L193 -14L186 -16L174 -16L169 -14L157 -4L151 10L150 18L149 42L151 59z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M152 82L133 91L136 174L141 208L227 207L232 161L232 90L214 82z" fill="#038103"
+                  fill-opacity="0" fill-rule="evenodd" stroke="#038103" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-opacity="0" stroke-width="0"></path>
+        </g>
+    </svg>
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+
+</div>
+</body>
+</html>

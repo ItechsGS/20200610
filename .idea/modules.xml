@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/20200610.iml" filepath="$PROJECT_DIR$/.idea/modules/20200610.iml" group="20200610" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="20200610/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/commonlib/commonlib.iml" filepath="$PROJECT_DIR$/.idea/modules/commonlib/commonlib.iml" group="20200610/commonlib" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/library.iml" group="20200610/library" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/material-calendarview-2.0.1/material-calendarview-2.0.1.iml" filepath="$PROJECT_DIR$/.idea/modules/material-calendarview-2.0.1/material-calendarview-2.0.1.iml" group="20200610/material-calendarview-2.0.1" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mobile/mobile.iml" filepath="$PROJECT_DIR$/.idea/modules/mobile/mobile.iml" group="20200610/mobile" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mobilertc/mobilertc.iml" filepath="$PROJECT_DIR$/.idea/modules/mobilertc/mobilertc.iml" group="20200610/mobilertc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/photoeditorsdk/photoeditorsdk.iml" filepath="$PROJECT_DIR$/.idea/modules/photoeditorsdk/photoeditorsdk.iml" group="20200610/photoeditorsdk" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wear/wear.iml" filepath="$PROJECT_DIR$/.idea/modules/wear/wear.iml" group="20200610/wear" />
+    </modules>
+  </component>
+</project>

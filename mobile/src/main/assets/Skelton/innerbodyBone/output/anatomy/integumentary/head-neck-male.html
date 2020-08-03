@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/integumentary_system_head_neck_male_view.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+    <svg height="743" pointer-events="none" style="left: -37px; top: -62px;"
+         viewBox="-37 -62 439 743" width="439">
+        <g>
+            <path class="leaflet-interactive"
+                  d="M238 220L226 225L217 233L217 235L225 235L236 238L256 238L263 237L274 232L260 224L251 221L238 220z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M127 221L114 222L105 225L93 232L95 234L111 238L131 238L149 234L148 231L140 224L127 221z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M166 -25L165 -20L143 -22L73 -2L71 9L47 25L45 27L44 32L13 67L10 80L11 85L9 87L12 97L9 100L-1 122L4 123L1 143L10 159L12 167L11 186L12 215L14 227L15 229L19 229L22 234L23 277L25 283L24 302L26 308L35 307L38 302L35 288L35 256L37 243L39 201L40 198L42 198L40 194L46 163L46 145L52 138L54 132L56 117L59 112L57 108L59 103L66 99L75 98L96 76L101 77L112 73L114 73L114 75L117 76L126 71L143 72L155 75L178 68L181 65L185 65L204 70L229 73L255 83L268 84L282 88L287 83L303 100L302 108L313 120L312 133L319 158L326 165L327 206L332 262L332 278L329 301L330 305L337 312L343 300L342 291L345 284L346 260L349 257L349 231L350 228L356 224L355 217L357 215L359 217L360 216L357 211L358 207L362 213L362 201L364 201L361 193L363 144L360 102L358 95L355 94L349 86L346 57L337 46L338 40L331 38L333 31L321 25L316 20L312 10L309 11L300 7L297 10L293 6L292 -3L278 0L272 -7L272 -9L266 -8L261 -5L235 -19L211 -17L166 -25z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M25 288L24 304L27 308L34 307L38 303L35 282L37 232L92 231L98 235L116 238L129 238L143 235L150 236L148 231L143 226L133 221L118 221L102 226L93 231L37 232L40 198L42 198L40 196L41 187L46 162L46 145L53 135L57 115L60 110L58 110L57 107L60 102L67 99L74 99L96 76L99 78L112 73L114 74L114 76L117 76L126 71L144 72L156 75L180 67L182 65L226 73L255 83L283 88L286 83L291 87L297 95L303 99L302 108L313 121L312 134L315 145L320 159L326 165L329 233L275 233L259 223L243 219L232 221L223 226L220 228L216 235L225 235L236 238L250 238L275 233L329 233L331 255L331 287L329 302L332 309L334 309L337 312L343 300L342 291L345 282L346 259L349 257L348 235L351 226L355 227L364 238L367 268L365 297L362 312L360 318L348 338L340 345L332 349L326 350L318 381L313 410L312 449L314 455L336 480L355 496L402 529L402 651L-37 651L-37 530L22 487L34 476L48 460L55 449L51 393L43 357L40 351L31 348L19 339L6 318L3 306L-1 268L2 239L7 230L14 226L14 229L20 230L22 236L22 267L25 284z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+        </g>
+    </svg>
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+
+</div>
+</body>
+</html>

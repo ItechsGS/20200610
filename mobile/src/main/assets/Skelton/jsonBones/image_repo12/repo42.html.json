@@ -1,0 +1,92 @@
+[
+  {
+    "id": "40561",
+    "pages_id": "15860",
+    "seq_id": "1",
+    "name": "Somites"
+  },
+  {
+    "id": "40562",
+    "pages_id": "15860",
+    "seq_id": "2",
+    "name": "Primitive Streak"
+  },
+  {
+    "id": "40563",
+    "pages_id": "15860",
+    "seq_id": "3",
+    "name": "Embryo"
+  },
+  {
+    "id": "40564",
+    "pages_id": "15860",
+    "seq_id": "4",
+    "name": "Branchial Arches"
+  },
+  {
+    "id": "40565",
+    "pages_id": "15860",
+    "seq_id": "5",
+    "name": "Yolk Sac"
+  },
+  {
+    "id": "40566",
+    "pages_id": "15860",
+    "seq_id": "6",
+    "name": "Umbilical Cord"
+  },
+  {
+    "id": "40567",
+    "pages_id": "15860",
+    "seq_id": "7",
+    "name": "Trophoblast"
+  },
+  {
+    "id": "40568",
+    "pages_id": "15860",
+    "seq_id": "8",
+    "name": "Umbilical Cord (Formative Stage)"
+  },
+  {
+    "id": "40569",
+    "pages_id": "15860",
+    "seq_id": "9",
+    "name": "Amniotic Cavity"
+  },
+  {
+    "id": "40570",
+    "pages_id": "15860",
+    "seq_id": "10",
+    "name": "Body Stalk"
+  },
+  {
+    "id": "40571",
+    "pages_id": "15860",
+    "seq_id": "11",
+    "name": "Arm Bud"
+  },
+  {
+    "id": "40572",
+    "pages_id": "15860",
+    "seq_id": "12",
+    "name": "Neural Groove (Forming Neural Tube)"
+  },
+  {
+    "id": "40573",
+    "pages_id": "15860",
+    "seq_id": "13",
+    "name": "Leg Bud"
+  },
+  {
+    "id": "40574",
+    "pages_id": "15860",
+    "seq_id": "14",
+    "name": "Heart"
+  },
+  {
+    "id": "40575",
+    "pages_id": "15860",
+    "seq_id": "15",
+    "name": "Embryonic Disk"
+  }
+]

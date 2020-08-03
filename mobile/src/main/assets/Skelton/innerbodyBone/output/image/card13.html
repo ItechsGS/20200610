@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/heart_pacemaker.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+    <div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-hide leaflet-interactive"
+         style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; left: 349px; top: 66px; z-index: 66;"
+         tabindex="0">
+        <div><span>2</span></div>
+    </div>
+    <img alt="" class="leaflet-marker-icon leaflet-zoom-hide leaflet-interactive"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/marker-mine.png"
+         style="margin-left: -10px; margin-top: -12px; width: 28px; height: 28px; left: 161px; top: 243px; z-index: 243;"
+         tabindex="0">
+    <div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-hide leaflet-interactive"
+         style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; left: 97px; top: 332px; z-index: 332;"
+         tabindex="0">
+        <div><span>3</span></div>
+    </div>
+    <img alt="" class="leaflet-marker-icon leaflet-zoom-hide leaflet-interactive"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/marker-mine.png"
+         style="margin-left: -10px; margin-top: -12px; width: 28px; height: 28px; left: 268px; top: 295px; z-index: 295;"
+         tabindex="0"><img alt="" class="leaflet-marker-icon leaflet-zoom-hide leaflet-interactive"
+                           src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/marker-mine.png"
+                           style="margin-left: -10px; margin-top: -12px; width: 28px; height: 28px; left: 401px; top: 296px; z-index: 296;"
+                           tabindex="0">
+</div>
+</body>
+</html>

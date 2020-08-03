@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/Thoracolumbar-Fascia.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+    <svg height="743" pointer-events="none" style="left: -37px; top: -62px;"
+         viewBox="-37 -62 439 743" width="439">
+        <g>
+            <path class="leaflet-interactive"
+                  d="M182 312L186 309L186 304L185 302L183 302L183 280L186 276L183 267L183 240L186 238L186 228L183 223L183 206L185 205L187 199L185 185L183 184L183 122L185 118L186 107L197 70L201 75L202 148L204 167L211 192L227 217L246 243L254 248L263 251L292 246L301 243L308 238L310 239L308 258L304 270L273 291L264 301L254 316L234 360L215 389L203 403L195 406L191 404L189 401L183 373L181 391L174 406L170 406L162 401L153 391L131 356L116 323L103 303L90 288L62 270L59 261L58 241L61 238L69 245L81 250L94 252L106 250L117 246L132 234L145 219L165 166L165 90L171 75L183 122L183 184L179 191L179 198L182 206L183 223L181 226L180 233L181 240L183 240L183 267L181 270L181 277L183 280L183 302L180 306L181 311z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+        </g>
+    </svg>
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+
+</div>
+</body>
+</html>

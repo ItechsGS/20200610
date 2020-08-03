@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/Cranial-Nerve-X---Vagus-Nerve.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+    <svg height="743" pointer-events="none" style="left: -37px; top: -62px;"
+         viewBox="-37 -62 439 743" width="439">
+        <g>
+            <path class="leaflet-interactive"
+                  d="M160 24L167 28L174 36L179 48L182 62L182 154L184 153L185 130L183 102L185 49L190 34L194 29L204 23L214 23L217 28L225 32L231 30L249 35L254 42L265 52L274 51L287 57L298 73L308 78L312 86L321 96L333 132L344 153L342 150L343 179L355 201L360 223L360 244L366 259L371 279L374 283L378 304L376 323L378 349L372 377L365 393L360 412L362 411L349 439L351 451L350 450L349 461L347 466L349 466L347 468L345 477L344 475L332 498L335 499L331 499L330 501L332 502L329 503L309 525L300 530L301 531L297 531L298 532L287 538L280 538L264 542L246 542L233 540L234 539L230 538L230 540L218 532L214 531L210 551L199 548L170 548L157 551L153 531L146 533L137 539L112 543L113 542L101 542L79 536L84 538L79 538L71 532L60 527L50 518L38 503L34 501L37 501L36 499L33 500L33 498L36 498L32 493L22 471L22 474L20 467L18 466L20 466L18 449L16 451L15 450L18 449L17 437L14 428L12 427L3 395L2 386L-4 373L-9 351L-10 352L-9 322L-11 305L-10 294L-7 284L-10 285L-7 283L-4 277L-3 270L6 244L6 232L9 212L16 192L24 180L23 157L25 151L21 154L26 149L32 137L42 103L46 96L62 75L68 73L74 66L74 63L79 58L93 50L102 51L119 35L136 30L141 32L147 28L152 28L154 25L158 24z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+        </g>
+    </svg>
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+
+</div>
+</body>
+</html>

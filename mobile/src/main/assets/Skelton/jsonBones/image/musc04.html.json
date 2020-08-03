@@ -1,0 +1,38 @@
+[
+  {
+    "id": "37349",
+    "pages_id": "13170",
+    "seq_id": "1",
+    "name": "3rd Class Lever"
+  },
+  {
+    "id": "37350",
+    "pages_id": "13170",
+    "seq_id": "2",
+    "name": "1st Class Lever"
+  },
+  {
+    "id": "37351",
+    "pages_id": "13170",
+    "seq_id": "3",
+    "name": "2nd Class Lever"
+  },
+  {
+    "id": "37352",
+    "pages_id": "13170",
+    "seq_id": "4",
+    "name": "Resistance"
+  },
+  {
+    "id": "37353",
+    "pages_id": "13170",
+    "seq_id": "5",
+    "name": "Effort"
+  },
+  {
+    "id": "37354",
+    "pages_id": "13170",
+    "seq_id": "6",
+    "name": "Fulcrum"
+  }
+]

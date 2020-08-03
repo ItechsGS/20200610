@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/muscle_cell_types.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+    <div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-hide leaflet-interactive"
+         style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; left: 363px; top: 53px; z-index: 53;"
+         tabindex="0">
+        <div><span>2</span></div>
+    </div>
+    <div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-hide leaflet-interactive"
+         style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; left: 189px; top: 109px; z-index: 109;"
+         tabindex="0">
+        <div><span>3</span></div>
+    </div>
+    <div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-hide leaflet-interactive"
+         style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; left: 44px; top: 137px; z-index: 137;"
+         tabindex="0">
+        <div><span>2</span></div>
+    </div>
+    <div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-hide leaflet-interactive"
+         style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; left: 42px; top: 31px; z-index: 31;"
+         tabindex="0">
+        <div><span>2</span></div>
+    </div>
+</div>
+</body>
+</html>

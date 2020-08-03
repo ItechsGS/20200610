@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/Superior-Extensor-Retinaculum.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+    <svg height="743" pointer-events="none" style="left: -37px; top: -62px;"
+         viewBox="-37 -62 439 743" width="439">
+        <g>
+            <path class="leaflet-interactive"
+                  d="M128 78L126 90L125 115L118 157L118 177L121 210L124 221L132 204L134 183L133 106L135 78L128 78z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive" d="M151 80L152 101L154 99L160 81L151 80z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive" d="M153 163L151 167L152 170L153 162z" fill="#038103"
+                  fill-opacity="0" fill-rule="evenodd" stroke="#038103" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-opacity="0" stroke-width="0"></path>
+            <path class="leaflet-interactive" d="M163 170L161 172L161 186L163 186L163 171z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M156 175L154 179L154 185L152 188L155 187L157 177L156 176z" fill="#038103"
+                  fill-opacity="0" fill-rule="evenodd" stroke="#038103" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-opacity="0" stroke-width="0"></path>
+            <path class="leaflet-interactive" d="M168 181L169 184L168 181z" fill="#038103"
+                  fill-opacity="0" fill-rule="evenodd" stroke="#038103" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-opacity="0" stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M287 74L274 75L280 81L283 88L286 115L284 131L279 134L280 142L286 163L288 165L297 161L304 170L314 190L314 194L311 196L295 199L301 223L303 221L307 221L310 219L321 204L327 191L328 174L323 146L313 116L299 90L296 87L290 73L287 74z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M255 133L243 135L243 163L245 171L260 170L273 167L273 163L263 133L255 133z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+        </g>
+    </svg>
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+
+</div>
+</body>
+</html>

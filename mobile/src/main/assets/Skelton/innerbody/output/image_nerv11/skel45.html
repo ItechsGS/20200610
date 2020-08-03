@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/Superior-Nasal-Concha.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+    <svg height="743" pointer-events="none" style="left: -37px; top: -62px;"
+         viewBox="-37 -62 439 743" width="439">
+        <g>
+            <path class="leaflet-interactive"
+                  d="M162 -9L156 -3L151 12L149 42L152 61L151 76L155 80L211 79L218 42L217 21L212 2L206 -6L194 -14L181 -17L168 -13z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M152 83L136 90L134 149L140 210L226 210L232 157L229 89L215 82z" fill="#038103"
+                  fill-opacity="0" fill-rule="evenodd" stroke="#038103" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-opacity="0" stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M140 212L140 222L126 263L121 289L120 304L178 324L182 321L189 324L247 303L242 268L227 223L226 212z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+        </g>
+    </svg>
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+    <div class="leaflet-marker-icon marker-cluster marker-cluster-medium leaflet-zoom-hide leaflet-interactive"
+         style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; left: 185px; top: 50px; z-index: 50;"
+         tabindex="0">
+        <div><span>17</span></div>
+    </div>
+    <img alt="" class="leaflet-marker-icon leaflet-zoom-hide leaflet-interactive"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/marker-mine.png"
+         style="margin-left: -10px; margin-top: -12px; width: 28px; height: 28px; left: 214px; top: 184px; z-index: 184;"
+         tabindex="0">
+    <div class="leaflet-marker-icon marker-cluster marker-cluster-medium leaflet-zoom-hide leaflet-interactive"
+         style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; left: 178px; top: 233px; z-index: 233;"
+         tabindex="0">
+        <div><span>18</span></div>
+    </div>
+</div>
+</body>
+</html>

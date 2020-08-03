@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/respiratory_system_male_view.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+    <svg height="743" pointer-events="none" style="left: -37px; top: -62px;"
+         viewBox="-37 -62 439 743" width="439">
+        <g>
+            <path class="leaflet-interactive"
+                  d="M154 72L138 82L121 90L124 169L129 182L131 207L235 207L236 184L242 169L244 145L245 90L212 71z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M158 69L161 63L161 56L158 44L154 41L152 37L153 -2L162 -14L168 -18L176 -20L191 -20L197 -18L207 -12L211 -7L213 -1L215 18L215 36L213 42L208 45L206 62L209 69z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+        </g>
+    </svg>
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+    <div class="leaflet-marker-icon marker-cluster marker-cluster-medium leaflet-zoom-hide leaflet-interactive"
+         style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; left: 182px; top: 138px; z-index: 138;"
+         tabindex="0">
+        <div><span>11</span></div>
+    </div>
+    <div class="leaflet-marker-icon marker-cluster marker-cluster-medium leaflet-zoom-hide leaflet-interactive"
+         style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; left: 182px; top: 45px; z-index: 45;"
+         tabindex="0">
+        <div><span>11</span></div>
+    </div>
+</div>
+</body>
+</html>

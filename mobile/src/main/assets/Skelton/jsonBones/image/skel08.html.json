@@ -1,0 +1,68 @@
+[
+  {
+    "id": "5831",
+    "pages_id": "11428",
+    "seq_id": "1",
+    "name": "Femur"
+  },
+  {
+    "id": "5832",
+    "pages_id": "11428",
+    "seq_id": "2",
+    "name": "Acetabulum"
+  },
+  {
+    "id": "5833",
+    "pages_id": "11428",
+    "seq_id": "3",
+    "name": "Femoral Component of Prosthesis"
+  },
+  {
+    "id": "5834",
+    "pages_id": "11428",
+    "seq_id": "4",
+    "name": "Artificial Head of Femur"
+  },
+  {
+    "id": "5835",
+    "pages_id": "11428",
+    "seq_id": "5",
+    "name": "Head of Femur"
+  },
+  {
+    "id": "5836",
+    "pages_id": "11428",
+    "seq_id": "6",
+    "name": "Ilium"
+  },
+  {
+    "id": "5837",
+    "pages_id": "11428",
+    "seq_id": "7",
+    "name": "Intramedullary Cavity"
+  },
+  {
+    "id": "5838",
+    "pages_id": "11428",
+    "seq_id": "8",
+    "name": "Prosthetic Acetabulum"
+  },
+  {
+    "id": "5839",
+    "pages_id": "11428",
+    "seq_id": "9",
+    "name": "Joint Capsule"
+  },
+  {
+    "id": "5840",
+    "pages_id": "11428",
+    "seq_id": "10",
+    "name": "Ischium"
+  },
+  {
+    "id": "5841",
+    "pages_id": "11428",
+    "seq_id": "11",
+    "name": "Neck of Prosthesis"
+  }
+]

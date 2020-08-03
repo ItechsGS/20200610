@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/Popliteal-Nodes.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+    <svg height="743" pointer-events="none" style="left: -37px; top: -62px;"
+         viewBox="-37 -62 439 743" width="439">
+        <g>
+            <path class="leaflet-interactive" d="M269 -22L275 -22L270 -22z" fill="#038103"
+                  fill-opacity="0" fill-rule="evenodd" stroke="#038103" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-opacity="0" stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M271 84L271 86L273 84L278 68L284 64L284 60L292 56L294 51L289 53L283 59L285 61L293 58L293 62L290 65L291 72L287 88L289 86L292 69L294 69L295 66L294 59L296 57L295 52L296 53L296 63L298 64L294 73L297 76L299 82L299 84L295 87L295 89L298 92L299 101L299 91L301 87L299 85L300 83L297 76L297 71L298 66L301 63L311 76L314 75L322 81L322 79L311 70L308 71L306 69L306 67L301 62L298 47L298 55L297 54L297 46L300 47L302 43L305 41L311 42L314 40L314 38L323 36L333 36L340 42L341 49L342 48L341 43L334 35L324 35L332 31L315 38L313 37L312 35L314 29L314 22L311 11L313 27L310 22L304 17L302 12L301 13L304 18L310 23L313 29L312 34L305 41L302 42L300 40L302 36L302 27L297 14L301 28L301 36L300 39L297 40L296 44L293 39L293 33L287 28L285 23L293 39L293 43L291 45L292 48L290 52L279 62L279 66L275 72L271 84z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive" d="M271 -21L273 -19L275 -20L272 -21z" fill="#038103"
+                  fill-opacity="0" fill-rule="evenodd" stroke="#038103" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-opacity="0" stroke-width="0"></path>
+            <path class="leaflet-interactive" d="M268 -21L269 -21z" fill="#038103" fill-opacity="0"
+                  fill-rule="evenodd" stroke="#038103" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-opacity="0" stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M263 -33L262 -32L265 -29L266 -24L265 -19L262 -17L266 -12L268 0L272 -1L274 0L275 4L278 4L283 19L280 17L269 -1L269 1L275 8L277 14L282 19L284 24L286 20L280 12L278 0L275 -3L272 -12L268 -15L272 -11L275 -1L274 0L269 -3L266 -13L269 -15L266 -20L266 -33L263 -33z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M198 19L199 24L202 19L201 15L204 10L204 6L208 3L208 0L212 -1L207 7L204 17L202 18L203 19L207 13L209 5L214 -2L217 -14L214 -10L213 -4L207 0L210 -9L215 -15L218 -14L220 -16L217 -33L217 -21L215 -20L214 -15L210 -11L207 -3L204 0L204 9L199 19z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M163 79L162 80L169 75L175 75L178 69L184 63L186 65L187 75L183 86L183 90L185 92L183 106L185 94L188 89L185 82L187 76L190 73L187 67L189 53L189 69L190 71L190 69L192 69L199 98L200 99L193 71L195 65L191 61L192 58L201 61L202 65L206 67L212 85L214 87L208 69L206 67L206 61L203 60L194 51L192 51L200 57L200 60L194 58L190 53L190 51L193 50L193 44L191 42L192 37L195 34L199 26L198 25L198 27L191 34L191 42L187 45L186 48L188 53L186 56L186 48L187 45L189 44L184 37L183 30L188 17L187 16L182 31L184 37L183 42L176 40L172 35L172 27L181 17L172 25L172 19L171 20L172 35L169 38L165 36L169 38L170 41L182 42L185 48L185 56L183 62L176 70L172 70L170 74L163 78z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M283 276L287 286L287 300L284 303L284 305L286 301L288 303L289 310L288 291L290 291L292 287L286 283L284 276z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M194 286L193 287L195 291L195 305L197 301L199 305L196 299L196 291L199 288L197 284L202 273L197 284L194 285z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M165 312L166 315L169 296L172 293L175 286L181 282L180 277L185 270L186 275L182 289L180 291L180 297L182 295L184 297L183 296L186 293L186 291L183 288L186 280L187 271L190 266L188 262L192 254L193 237L192 250L189 259L184 265L184 270L180 277L176 279L176 285L169 294L165 312z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M291 236L291 250L296 262L295 267L297 269L297 275L301 287L299 293L302 296L301 297L302 296L304 298L303 295L305 291L301 287L298 270L300 270L302 273L305 283L314 295L317 313L318 310L315 295L309 287L309 279L303 275L301 271L302 267L295 259L292 250L291 236z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+        </g>
+    </svg>
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/endocrine_glands_lower_torso.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+    <svg height="743" pointer-events="none" style="left: -37px; top: -62px;"
+         viewBox="-37 -62 439 743" width="439">
+        <g>
+            <path class="leaflet-interactive"
+                  d="M111 73L102 76L91 86L86 99L87 105L84 113L85 164L89 174L91 186L96 195L107 205L115 209L125 211L137 207L147 197L151 188L152 179L150 168L146 162L129 160L121 153L119 141L124 124L124 118L128 114L134 114L144 108L152 106L152 96L147 97L141 95L133 88L125 86L111 73z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M262 81L253 92L240 103L235 104L236 105L254 103L260 101L264 107L263 112L254 121L248 124L224 126L232 130L238 130L238 138L235 143L234 150L225 155L218 162L214 174L215 184L220 192L226 198L238 203L252 203L266 196L277 178L280 167L286 155L287 126L286 116L283 111L282 102L279 96L271 87L262 81z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M259 101L255 103L214 107L188 107L176 105L152 105L146 107L136 113L127 114L125 116L124 125L119 140L120 151L122 155L127 159L138 162L148 162L166 158L170 154L170 152L169 149L161 142L163 140L177 140L228 125L249 124L252 121L254 121L264 110L263 103L259 101z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M141 56L124 59L115 66L111 70L111 72L122 84L131 87L143 96L150 97L157 92L155 86L156 72L152 60L149 57L141 56z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M239 62L230 64L223 70L217 86L217 98L215 102L217 106L234 105L240 103L261 83L261 75L257 70L249 64L239 62z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M123 386L119 390L116 403L114 405L115 408L117 406L117 414L119 419L122 422L124 422L137 435L149 437L163 452L164 457L168 463L172 478L173 503L178 551L180 559L184 559L186 561L190 539L194 483L203 452L217 437L230 436L251 417L250 402L251 401L251 403L252 400L250 394L243 387L239 387L236 390L232 408L233 417L228 426L213 423L201 414L184 409L166 413L153 424L138 425L133 418L134 405L132 391L127 386L123 386z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+        </g>
+    </svg>
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+
+</div>
+</body>
+</html>

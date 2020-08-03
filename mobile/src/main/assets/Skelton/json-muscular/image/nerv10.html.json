@@ -1,0 +1,62 @@
+[
+  {
+    "pages_id": "1740",
+    "seq_id": "1",
+    "name": "Astigmatism",
+    "id": "37862"
+  },
+  {
+    "pages_id": "1740",
+    "seq_id": "2",
+    "name": "Bifocals",
+    "id": "37863"
+  },
+  {
+    "pages_id": "1740",
+    "seq_id": "3",
+    "name": "Concave Lens",
+    "id": "37864"
+  },
+  {
+    "pages_id": "1740",
+    "seq_id": "4",
+    "name": "Original Image",
+    "id": "37865"
+  },
+  {
+    "pages_id": "1740",
+    "seq_id": "5",
+    "name": "Cylindrical Lens",
+    "id": "37866"
+  },
+  {
+    "pages_id": "1740",
+    "seq_id": "6",
+    "name": "Nearsightedness",
+    "id": "37867"
+  },
+  {
+    "pages_id": "1740",
+    "seq_id": "7",
+    "name": "Convex Lens",
+    "id": "37868"
+  },
+  {
+    "pages_id": "1740",
+    "seq_id": "8",
+    "name": "Farsightedness",
+    "id": "37869"
+  },
+  {
+    "pages_id": "1740",
+    "seq_id": "9",
+    "name": "Reversed Image on Retina",
+    "id": "37870"
+  },
+  {
+    "pages_id": "1740",
+    "seq_id": "10",
+    "name": "Presbyopia",
+    "id": "37871"
+  }
+]

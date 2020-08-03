@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/Transverse-Ligament-of-Humerus.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+    <svg height="743" pointer-events="none" style="left: -37px; top: -62px;"
+         viewBox="-37 -62 439 743" width="439">
+        <g>
+            <path class="leaflet-interactive"
+                  d="M250 46L242 46L230 50L219 49L217 51L229 66L233 77L235 90L254 88L259 92L259 94L262 97L264 97L269 92L267 84L267 64L271 46L250 46z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M128 117L119 118L107 122L99 126L94 132L89 145L87 161L91 187L81 185L71 178L40 162L35 161L34 142L28 146L8 166L2 168L13 177L22 181L25 184L43 191L56 199L82 210L90 217L92 217L138 263L143 265L153 255L160 251L170 241L171 238L170 233L162 225L151 222L135 221L133 217L131 211L129 187L124 177L125 164L134 138L134 122L130 117L128 117z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M248 162L245 165L235 165L239 169L243 179L248 213L241 246L237 254L225 266L207 273L213 278L226 276L236 284L247 265L251 253L256 221L256 186L248 162z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M269 88L269 92L264 97L262 97L255 88L241 89L240 90L244 92L227 113L227 115L224 118L222 126L215 133L209 127L208 136L210 144L213 153L219 161L245 165L251 159L257 149L269 146L274 142L280 140L284 136L288 128L287 103L282 95L269 88z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M270 51L267 64L267 84L269 88L281 95L292 69L303 56L303 54L300 55L294 53L270 51z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M122 22L118 22L105 27L89 41L83 58L84 67L88 65L115 66L122 64L120 61L107 57L111 55L121 55L138 52L148 48L154 48L164 51L172 57L179 56L180 51L178 48L174 46L152 24L147 22L122 22z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+        </g>
+    </svg>
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+
+</div>
+</body>
+</html>

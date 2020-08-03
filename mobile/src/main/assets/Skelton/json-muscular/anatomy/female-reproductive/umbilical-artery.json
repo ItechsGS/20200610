@@ -1,0 +1,86 @@
+[
+  {
+    "pages_id": "3452",
+    "seq_id": "1",
+    "name": "Amniotic Fluid",
+    "id": "38629"
+  },
+  {
+    "pages_id": "3452",
+    "seq_id": "2",
+    "name": "Chorion",
+    "id": "38630"
+  },
+  {
+    "pages_id": "3452",
+    "seq_id": "3",
+    "name": "Chorion Frondosum",
+    "id": "38631"
+  },
+  {
+    "pages_id": "3452",
+    "seq_id": "4",
+    "name": "Fetus",
+    "id": "38632"
+  },
+  {
+    "pages_id": "3452",
+    "seq_id": "5",
+    "name": "Hand",
+    "id": "38633"
+  },
+  {
+    "pages_id": "3452",
+    "seq_id": "6",
+    "name": "Foot",
+    "id": "38634"
+  },
+  {
+    "pages_id": "3452",
+    "seq_id": "7",
+    "name": "Intervillous Pool of Maternal Blood",
+    "id": "38635"
+  },
+  {
+    "pages_id": "3452",
+    "seq_id": "8",
+    "name": "Placenta",
+    "id": "38636"
+  },
+  {
+    "pages_id": "3452",
+    "seq_id": "9",
+    "name": "Heart",
+    "id": "38637"
+  },
+  {
+    "pages_id": "3452",
+    "seq_id": "10",
+    "name": "Maternal Artery",
+    "id": "38638"
+  },
+  {
+    "pages_id": "3452",
+    "seq_id": "11",
+    "name": "Maternal Vein",
+    "id": "38639"
+  },
+  {
+    "pages_id": "3452",
+    "seq_id": "12",
+    "name": "Umbilical Cord",
+    "id": "38640"
+  },
+  {
+    "pages_id": "3452",
+    "seq_id": "13",
+    "name": "Umbilical Veins",
+    "id": "38641"
+  },
+  {
+    "pages_id": "3452",
+    "seq_id": "14",
+    "name": "Umbilical Artery",
+    "id": "38642"
+  }
+]

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/Brachialis-Muscle.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+    <svg height="743" pointer-events="none" style="left: -37px; top: -62px;"
+         viewBox="-37 -62 439 743" width="439">
+        <g>
+            <path class="leaflet-interactive"
+                  d="M178 299L178 301L183 307L198 313L213 313L225 309L229 291L233 284L233 277L228 270L233 262L237 244L229 238L216 233L201 232L194 234L192 250L183 274L178 298z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M118 554L117 557L121 557L129 548L128 540L132 533L132 569L129 582L126 584L127 593L125 610L126 619L128 621L131 618L131 615L134 611L134 601L139 589L138 583L142 566L149 561L147 549L146 552L146 548L148 545L149 559L154 555L151 558L150 563L152 578L148 595L148 610L150 618L152 620L152 626L156 628L158 624L158 602L160 595L159 585L163 570L166 566L167 558L171 564L172 570L172 593L174 602L172 609L175 615L174 619L176 621L179 620L179 615L183 607L181 605L181 597L183 590L181 586L180 576L184 559L184 553L189 561L191 570L191 595L193 599L193 604L196 605L199 597L199 583L201 577L198 560L200 553L200 545L198 541L197 519L196 517L169 524L168 526L167 524L169 521L170 523L196 516L191 499L193 487L193 473L184 470L170 468L154 469L153 473L150 475L150 486L148 491L144 494L143 499L140 500L127 518L124 528L125 531L120 546L121 549L118 554z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M205 15L206 24L208 28L211 56L230 59L245 59L263 54L271 50L288 35L295 19L295 1L291 -9L279 -23L277 -23L259 -15L250 -17L242 -15L240 -13L235 -13L227 -8L224 -2L222 -2L208 8L205 15z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+        </g>
+    </svg>
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+
+</div>
+</body>
+</html>

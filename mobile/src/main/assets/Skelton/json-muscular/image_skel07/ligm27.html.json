@@ -1,0 +1,50 @@
+[
+  {
+    "pages_id": "3446",
+    "seq_id": "1",
+    "name": "Elbow Joint",
+    "id": "38579"
+  },
+  {
+    "pages_id": "3446",
+    "seq_id": "2",
+    "name": "Hinge Joint",
+    "id": "38580"
+  },
+  {
+    "pages_id": "3446",
+    "seq_id": "3",
+    "name": "Ball & Socket Joint",
+    "id": "38581"
+  },
+  {
+    "pages_id": "3446",
+    "seq_id": "4",
+    "name": "Gliding Joint",
+    "id": "38582"
+  },
+  {
+    "pages_id": "3446",
+    "seq_id": "5",
+    "name": "Hand",
+    "id": "38583"
+  },
+  {
+    "pages_id": "3446",
+    "seq_id": "6",
+    "name": "Hip Joint",
+    "id": "38584"
+  },
+  {
+    "pages_id": "3446",
+    "seq_id": "7",
+    "name": "Saddle Joint",
+    "id": "38585"
+  },
+  {
+    "pages_id": "3446",
+    "seq_id": "8",
+    "name": "Spine",
+    "id": "38586"
+  }
+]

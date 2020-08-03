@@ -1,0 +1,74 @@
+[
+  {
+    "id": "5958",
+    "pages_id": "11463",
+    "seq_id": "1",
+    "name": "Comminuted Fracture"
+  },
+  {
+    "id": "5959",
+    "pages_id": "11463",
+    "seq_id": "2",
+    "name": "Nonunion Fracture"
+  },
+  {
+    "id": "5960",
+    "pages_id": "11463",
+    "seq_id": "3",
+    "name": "Greenstick Fracture"
+  },
+  {
+    "id": "5961",
+    "pages_id": "11463",
+    "seq_id": "4",
+    "name": "Delayed Union Fracture"
+  },
+  {
+    "id": "5962",
+    "pages_id": "11463",
+    "seq_id": "5",
+    "name": "Metal Plate for Fracture"
+  },
+  {
+    "id": "5963",
+    "pages_id": "11463",
+    "seq_id": "6",
+    "name": "Malunion Fracture"
+  },
+  {
+    "id": "5964",
+    "pages_id": "11463",
+    "seq_id": "7",
+    "name": "Pins for Fracture"
+  },
+  {
+    "id": "5965",
+    "pages_id": "11463",
+    "seq_id": "8",
+    "name": "Screw for Fracture"
+  },
+  {
+    "id": "5966",
+    "pages_id": "11463",
+    "seq_id": "9",
+    "name": "Spiral Fracture"
+  },
+  {
+    "id": "5967",
+    "pages_id": "11463",
+    "seq_id": "10",
+    "name": "Transverse Fracture"
+  },
+  {
+    "id": "5968",
+    "pages_id": "11463",
+    "seq_id": "11",
+    "name": "Oblique Fracture"
+  },
+  {
+    "id": "5969",
+    "pages_id": "11463",
+    "seq_id": "12",
+    "name": "Union Fracture"
+  }
+]

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/Posterior-Fontanelle.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+    <div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-hide leaflet-interactive"
+         style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; left: 57px; top: 24px; z-index: 24;"
+         tabindex="0">
+        <div><span>5</span></div>
+    </div>
+    <div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-hide leaflet-interactive"
+         style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; left: 386px; top: 187px; z-index: 187;"
+         tabindex="0">
+        <div><span>3</span></div>
+    </div>
+    <div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-hide leaflet-interactive"
+         style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; left: 281px; top: 97px; z-index: 97;"
+         tabindex="0">
+        <div><span>4</span></div>
+    </div>
+    <img alt="" class="leaflet-marker-icon leaflet-zoom-hide leaflet-interactive"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/marker-mine.png"
+         style="margin-left: -10px; margin-top: -12px; width: 28px; height: 28px; left: 179px; top: 104px; z-index: 104;"
+         tabindex="0"><img alt="" class="leaflet-marker-icon leaflet-zoom-hide leaflet-interactive"
+                           src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/marker-mine.png"
+                           style="margin-left: -10px; margin-top: -12px; width: 28px; height: 28px; left: 137px; top: 208px; z-index: 208;"
+                           tabindex="0">
+    <div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-hide leaflet-interactive"
+         style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; left: 277px; top: 249px; z-index: 249;"
+         tabindex="0">
+        <div><span>5</span></div>
+    </div>
+    <div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-hide leaflet-interactive"
+         style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; left: 178px; top: 302px; z-index: 302;"
+         tabindex="0">
+        <div><span>4</span></div>
+    </div>
+    <div class="leaflet-marker-icon marker-cluster marker-cluster-medium leaflet-zoom-hide leaflet-interactive"
+         style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; left: 202px; top: 200px; z-index: 200;"
+         tabindex="0">
+        <div><span>12</span></div>
+    </div>
+</div>
+</body>
+</html>

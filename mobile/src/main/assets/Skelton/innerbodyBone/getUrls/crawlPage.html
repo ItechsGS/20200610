@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="../jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+<script type="text/javascript">
+    
+    
+            var pages = {"male": "/anatomy/skeletal-male", "female": "/image/skelfov.html"};
+            var tree = {};
+            var url = [];
+            $.each(Object.keys(pages), function (key, value) {
+                tree[value] = {child: {}};
+                getContent(pages[value], tree[value], function (data, obj) {
+                    var baseElement = $(data).find("h1").text();
+                    obj.child = [{
+                            category: baseElement,
+                            views: [
+                                {
+                                    name: baseElement,
+                                    child: {}
+                                }
+                            ]
+                        }];
+                    var title = "parent";
+                    $(data).find(".related-anatomy li:not(.related-anatomy-top)").each(function () {
+                        console.log(title)
+                        if ($(this).find(".related-terms-section-head").length) {
+                            title = $(this).text();
+                        } else if ($(this).hasClass("related-anatomy-bottom")) {
+                            if (obj.child[0].views[0].child[title] === undefined) {
+                                obj.child[0].views[0].child[title] = [];
+                            }
+                            $.post("store_in_db.php", {
+                                title: $(this).text(),
+                                url: $(this).find("a").attr("href")
+                            });
+                            obj.child[0].views[0].child[title].push({
+                                title: $(this).text(),
+                                url: $(this).find("a").attr("href")
+                            });
+                        }
+                    });
+                    $(data).find('#list-to-filter li:nth-last-child(3) ul li').each(function (index) {
+                        obj.child[0].views.push({
+                            name: $(this).text(),
+                            child: {}
+                        });
+                        getContent($(this).find("a").attr("href"), obj.child[0].views[index + 1].child, function (data, obj) {
+                            var title = "parent";
+                            $(data).find(".related-anatomy li:not(.related-anatomy-top)").each(function () {
+                                if ($(this).find(".related-terms-section-head").length) {
+                                    title = $(this).text();
+                                } else if ($(this).hasClass("related-anatomy-bottom")) {
+                                    if (obj[title] === undefined) {
+                                        obj[title] = [];
+                                    }
+                                    $.post("store_in_db.php", {
+                                        title: $(this).text(),
+                                        url: $(this).find("a").attr("href")
+                                    });
+                                    obj[title].push({
+                                        title: $(this).text(),
+                                        url: $(this).find("a").attr("href")
+                                    });
+                                }
+                            });
+                        });
+                    });
+                    $(data).find('#list-to-filter li:nth-last-child(2) ul li').each(function (index) {
+                        obj.child.push({
+                            category: $(this).text(),
+                            views: [{
+                                    name: $(this).text(),
+                                    child: {}
+                                }
+                            ]
+                        });
+                        getContent($(this).find("a").attr("href"), obj.child[index].views[0].child, function (data, obj) {
+                            var title = "parent";
+                            $(data).find(".related-anatomy li:not(.related-anatomy-top)").each(function () {
+                                if ($(this).find(".related-terms-section-head").length) {
+                                    title = $(this).text();
+                                } else if ($(this).hasClass("related-anatomy-bottom")) {
+                                    if (obj[title] === undefined) {
+                                        obj[title] = [];
+                                    }
+                                    $.post("store_in_db.php", {
+                                        title: $(this).text(),
+                                        url: $(this).find("a").attr("href")
+                                    });
+                                    obj[title].push({
+                                        title: $(this).text(),
+                                        url: $(this).find("a").attr("href")
+                                    });
+                                }
+                            });
+                        });
+                        getContent($(this).find("a").attr("href"), obj.child[index + 1], function (data, obj) {
+                            $(data).find('#list-to-filter li:nth-last-child(3) ul li').each(function (index) {
+                                obj.views.push({
+                                    name: $(this).text(),
+                                    child: {}
+                                });
+                                getContent($(this).find("a").attr("href"), obj.views[index + 1].child, function (data, obj) {
+                                    var title = "parent";
+                                    $(data).find(".related-anatomy li:not(.related-anatomy-top)").each(function () {
+                                        if ($(this).find(".related-terms-section-head").length) {
+                                            title = $(this).text();
+                                        } else if ($(this).hasClass("related-anatomy-bottom")) {
+                                            if (obj[title] === undefined) {
+                                                obj[title] = [];
+                                            }
+                                            $.post("store_in_db.php", {
+                                                title: $(this).text(),
+                                                url: $(this).find("a").attr("href")
+                                            });
+                                            obj[title].push({
+                                                title: $(this).text(),
+                                                url: $(this).find("a").attr("href")
+                                            });
+                                        }
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+            function getContent(page, obj, callback) {
+                $.get("page_hierarchy.php?page=" + page, function (data) {
+                    callback(data, obj);
+                });
+            }
+
+
+
+
+
+</script>
+<div class="output"></div>
+</body>
+</html>

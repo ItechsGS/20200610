@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muscular System - Muscles of the Human Body</title>
+    <meta charset="utf-8"/>
+    <link href="../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".leaflet-image-layer").css("zIndex", 0);
+                $("path").attr("stroke-width", 3);
+
+                $("path").mouseover(function () {
+                    $(this).attr("stroke-opacity", 1);
+                });
+                $("path").mouseout(function () {
+                    $(this).attr("stroke-opacity", 0);
+                });
+                $("path").click(function () {
+                    window.location = $("path").index($(this));
+                });
+            });
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="leaflet-pane leaflet-overlay-pane">
+    <img alt="" class="leaflet-image-layer"
+         src="https://ib2-prod-cdn-howtodothingsltd.netdna-ssl.com/assets/Supraspinous-Ligament-1.png"
+         style="z-index: 1; left: -67px; top: -33px; width: 500px; height: 684px;">
+    <svg height="743" pointer-events="none" style="left: -37px; top: -62px;"
+         viewBox="-37 -62 439 743" width="439">
+        <g>
+            <path class="leaflet-interactive"
+                  d="M179 598L181 605L187 606L189 604L189 598L196 596L201 601L204 601L206 603L202 607L198 607L195 609L198 616L197 618L191 621L190 625L192 627L184 637L181 636L180 632L176 627L176 625L178 625L177 622L169 617L173 609L166 607L162 604L162 602L166 601L172 596L176 598z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M175 47L185 45L193 47L195 45L198 48L201 48L206 45L207 43L205 40L205 32L210 31L209 29L204 26L203 22L188 15L196 14L200 16L204 21L204 14L206 13L216 19L219 14L217 9L208 7L207 1L205 0L199 0L191 3L177 3L170 0L163 0L159 8L153 8L150 10L149 14L153 19L163 14L164 21L164 19L171 14L180 14L179 17L165 22L163 24L163 27L168 31L175 33L178 31L190 31L193 33L186 33L183 31L182 33L177 34L168 31L163 27L159 28L159 32L163 32L163 39L161 43L162 46L165 48L169 48L173 45L174 46z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M181 502L182 380L178 380L174 377L174 363L172 362L170 365L167 365L166 363L165 368L167 371L165 373L157 374L155 377L156 381L164 381L164 387L170 389L170 391L165 393L165 397L163 398L152 395L148 404L149 406L155 405L166 408L163 412L164 417L173 419L164 424L162 429L147 428L144 430L142 434L142 437L144 439L157 438L166 440L161 448L161 454L155 455L145 451L143 456L145 459L163 468L160 477L165 477L160 482L159 487L148 487L144 490L144 492L154 499L159 497L162 499L161 506L164 513L179 502z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M189 502L190 379L194 377L196 362L198 365L201 365L202 363L203 366L201 371L205 374L211 374L213 378L213 380L204 381L205 385L201 389L198 389L198 391L201 393L204 392L203 397L211 397L215 395L217 396L220 405L202 408L205 413L204 417L195 419L202 422L205 425L205 428L207 429L221 428L224 431L226 438L211 438L202 440L207 449L207 455L209 456L221 451L224 453L224 458L205 468L205 471L208 476L207 478L203 476L203 478L206 479L209 483L209 487L221 487L224 490L224 493L217 496L215 499L207 498L207 509L204 513L191 503z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M189 100L200 100L210 93L215 95L214 101L210 105L204 107L203 109L203 111L210 107L213 107L213 116L211 119L202 124L200 132L203 129L210 126L213 128L213 138L201 144L200 149L202 152L205 150L209 150L211 152L211 157L213 161L201 166L201 172L204 170L210 171L212 175L211 181L201 185L199 192L199 196L210 194L213 198L213 203L212 205L202 207L198 219L199 221L209 222L212 226L211 231L202 232L201 238L198 239L198 244L207 245L210 247L211 250L210 255L202 256L200 258L200 267L201 269L209 272L212 275L212 279L206 283L203 281L201 282L202 283L199 287L199 293L202 295L206 295L209 301L207 307L201 308L201 319L208 326L209 332L205 334L199 334L199 342L207 356L199 356L195 358L195 374L193 378L190 376L186 284L189 206L188 153L191 152L188 152L189 110z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M153 95L153 99L155 102L165 110L156 107L154 110L156 118L166 124L168 130L167 132L165 129L158 126L156 127L155 130L156 139L166 144L168 150L166 152L159 150L157 152L156 158L157 162L167 166L167 172L163 170L158 171L157 179L158 182L168 186L167 190L169 193L168 197L162 194L158 194L155 199L155 203L157 205L165 207L169 214L169 220L167 222L160 221L156 226L156 229L158 231L167 233L167 237L170 243L168 245L161 245L157 250L159 256L164 256L167 257L168 259L167 269L161 270L156 276L159 283L166 281L166 285L169 290L168 293L166 295L162 295L159 300L159 305L162 307L166 307L167 313L167 320L160 325L159 332L162 334L169 335L168 345L161 354L161 356L162 357L166 355L174 359L173 375L175 377L179 376L182 380L181 274L184 178L181 155L178 152L181 152L181 135L179 133L181 133L183 99L171 99L163 93L154 94z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M154 94L153 92L157 90L160 85L156 83L157 80L161 78L159 71L162 65L162 58L160 57L163 53L160 46L161 41L162 45L165 48L173 48L185 45L194 48L201 48L206 46L206 42L208 42L205 52L208 57L206 58L206 65L209 70L207 78L212 82L212 84L208 84L210 89L214 91L215 94L205 93L198 99L193 98L189 100L187 85L188 84L186 83L184 83L182 86L183 99L171 99L163 93L154 94z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+            <path class="leaflet-interactive"
+                  d="M165 512L170 519L169 524L159 523L155 527L157 534L168 539L170 546L160 545L157 549L159 554L164 556L170 555L171 557L170 567L166 564L160 564L158 567L158 571L160 573L163 574L169 572L168 584L166 582L161 583L161 587L164 590L168 586L168 594L163 596L168 597L168 600L172 596L176 598L198 597L198 599L200 600L200 597L205 595L200 593L200 587L201 586L204 590L207 588L208 583L204 581L200 584L200 573L207 574L210 572L211 567L209 564L205 563L200 565L198 568L196 556L203 557L209 554L210 551L208 546L200 545L197 547L197 541L200 537L211 534L214 528L210 523L202 524L200 521L200 517L203 512L199 509L169 509z"
+                  fill="#038103" fill-opacity="0" fill-rule="evenodd" stroke="#038103"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0"
+                  stroke-width="0"></path>
+        </g>
+    </svg>
+</div>
+<div class="leaflet-pane leaflet-marker-pane">
+
+</div>
+</body>
+</html>
