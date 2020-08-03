@@ -1,0 +1,36 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_indicator_margin">14dp</dimen>
+    <dimen name="normal_margin_set">10dp</dimen>
+    <dimen name="horizontal_scroll_margin">60dp</dimen>
+    <dimen name="margin_drawer_logo">45dp</dimen>
+    <dimen name="text_box_margin">10dp</dimen>
+    <dimen name="table_content_text_margin">25dp</dimen>
+    <dimen name="margin_between_text_and_other_controls">8dp</dimen>
+
+    <!-- Common Parameters -->
+    <dimen name="button_text_size">22sp</dimen>
+    <dimen name="choose_screen_text_size">19sp</dimen>
+    <dimen name="choose_screen_text_size_small">19sp</dimen>
+    <dimen name="drawer_items_text_size">16sp</dimen>
+    <dimen name="text_size_better">30sp</dimen>
+    <dimen name="text_size_athlete">35sp</dimen>
+    <dimen name="text_size_grid_item_name">14sp</dimen>
+    <dimen name="text_size_grid_palyer_name">16sp</dimen>
+    <dimen name="text_size_setting_items">12sp</dimen>
+    <dimen name="text_size_tap_start_pause">8sp</dimen>
+
+    <dimen name="grid_padding">7dp</dimen>
+    <dimen name="small_textsize1">15sp</dimen>
+    <dimen name="small_textsize">10sp</dimen>
+
+    <dimen name="edit_text_textsize">20sp</dimen>
+    <dimen name="team_name_textsize">18sp</dimen>
+    <dimen name="column_width">148dp</dimen>
+    <dimen name="column_height">76dp</dimen>
+
+    <dimen name="play_icon_width">50dp</dimen>
+    <dimen name="play_icon_height">50dp</dimen>
+    <dimen name="athlete_screen_round_progress_bar">85dp</dimen>
+</resources>

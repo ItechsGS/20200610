@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/color_black_for_toggle_selected">
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/MainCardForCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/color_black_for_toggle_selected"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:background="@drawable/bg_white_semi_rounded">
+
+
+            <ImageView
+                android:id="@+id/myImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center" />
+
+
+            <TextView
+                android:id="@+id/myImageViewText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+
+            <LinearLayout
+                android:id="@+id/AddExerciseForPurhase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/myImageView"
+                android:background="#80424242"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/smallCat"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:background="@color/bgColorDark"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/catImg"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="1dp" />
+
+        <TextView
+            android:id="@+id/catName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:fontFamily="@font/agencyr"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textAllCaps="true"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/RlayoutPillar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="2dp"
+    android:layout_marginBottom="2dp"
+    android:layout_weight="1"
+    android:background="@drawable/ripple"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/grid_padding">
+
+        <ImageView
+            android:id="@+id/lock"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/changepassw" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForHoloCirculer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginBottom="8dp">
+
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForHoloCircleContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.org.godspeed.utility.HoloCircularProgressBar
+                android:id="@+id/holoCircul"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:marker_progress="0"
+                app:progress="0"
+                app:progress_background_color="#4e4e50"
+                app:progress_color="#edbb57"
+                app:stroke_width="3dp"
+                app:thumb_visible="false" />
+
+            <TextView
+                android:id="@+id/textViewCirculValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:maxLength="6"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/drawer_items_text_size" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/rLayoutForHoloCircleContainer">
+
+            <ImageView
+                android:id="@+id/imageViewIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+
+                android:layout_marginBottom="5dp"
+
+                android:src="@drawable/regen" />
+
+            <TextView
+                android:id="@+id/textViewText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewIcon"
+                android:layout_alignLeft="@id/imageViewIcon"
+                android:hint="@string/regen"
+                android:text="@string/regen"
+                android:textAllCaps="true"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/text_size_grid_palyer_name" />
+
+            <TextView
+                android:id="@+id/textViewTextActType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewText"
+                android:layout_alignLeft="@id/imageViewIcon"
+                android:textAllCaps="true"
+                android:textColor="@color/color_gray_for_toggle_unselected"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rLayoutforSleep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rLayoutForHoloCirculer"
+        android:layout_alignLeft="@+id/rLayoutForHoloCirculer"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/normal_margin_set">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/round_shap_both_side"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textViewSleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_indicator_margin"
+                android:text="@string/sleep"
+                android:textColor="@color/textColorYellow"
+                android:textSize="@dimen/text_size_grid_item_name" />
+
+            <ImageView
+                android:id="@+id/imageViewDownArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/activity_indicator_margin"
+                android:src="@drawable/drop_down_for_profile" />
+
+            <ImageView
+                android:id="@+id/imageViewSleepDash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_indicator_margin"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/imageViewDownArrow"
+                android:src="@drawable/dash_for_profile" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

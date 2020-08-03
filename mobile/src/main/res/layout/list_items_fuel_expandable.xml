@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="#3a3a3c">
+
+        <TextView
+            android:id="@+id/textViewItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/activity_indicator_margin"
+            android:paddingTop="@dimen/activity_indicator_margin"
+            android:text="Fuel Item"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+        <TextView
+            android:id="@+id/textViewItemDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewItemName"
+            android:layout_marginTop="@dimen/text_box_margin"
+            android:gravity="center"
+            android:paddingLeft="@dimen/activity_indicator_margin"
+            android:paddingBottom="@dimen/activity_indicator_margin"
+            android:text="Description"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/text_size_grid_item_name" />
+
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/text_box_margin"
+            android:gravity="center"
+            android:text="100"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/text_size_grid_palyer_name" />
+    </RelativeLayout>
+</RelativeLayout>

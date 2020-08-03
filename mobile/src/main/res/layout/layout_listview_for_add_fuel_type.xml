@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3a3a3c">
+
+    <RelativeLayout
+        android:id="@+id/rLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_indicator_margin">
+
+        <ImageView
+            android:id="@+id/imageViewBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/normal_margin_set"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:id="@+id/textViewScreenName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/add_fuel"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/choose_screen_text_size" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dividerOne"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rLayoutHeader"
+        android:background="@drawable/login_transparant_layer"></RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollViewFuelType"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/horizontal_scroll_margin"
+        android:layout_below="@id/dividerOne"
+        android:layout_marginTop="1dp"
+        android:background="#3a3a3c"
+        android:fillViewport="true"
+        android:measureAllChildren="false">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForActivationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/health_profile_selected_button_icon">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/imageViewActivation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/activation_icon_gray"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textViewRecent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/imageViewActivation"
+                        android:gravity="center"
+                        android:text="@string/recent"
+                        android:textColor="@color/color_gray_for_text" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForSkillsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/unselected_transparent_button_icon">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/imageViewSkills"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/skills"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textViewFrequent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/imageViewSkills"
+                        android:gravity="center"
+                        android:text="@string/frequent"
+                        android:textColor="@color/color_gray_for_text" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForEnergyTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/unselected_transparent_button_icon">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/imageViewEnergy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/energy_icon_gray"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textViewMyFoods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/imageViewEnergy"
+                        android:gravity="center"
+                        android:text="@string/my_foods"
+                        android:textColor="@color/color_gray_for_text" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForBuildTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/unselected_transparent_button_icon">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/imageViewBuild"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/build_icon_gray"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textViewMeals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/imageViewBuild"
+                        android:gravity="center"
+                        android:text="@string/meal"
+                        android:textColor="@color/color_gray_for_text" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <ListView
+        android:id="@+id/listViewFuelTypes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lLayoutForBottomView"
+        android:layout_below="@+id/horizontalScrollViewFuelType"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:background="#ffffff"
+        android:divider="#000000"
+        android:dividerHeight="1dp"
+        tools:listitem="@layout/list_items_fuel_expandable" />
+
+    <LinearLayout
+        android:id="@+id/lLayoutForBottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#343433"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForButtonCreateFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/text_box_margin"
+            android:layout_weight="1"
+            android:padding="@dimen/text_box_margin">
+
+            <TextView
+                android:id="@+id/textViewCreateFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_button"
+                android:gravity="center"
+                android:text="Create a Food"
+                android:textColor="@color/textColorYellow" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rLAyoutButtonQuickAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/text_box_margin"
+            android:layout_weight="1"
+            android:padding="@dimen/text_box_margin">
+
+            <TextView
+                android:id="@+id/textViewQuickAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_button"
+                android:gravity="center"
+                android:hint="Create a Food"
+                android:text="Quick Add"
+                android:textAlignment="center"
+                android:textColor="@color/textColorYellow" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

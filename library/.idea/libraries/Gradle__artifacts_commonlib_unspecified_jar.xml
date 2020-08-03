@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: artifacts:commonlib:unspecified@jar">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/../commonlib/build/.transforms/9dd978076f1945bbed02810c7a16daaa/commonlib/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../commonlib/build/.transforms/9dd978076f1945bbed02810c7a16daaa/commonlib/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../commonlib/build/.transforms/9dd978076f1945bbed02810c7a16daaa/commonlib/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

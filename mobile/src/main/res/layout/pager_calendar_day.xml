@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/color_black_for_toggle_selected"
+    app:cardCornerRadius="0dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/xx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_calendar_day_of_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:maxLength="3"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorYellow"
+                android:textSize="19sp"
+                tools:text="Wednesday" />
+
+            <TextView
+                android:id="@+id/tv_calendar_day_of_Month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:maxLength="3"
+                android:textColor="@color/textColorYellow"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/tv_calendar_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+
+                android:textAllCaps="true"
+                android:textColor="@color/textColorYellow"
+
+                android:textSize="19sp"
+                android:textStyle="bold"
+                tools:text="1" />
+        </LinearLayout>
+
+        <!--        <View-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:layout_marginEnd="16dp"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0.5dp" />-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/xx">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_calendar_events"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/fab_create_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="10dp"
+                android:src="@drawable/add_athlete"
+                android:visibility="gone"
+                app:elevation="0dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_no_events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_no_events_icon"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:src="@drawable/ic_calendar"
+                android:tint="#c9c9c9" />
+
+            <TextView
+                android:id="@+id/tv_no_events_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No events"
+                android:textColor="#a5a5a5"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
+

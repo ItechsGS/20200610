@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rLayoutForListItems"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/activity_indicator_margin">
+
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForExerciseVideoList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shap_round_corner_dark">
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForLeftSideExercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+                android:id="@+id/imageViewSelectExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/activity_indicator_margin"
+                android:src="@drawable/select_exercise" />
+
+            <TextView
+                android:id="@+id/textViewSelectExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/imageViewSelectExercise"
+                android:text="@string/exercise"
+
+                android:textColor="#ffffff" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForRightSideExercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/imageViewWatchExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/activity_indicator_margin"
+                android:src="@drawable/play_video_icon" />
+
+            <TextView
+                android:id="@+id/textViewWatchExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/imageViewWatchExercise"
+                android:text="@string/watch_video"
+
+                android:textColor="@color/textColorYellow" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

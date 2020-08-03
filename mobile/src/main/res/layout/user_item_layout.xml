@@ -1,0 +1,237 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/MainRLYLayoutLevel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:layout_margin="5dp"
+    android:animateLayoutChanges="true">
+
+    <RelativeLayout
+        android:id="@+id/LevelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_toStartOf="@+id/arrow1"
+            android:layout_weight="1">
+
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForProfilePic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/myframe" />
+
+
+                <com.christophesmet.android.views.maskableframelayout.MaskableFrameLayout
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:mask="@drawable/logo_f"
+
+                    app:porterduffxfermode="DST_IN">
+
+                    <ImageView
+                        android:id="@+id/LevelImage"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY" />
+
+
+                </com.christophesmet.android.views.maskableframelayout.MaskableFrameLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/LevelText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/rLayoutForProfilePic"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/drawer_items_text_size" />
+        </RelativeLayout>
+
+        <ImageView
+
+            android:id="@+id/arrow1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/right_arrow"
+            android:tint="#686868"
+
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/rightSign"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/rightsign"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rAthleteLevelExercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/valueAndName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp">
+
+            <TextView
+                android:id="@+id/AtheleteLevelExerciseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/agencyr"
+                android:textColor="@color/color_white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/AtheleteExerciseValueMultiple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/agencyr"
+                android:textColor="#FF0000"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/valueAndName"
+            android:layout_margin="3dp"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/AtheleteLevelExerciseValues"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/yellow_box"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLines="1"
+
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/textColorYellow"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/AtheleteExerciseValuesIncDic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/MultiplyValueDcr"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/yellow_box_rounded_left"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/Maincolor"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/MultiplyValueInc"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/yellow_box_rounded_right"
+                    android:gravity="center"
+
+                    android:text="+"
+                    android:textColor="@color/Maincolor"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForAthleteTraining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dark_"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textViewExerciseName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/text_box_margin"
+            android:layout_toLeftOf="@+id/rLayoutForWatchVideo"
+            android:layout_toRightOf="@+id/imageViewSelectUnSelectExerciseType"
+            android:ellipsize="end"
+            android:text="Exercise Name Here"
+            android:textAllCaps="true"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_size_grid_item_name" />
+
+        <TextView
+            android:id="@+id/textViewExerciseDate"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:paddingLeft="7dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/right_arrow"
+            android:text="DATE"
+            android:textAllCaps="true"
+            android:textColor="@color/color_white"
+            android:tint="@color/textColorYellow"
+            android:visibility="visible" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainRLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3a3a3c">
+
+    <LinearLayout
+        android:id="@+id/rLayoutforSelectTeam"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/rLayoutForTeamsOrIndividualHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutforTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textViewTeam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/agencyr"
+                        android:gravity="center"
+                        android:padding="@dimen/activity_indicator_margin"
+                        android:text="@string/teams"
+                        android:textAllCaps="true"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <RelativeLayout
+                        android:id="@+id/rLayoutforTeamUnderline"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/textViewTeam"
+                        android:layout_alignLeft="@+id/textViewTeam"
+                        android:layout_alignRight="@+id/textViewTeam"
+                        android:background="@color/textColorYellow" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutforIndividual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/rLayoutforTeam"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textViewIndividual"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/agencyr"
+                        android:gravity="center"
+                        android:padding="@dimen/activity_indicator_margin"
+                        android:text="@string/individuals"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_for_absent_palyer"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <RelativeLayout
+                        android:id="@+id/rLayoutforIndividualUnderline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/textViewIndividual"
+                        android:layout_alignLeft="@+id/textViewIndividual"
+                        android:layout_alignRight="@+id/textViewIndividual"
+                        android:background="@color/textColorYellow"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:background="#222223"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ForPerfom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center"
+                    android:paddingEnd="3dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rLayoutofPerfrom"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/PerfromName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:src="@drawable/plus_with_circle_icon"
+                            android:text="@string/team"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/team_name_textsize" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/AllAthleteList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#222223"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/SelectExerciseMovementAndWorkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForMovement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textViewMovement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/agencyr"
+                    android:gravity="center"
+                    android:padding="@dimen/activity_indicator_margin"
+                    android:text="MOVEMENT"
+                    android:textAllCaps="true"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutforMovementUnderline"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/textViewMovement"
+                    android:layout_alignLeft="@+id/textViewMovement"
+                    android:layout_alignRight="@+id/textViewMovement"
+                    android:background="@color/textColorYellow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutforWorkout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textViewWorkout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/agencyr"
+                    android:gravity="center"
+                    android:padding="@dimen/activity_indicator_margin"
+                    android:text="WORKOUT"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_for_absent_palyer"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutforWorkoutUnderline"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+
+                    android:layout_below="@id/textViewWorkout"
+                    android:layout_alignLeft="@+id/textViewWorkout"
+                    android:layout_alignRight="@+id/textViewWorkout"
+                    android:background="@color/textColorYellow"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#222223"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/ForPerfomMove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center_vertical|center"
+                android:paddingEnd="3dp">
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutofPerfromMove"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/PerfromNameMove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:src="@drawable/plus_with_circle_icon"
+                        android:text="@string/team"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/team_name_textsize" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/MoveMent_Workout_List"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/CustomDateFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#343436"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rLayoutStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/startDateText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/agencyr"
+                    android:text="Start Date"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/startDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/startDateText"
+                    android:fontFamily="@font/agencyr"
+                    android:text="2019-12-11"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_white"
+
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/EnddateText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/agencyr"
+                    android:text="End Date"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/endDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/EnddateText"
+                    android:fontFamily="@font/agencyr"
+                    android:text="2019-12-11"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_white"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/graphViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:paddingTop="3dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/hh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/agencyr"
+                android:gravity="center"
+                android:text="        Max Power"
+                android:textAlignment="textStart"
+                android:textColor="@color/color_white"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/hh"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/Avg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/textColorYellow"
+                    android:checked="true"
+                    android:fontFamily="@font/agencyr"
+                    android:text="Average"
+
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/peak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/textColorYellow"
+                    android:fontFamily="@font/agencyr"
+                    android:text="Peak"
+                    android:textColor="@color/color_white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_weight="0"-->
+        <!--            android:id="@+id/LayoutForType"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="40dp"-->
+        <!--            android:layout_margin="10dp"-->
+        <!--            android:visibility="gone"-->
+        <!--            android:layout_marginLeft="12dp"-->
+        <!--            android:layout_marginTop="5dp"-->
+        <!--            android:layout_marginRight="12dp"-->
+        <!--            android:layout_marginBottom="5dp"-->
+        <!--            android:background="@drawable/textviewradious_yellow"-->
+        <!--            android:gravity="center"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:weightSum="5">-->
+
+
+        <!--            <LinearLayout-->
+        <!--                android:id="@+id/LayoutDAY"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="40dp"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:background="@drawable/textviewradious"-->
+        <!--                android:gravity="center"-->
+        <!--                android:orientation="vertical">-->
+
+
+        <!--                <TextView-->
+        <!--                    android:id="@+id/DAYText"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="match_parent"-->
+        <!--                    android:layout_gravity="center_vertical"-->
+        <!--                    android:gravity="center"-->
+        <!--                    android:text="DAY"-->
+        <!--                    android:fontFamily="@font/agencyr"-->
+        <!--                    android:textAlignment="center"-->
+        <!--                    android:textColor="@color/textColorYellow"-->
+        <!--                    android:textSize="17sp" />-->
+
+        <!--            </LinearLayout>-->
+
+        <!--            <View-->
+        <!--                android:layout_width="0.8dp"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:background="@color/textColorYellow" />-->
+
+        <!--&lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:id="@+id/LayoutWeek"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_height="40dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_weight="1"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:background="@drawable/textviewradious"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:orientation="vertical">&ndash;&gt;-->
+
+        <!--&lt;!&ndash;                <TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:id="@+id/WeekText"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:layout_gravity="center_vertical"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:text="WEEK"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:fontFamily="@font/agencyr"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:textAlignment="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:textColor="@color/textColorYellow"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:textSize="17sp" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;            </LinearLayout>&ndash;&gt;-->
+
+        <!--            <View-->
+        <!--                android:layout_width="0.8dp"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:background="@color/textColorYellow" />-->
+
+        <!--            <LinearLayout-->
+        <!--                android:id="@+id/LayoutMONTH"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="40dp"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:background="@drawable/textviewradious"-->
+        <!--                android:gravity="center"-->
+        <!--                android:orientation="vertical">-->
+
+        <!--                <TextView-->
+        <!--                    android:id="@+id/MONTHText"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="match_parent"-->
+        <!--                    android:layout_gravity="center_vertical"-->
+        <!--                    android:gravity="center"-->
+        <!--                    android:fontFamily="@font/agencyr"-->
+        <!--                    android:text="MONTH"-->
+        <!--                    android:textAlignment="center"-->
+        <!--                    android:textColor="@color/textColorYellow"-->
+        <!--                    android:textSize="17sp" />-->
+
+
+        <!--            </LinearLayout>-->
+
+        <!--            <View-->
+        <!--                android:layout_width="0.8dp"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:background="@color/textColorYellow" />-->
+
+        <!--            <LinearLayout-->
+        <!--                android:id="@+id/LayoutYEAR"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="40dp"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:background="@drawable/textviewradious"-->
+        <!--                android:gravity="center"-->
+        <!--                android:orientation="vertical">-->
+
+        <!--                <TextView-->
+        <!--                    android:id="@+id/YEARText"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="match_parent"-->
+        <!--                    android:layout_gravity="center_vertical"-->
+        <!--                    android:gravity="center"-->
+        <!--                    android:text="YEAR"-->
+        <!--                    android:fontFamily="@font/agencyr"-->
+        <!--                    android:textAlignment="center"-->
+        <!--                    android:textColor="@color/textColorYellow"-->
+        <!--                    android:textSize="17sp"-->
+
+        <!--                    />-->
+
+        <!--            </LinearLayout>-->
+
+        <!--            <View-->
+        <!--                android:layout_width="0.8dp"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:background="@color/textColorYellow" />-->
+
+        <!--&lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:id="@+id/LayoutCustom"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_height="40dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_weight="1"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:background="@drawable/textviewradious"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:orientation="vertical">&ndash;&gt;-->
+
+        <!--&lt;!&ndash;                <TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:id="@+id/CustomText"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:layout_gravity="center_vertical"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:text="CUSTOM"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:fontFamily="@font/agencyr"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:textAlignment="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:textColor="@color/textColorYellow"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:textSize="17sp"&ndash;&gt;-->
+
+        <!--&lt;!&ndash;                    />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;            </LinearLayout>&ndash;&gt;-->
+        <!--        </LinearLayout>-->
+        <LinearLayout
+            android:id="@+id/LayoutForType"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="0"
+            android:background="@drawable/textviewradious_yellow"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+
+            <LinearLayout
+                android:id="@+id/LayoutDay"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/textviewradious"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/DayText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Day"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.8dp"
+                android:layout_height="match_parent"
+                android:background="@color/textColorYellow" />
+
+            <LinearLayout
+                android:id="@+id/LayoutWeek"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/textviewradious"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/WeekText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Week"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.8dp"
+                android:layout_height="match_parent"
+                android:background="@color/textColorYellow" />
+
+            <LinearLayout
+                android:id="@+id/LayoutMonth"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/textviewradious"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/MonthText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Month"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.8dp"
+                android:layout_height="match_parent"
+                android:background="@color/textColorYellow" />
+
+            <LinearLayout
+                android:id="@+id/LayoutYear"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/textviewradious"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/YearText"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Year"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="17sp"
+
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.8dp"
+                android:layout_height="match_parent"
+                android:background="@color/textColorYellow" />
+
+
+            <LinearLayout
+                android:id="@+id/LayoutCustom"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/textviewradious"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/CustomText"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Custom"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="17sp"
+
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ViewForListofAllData"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:background="#343436"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:fontFamily="@font/agencyr"
+            android:text="Team"
+            android:textAlignment="center"
+            android:textColor="@color/textColorYellow"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+    <!--    <HorizontalScrollView-->
+    <!--        android:id="@+id/horizontalPillerName"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="@dimen/horizontal_scroll_margin"-->
+    <!--        android:layout_below="@+id/rLayoutforSelectTeam"-->
+    <!--        android:background="#313133">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center_vertical"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            android:weightSum="6">-->
+
+
+    <!--            <RelativeLayout-->
+    <!--                android:id="@+id/rLayoutForActivationTitle"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_gravity="center_vertical"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:background="@drawable/health_profile_selected_button_icon">-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_centerInParent="true">-->
+
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/imageViewActivation"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:src="@drawable/activation_icon_gray" />-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textViewActivation"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:layout_marginLeft="2dp"-->
+    <!--                        android:layout_toRightOf="@+id/imageViewActivation"-->
+    <!--                        android:gravity="center"-->
+    <!--                        android:text="@string/activation"-->
+    <!--                        android:textColor="@color/color_gray_for_text" />-->
+    <!--                </RelativeLayout>-->
+    <!--            </RelativeLayout>-->
+
+
+    <!--            <RelativeLayout-->
+    <!--                android:id="@+id/rLayoutForSkillsTitle"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_gravity="center_vertical"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:background="@drawable/unselected_transparent_button_icon">-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_centerInParent="true">-->
+
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/imageViewSkills"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:src="@drawable/skills" />-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textViewSkills"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:layout_marginLeft="2dp"-->
+    <!--                        android:layout_toRightOf="@+id/imageViewSkills"-->
+    <!--                        android:gravity="center"-->
+    <!--                        android:text="@string/skills"-->
+    <!--                        android:textColor="@color/color_gray_for_text" />-->
+    <!--                </RelativeLayout>-->
+    <!--            </RelativeLayout>-->
+
+
+    <!--            <RelativeLayout-->
+    <!--                android:id="@+id/rLayoutForEnergyTitle"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_gravity="center_vertical"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:background="@drawable/unselected_transparent_button_icon">-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_centerInParent="true">-->
+
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/imageViewEnergy"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:src="@drawable/energy_icon_gray" />-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textViewEnergy"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:layout_marginLeft="2dp"-->
+    <!--                        android:layout_toRightOf="@+id/imageViewEnergy"-->
+    <!--                        android:gravity="center"-->
+    <!--                        android:text="@string/energy"-->
+    <!--                        android:textColor="@color/color_gray_for_text" />-->
+    <!--                </RelativeLayout>-->
+    <!--            </RelativeLayout>-->
+
+    <!--            <RelativeLayout-->
+    <!--                android:id="@+id/rLayoutForBuildTitle"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_gravity="center_vertical"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:background="@drawable/unselected_transparent_button_icon">-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_centerInParent="true">-->
+
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/imageViewBuild"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:src="@drawable/build_icon_gray" />-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textViewBuild"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:layout_marginLeft="2dp"-->
+    <!--                        android:layout_toRightOf="@+id/imageViewBuild"-->
+    <!--                        android:gravity="center"-->
+    <!--                        android:text="@string/build"-->
+    <!--                        android:textColor="@color/color_gray_for_text" />-->
+    <!--                </RelativeLayout>-->
+    <!--            </RelativeLayout>-->
+
+    <!--            <RelativeLayout-->
+    <!--                android:id="@+id/rLayoutForRegenTitle"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_gravity="center_vertical"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:background="@drawable/unselected_transparent_button_icon">-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_centerInParent="true">-->
+
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/imageViewRegen"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:src="@drawable/re_gen_gray" />-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textViewRegen"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:layout_marginLeft="2dp"-->
+    <!--                        android:layout_toRightOf="@+id/imageViewRegen"-->
+    <!--                        android:gravity="center"-->
+    <!--                        android:text="@string/regen"-->
+    <!--                        android:textColor="@color/color_gray_for_text" />-->
+    <!--                </RelativeLayout>-->
+    <!--            </RelativeLayout>-->
+
+    <!--            <RelativeLayout-->
+    <!--                android:id="@+id/rLayoutForFuelTitle"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_gravity="center_vertical"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:background="@drawable/unselected_transparent_button_icon">-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_centerInParent="true">-->
+
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/imageViewFuel"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:src="@drawable/fuel" />-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textViewFuel"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:layout_marginLeft="5dp"-->
+    <!--                        android:layout_toRightOf="@+id/imageViewFuel"-->
+    <!--                        android:gravity="center"-->
+    <!--                        android:text="@string/fuel"-->
+    <!--                        android:textColor="@color/color_gray_for_text" />-->
+
+    <!--                </RelativeLayout>-->
+    <!--            </RelativeLayout>-->
+
+
+    <!--        </LinearLayout>-->
+    <!--    </HorizontalScrollView>-->
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/rLayoutforSelectExercise"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@+id/horizontalPillerName"-->
+    <!--        android:background="#313133">-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/imageViewDropdownArrowExercise"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_alignParentRight="true"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_marginRight="@dimen/activity_indicator_margin"-->
+    <!--            android:padding="@dimen/activity_indicator_margin"-->
+    <!--            android:src="@drawable/drop_down_for_profile"-->
+    <!--            android:tint="@color/color_for_absent_palyer" />-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_marginLeft="@dimen/activity_indicator_margin"-->
+    <!--            android:layout_toLeftOf="@+id/imageViewDropdownArrowExercise">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/textViewExercise"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:paddingBottom="@dimen/activity_indicator_margin"-->
+    <!--                android:paddingTop="@dimen/activity_indicator_margin"-->
+    <!--                android:text="@string/exercise_selection"-->
+    <!--                android:textColor="@color/color_for_absent_palyer" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/textViewExerciseName"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_toRightOf="@+id/textViewExercise"-->
+    <!--                android:paddingBottom="@dimen/activity_indicator_margin"-->
+    <!--                android:paddingLeft="5dp"-->
+    <!--                android:paddingTop="@dimen/activity_indicator_margin"-->
+    <!--                android:text="CMJ Arm Swing"-->
+    <!--                android:textColor="@color/color_white" />-->
+    <!--        </RelativeLayout>-->
+
+    <!--    </RelativeLayout>-->
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/rLayoutExerciseDivider"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:layout_below="@+id/rLayoutforSelectExercise"-->
+    <!--        android:layout_marginLeft="@dimen/activity_indicator_margin"-->
+    <!--        android:layout_marginRight="@dimen/activity_indicator_margin"-->
+    <!--        android:background="@color/color_for_absent_palyer" />-->
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/rLayoutForRadioOptionMaxPower"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@id/rLayoutExerciseDivider"-->
+    <!--        android:background="#313133">-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:id="@+id/rLayoutForMaxPowerContrls"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginBottom="@dimen/activity_horizontal_margin"-->
+    <!--            android:layout_marginTop="@dimen/activity_horizontal_margin">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/textViewMaxPower"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginLeft="@dimen/activity_indicator_margin"-->
+    <!--                android:paddingBottom="@dimen/activity_indicator_margin"-->
+    <!--                android:paddingTop="@dimen/activity_indicator_margin"-->
+    <!--                android:text="@string/max_power"-->
+    <!--                android:textAllCaps="true"-->
+    <!--                android:textColor="@color/color_for_absent_palyer" />-->
+
+    <!--            <RelativeLayout-->
+    <!--                android:id="@+id/rLayoutForAverageRadioButton"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerVertical="true"-->
+    <!--                android:layout_marginLeft="@dimen/activity_indicator_margin"-->
+    <!--                android:layout_toRightOf="@+id/textViewMaxPower">-->
+
+    <!--                <ImageView-->
+    <!--                    android:id="@+id/imageViewAverageRadio"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_centerVertical="true"-->
+    <!--                    android:layout_marginLeft="@dimen/activity_indicator_margin"-->
+    <!--                    android:src="@drawable/radio_button_selected" />-->
+
+    <!--                <TextView-->
+    <!--                    android:id="@+id/textViewAverage"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_centerVertical="true"-->
+    <!--                    android:layout_marginLeft="@dimen/margin_between_text_and_other_controls"-->
+    <!--                    android:layout_toRightOf="@+id/imageViewAverageRadio"-->
+    <!--                    android:text="@string/average"-->
+    <!--                    android:textAllCaps="true"-->
+    <!--                    android:textColor="@color/textColorYellow" />-->
+
+    <!--            </RelativeLayout>-->
+
+    <!--            <RelativeLayout-->
+    <!--                android:id="@+id/rLayoutForPeakRadioButton"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerVertical="true"-->
+    <!--                android:layout_marginLeft="@dimen/activity_vertical_margin"-->
+    <!--                android:layout_toRightOf="@+id/rLayoutForAverageRadioButton">-->
+
+    <!--                <ImageView-->
+    <!--                    android:id="@+id/imageViewPeakRadio"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_centerVertical="true"-->
+    <!--                    android:layout_marginLeft="@dimen/activity_indicator_margin"-->
+    <!--                    android:src="@drawable/radio_button_unselected" />-->
+
+    <!--                <TextView-->
+    <!--                    android:id="@+id/textViewPeak"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_centerVertical="true"-->
+    <!--                    android:layout_marginLeft="@dimen/margin_between_text_and_other_controls"-->
+    <!--                    android:layout_toRightOf="@+id/imageViewPeakRadio"-->
+    <!--                    android:text="@string/peak"-->
+    <!--                    android:textAllCaps="true"-->
+    <!--                    android:textColor="@color/color_for_absent_palyer" />-->
+
+    <!--            </RelativeLayout>-->
+    <!--        </RelativeLayout>-->
+
+    <!--        <ScrollView-->
+    <!--            android:id="@+id/scrollViewCalendarAndGraphControl"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@+id/rLayoutForMaxPowerContrls">-->
+
+    <!--            <RelativeLayout-->
+    <!--                android:id="@+id/rLayoutForCalender"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content">-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:id="@+id/lLayoutForCalendar"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:orientation="horizontal"-->
+    <!--                    android:weightSum="2">-->
+
+    <!--                    <RelativeLayout-->
+    <!--                        android:id="@+id/rLayoutForFromCalender"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_weight="1">-->
+
+    <!--                        <TextView-->
+    <!--                            android:id="@+id/textViewFrom"-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_marginLeft="@dimen/activity_indicator_margin"-->
+    <!--                            android:text="@string/from"-->
+    <!--                            android:textAllCaps="true"-->
+    <!--                            android:textColor="@color/color_for_absent_palyer" />-->
+
+    <!--                        <RelativeLayout-->
+    <!--                            android:id="@+id/rLayoutForCalenderPicker"-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_below="@id/textViewFrom"-->
+    <!--                            android:layout_marginLeft="@dimen/activity_indicator_margin">-->
+
+    <!--                            <TextView-->
+    <!--                                android:id="@+id/textViewFromDateValue"-->
+    <!--                                android:layout_width="wrap_content"-->
+    <!--                                android:layout_height="wrap_content"-->
+    <!--                                android:layout_centerVertical="true"-->
+    <!--                                android:text="1 may, 2017"-->
+    <!--                                android:textAllCaps="true"-->
+    <!--                                android:textColor="@color/color_white" />-->
+
+    <!--                            <ImageView-->
+    <!--                                android:id="@+id/imageViewDropdownArrowFrom"-->
+    <!--                                android:layout_width="wrap_content"-->
+    <!--                                android:layout_height="wrap_content"-->
+    <!--                                android:layout_alignParentRight="true"-->
+    <!--                                android:layout_centerVertical="true"-->
+    <!--                                android:layout_marginRight="@dimen/activity_indicator_margin"-->
+    <!--                                android:padding="@dimen/activity_indicator_margin"-->
+    <!--                                android:src="@drawable/drop_down_for_profile"-->
+    <!--                                android:tint="@color/color_for_absent_palyer" />-->
+
+    <!--                        </RelativeLayout>-->
+
+    <!--                        <RelativeLayout-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="2dp"-->
+    <!--                            android:layout_below="@+id/rLayoutForCalenderPicker"-->
+    <!--                            android:layout_marginBottom="@dimen/activity_horizontal_margin"-->
+    <!--                            android:layout_marginLeft="@dimen/activity_indicator_margin"-->
+    <!--                            android:layout_marginRight="@dimen/activity_horizontal_margin"-->
+    <!--                            android:background="@color/color_for_absent_palyer" />-->
+    <!--                    </RelativeLayout>-->
+
+    <!--                    <RelativeLayout-->
+    <!--                        android:id="@+id/rLayoutForToCalender"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_weight="1">-->
+
+    <!--                        <TextView-->
+    <!--                            android:id="@+id/textViewTo"-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_marginLeft="@dimen/activity_indicator_margin"-->
+    <!--                            android:text="@string/to"-->
+    <!--                            android:textAllCaps="true"-->
+    <!--                            android:textColor="@color/color_for_absent_palyer" />-->
+
+    <!--                        <RelativeLayout-->
+    <!--                            android:id="@+id/rLayoutForCalenderPickerTo"-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_below="@id/textViewTo"-->
+    <!--                            android:layout_marginLeft="@dimen/activity_indicator_margin">-->
+
+    <!--                            <TextView-->
+    <!--                                android:id="@+id/textViewToDateValue"-->
+    <!--                                android:layout_width="wrap_content"-->
+    <!--                                android:layout_height="wrap_content"-->
+    <!--                                android:layout_centerVertical="true"-->
+    <!--                                android:text="1 may, 2017"-->
+    <!--                                android:textAllCaps="true"-->
+    <!--                                android:textColor="@color/color_white" />-->
+
+    <!--                            <ImageView-->
+    <!--                                android:id="@+id/imageViewDropdownArrowTo"-->
+    <!--                                android:layout_width="wrap_content"-->
+    <!--                                android:layout_height="wrap_content"-->
+    <!--                                android:layout_alignParentRight="true"-->
+    <!--                                android:layout_centerVertical="true"-->
+    <!--                                android:layout_marginRight="@dimen/activity_indicator_margin"-->
+    <!--                                android:padding="@dimen/activity_indicator_margin"-->
+    <!--                                android:src="@drawable/drop_down_for_profile"-->
+    <!--                                android:tint="@color/color_for_absent_palyer" />-->
+    <!--                        </RelativeLayout>-->
+
+    <!--                        <RelativeLayout-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="2dp"-->
+    <!--                            android:layout_below="@+id/rLayoutForCalenderPickerTo"-->
+    <!--                            android:layout_marginBottom="@dimen/activity_horizontal_margin"-->
+    <!--                            android:layout_marginLeft="@dimen/activity_indicator_margin"-->
+    <!--                            android:layout_marginRight="@dimen/activity_indicator_margin"-->
+    <!--                            android:background="@color/color_for_absent_palyer" />-->
+
+
+    <!--                    </RelativeLayout>-->
+    <!--                </LinearLayout>-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:id="@+id/rLayoutGraphView"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="250dp"-->
+    <!--                    android:visibility="gone"-->
+    <!--                    android:layout_below="@id/lLayoutForCalendar"-->
+    <!--                    android:background="#ff0000">-->
+
+    <!--                </RelativeLayout>-->
+    <!--            </RelativeLayout>-->
+    <!--        </ScrollView>-->
+    <!--    </RelativeLayout>-->

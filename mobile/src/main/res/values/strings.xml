@@ -1,0 +1,610 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="PrivateResource">Godspeed\u00AE</string>
+    <string name="app_name_for_directory">GodSpeed</string>
+    <string name="facebook_app_id">216577716131501</string>
+    <string name="btn_add_contact"><u>Logout</u></string>
+    <string name="sharing_text">Your sharing text goes here…</string>
+    <string name="share_title">Share Screenshot</string>
+    <string name="screenshot_take_failed">Failed to take screenshot!!</string>
+    <string name="wait">Please wait…</string>
+    <string name="full_page_screenshot">Full Page Screenshot</string>
+    <string name="hidden_text">Hidden Text</string>
+    <string name="custom_page_screenshot">Custom Page Screenshot</string>
+
+    <string name="continues">Continue</string>
+    <string name="begin">Begin</string>
+    <string name="ChangePassWord">Change Password</string>
+    <string name="Matric">Matric</string>
+    <string name="Imperial">Imperial</string>
+    <string name="KG">KG</string>
+    <string name="CM">CM</string>
+    <string name="LB">LB</string>
+    <string name="IN">IN</string>
+
+    <string name="previous">Go to previous</string>
+    <string name="next">Go to next</string>
+    <string name="calendar">Calendar</string>
+
+    <string name="double_dots" translatable="false">:</string>
+
+    <string name="close">Close</string>
+    <string name="ok">OK</string>
+    <string name="please_wait">Please wait</string>
+    <string name="internet_error">Check your internet connetion and try again.</string>
+    <string name="login">Login</string>
+    <string name="submit">Submit</string>
+    <string name="signup">Sign up</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="signup_coach">Sign Up As Coach</string>
+    <string name="signup_athlete">Sign Up As Athlete</string>
+    <string name="build_better">Build Better</string>
+    <string name="athletes">Athletes</string>
+    <string name="Weight1">Weight</string>
+    <string name="coachboard">Coachboard</string>
+    <string name="future">Futures</string>
+    <string name="champions">Champions</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="remember_password">Remember password</string>
+    <string name="forgot_password_for_heading">Forgot Password</string>
+    <string name="train_my">Train My</string>
+    <string name="train">Train</string>
+    <string name="absent">Absent</string>
+    <string name="present">Present</string>
+    <string name="weight1_tag">weight</string>
+    <string name="bodyfat1_tag">body_fat</string>
+    <string name="smm1_tag">smm</string>
+    <string name="height1_tag">height</string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">Close drawer</string>
+
+    <string name="logout">Logout</string>
+    <string name="logout_">LOGOUT</string>
+    <string name="help">Help</string>
+    <string name="home">A T H L E T E    P R O F I L E</string>
+    <string name="training">Training</string>
+    <string name="exercise_type">Exercise Type</string>
+    <string name="analytics">Analytics</string>
+    <string name="my_profile">My Profile</string>
+    <string name="profile">Profile</string>
+    <string name="programs">Programs</string>
+    <string name="account">Account</string>
+    <string name="comparative_analytics">Comparative Analytics</string>
+
+    <string name="activation">Activation</string>
+    <string name="build">Build</string>
+    <string name="energy">Energy</string>
+    <string name="regen">Re-gen</string>
+    <string name="fuel">Fuel</string>
+    <string name="add_fuel">Add Fuel</string>
+    <string name="skills">Skills</string>
+    <string name="plan_program">Plan Program</string>
+    <string name="select_dosage">SELECT DOSAGE</string>
+    <string name="select_team_for_assign_work">Select Team</string>
+    <string name="select_parameter">Select Parameter</string>
+    <string name="ground_mobility">Ground Mobility</string>
+    <string name="add_remove_excercise">Add/Remove Exercise</string>
+    <string name="add_excercise">Add Exercise</string>
+    <string name="complex">Complex</string>
+    <string name="delete">Delete</string>
+    <string name="add_set">Add Set</string>
+    <string name="add_athlete">Add Athlete</string>
+    <string name="add_another_coach">Add Another Coach</string>
+    <string name="add_coach">Add Coach</string>
+    <string name="add_team">Add Team</string>
+    <string name="watch_video">Watch Video</string>
+    <string name="exercise">Exercise</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="agree">Agree</string>
+    <string name="question_one">How many hours did you sleep last night?</string>
+    <string name="question_two">How was the quality of your sleep?</string>
+    <string name="question_three">Are you tired?</string>
+    <string name="question_four">Are you sore?</string>
+    <string name="question_five">Are you stressed?</string>
+    <string name="question_six">If so, why are you stressed?</string>
+    <string name="question_seven">How may glass of water you drink yesterday?</string>
+    <string name="question_eight">How many meals did you eat?</string>
+    <string name="great">Great</string>
+    <string name="good">Good</string>
+    <string name="moderate">moderate</string>
+    <string name="bad">Bad</string>
+    <string name="horrible">Horrible</string>
+    <string name="questionaries">Questionnaire</string>
+
+    <string name="yes">Yes</string>
+    <string name="a_little">A Little</string>
+    <string name="no">No</string>
+
+    <string name="chest">Chest</string>
+    <string name="back">Back</string>
+    <string name="shoulders">Shoulders</string>
+    <string name="Glutes">Glutes</string>
+    <string name="harmstring">Hamstrings, Quads, Calves, Neck</string>
+
+    <string name="relationship">Relationship</string>
+    <string name="work">Work</string>
+    <string name="injury">Injury</string>
+
+    <string name="set">Set</string>
+    <string name="reps">Reps</string>
+    <string name="wt">Wt</string>
+    <string name="per">Per</string>
+    <string name="lb">lb</string>
+    <string name="lbs">lbs</string>
+    <string name="in">in</string>
+    <string name="kg">kg</string>
+
+    <string name="regular">Regular</string>
+    <string name="change_exercise">Change Exercise</string>
+    <string name="movement_prep">Movement Prep</string>
+    <string name="movement_skill">Movement Skill</string>
+
+    <string name="cancel" tools:ignore="PrivateResource">Cancel</string>
+    <string name="done">Done</string>
+    <string name="Submit">Submit</string>
+    <string name="skip">Skip</string>
+
+    <string name="weight">Weight</string>
+    <string name="tempo">Tempo</string>
+
+
+    <string name="athleteName">Athlete Name</string>
+    <string name="overAll">Overall\nAverages</string>
+    <string name="average">Average</string>
+    <string name="velocity">Velocity</string>
+    <string name="power">Power</string>
+    <string name="heart_rate">Heart Rate</string>
+
+
+    <string name="max_power">Max Power</string>
+    <string name="max_hr">Max HR</string>
+    <string name="max_lift">Max Lift %</string>
+    <string name="watts">Watts</string>
+    <string name="beats_per_min">beats/min</string>
+
+    <string name="sleep">Sleep</string>
+    <string name="ms">m/s</string>
+
+    <string name="avg">Avg</string>
+    <string name="avg_hr">Avg HR</string>
+    <string name="max">Max</string>
+
+    <string name="athletes_profile">Athlete Profile</string>
+    <string name="athletes_filecase">Athlete Filecase</string>
+    <string name="filecase">Filecase</string>
+    <string name="update_info">Update Info</string>
+    <string name="session_review">Session Review</string>
+    <string name="download_history">Download History</string>
+    <string name="download_filecase">Download Filecase</string>
+    <string name="monthly">Monthly</string>
+    <string name="weekly">Weekly</string>
+    <string name="week">Week</string>
+    <string name="set_reps_rates">Set reps weight</string>
+    <string name="height">Height</string>
+    <string name="body_fat">Body Fat</string>
+    <string name="smm">SMM</string>
+    <string name="individuals">Individuals</string>
+    <string name="teams">Teams</string>
+    <string name="Bodyfat">Body Fat</string>
+    <string name="SMM">SMM</string>
+    <string name="Team2">Team 2</string>
+
+
+    <string name="WeightLB">Weight</string>
+    <string name="Height">Height</string>
+    <string name="HeightIN">Height in IN</string>
+    <string name="HeightinIN">Height (IN)</string>
+
+
+    <string name="team">Team</string>
+    <string name="background_theme">Background Theme</string>
+    <string name="tap_background_theme">Tap Here To Select Background Theme</string>
+    <string name="select_team">Select Teams To Compare</string>
+    <string name="exercise_selection">Exercise - </string>
+    <string name="peak">Peak</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+
+    <string name="health_profile">Health Profile</string>
+    <string name="body_composition_history">Body Composition History</string>
+    <string name="pbf">PBF</string>
+    <string name="ecw_tbw">ECW/TBW</string>
+    <string name="view">View</string>
+    <string name="edit">Edit</string>
+    <string name="print">Print</string>
+    <string name="print_filecase">Print Filecase</string>
+    <string name="injuris">Injuries</string>
+    <string name="add_injuris">Add New Injury</string>
+    <string name="muscular">Muscular</string>
+    <string name="bone">Bone</string>
+    <string name="add_note">Add Note</string>
+    <string name="edit_note">Edit Note</string>
+    <string name="view_note">View Note</string>
+    <string name="injury_part">Injury Part</string>
+    <string name="reported_on">Reported On</string>
+    <string name="recovered">Recovered</string>
+    <string name="not_recovered">Not Recovered</string>
+
+
+    <string name="activation_duration">Activation Duration</string>
+
+    <string name="build_duration">Build Duration</string>
+    <string name="energy_duration">Energy Duration</string>
+    <string name="regen_duration">Re-Gen Duration</string>
+    <string name="duration_athlete">Duration puts by Athlete</string>
+
+    <string name="metrics">Metrices</string>
+    <string name="workout">Workout</string>
+    <string name="day">Day</string>
+
+    <string name="jump_height">Jump Height</string>
+    <string name="raw_hr">RAW HR</string>
+    <string name="rsi">RSI</string>
+    <string name="agility_time">Agility Time</string>
+    <string name="time">Time</string>
+    <string name="vertical_jump">Vertical Jump</string>
+    <string name="sprint_time">Sprint Time</string>
+    <string name="prep">Prep</string>
+    <string name="movement">Movement</string>
+    <string name="elasticity">Elasticity</string>
+    <string name="activation_workout">Activation Workout</string>
+
+    <string name="recommanded_time">Recommended Time</string>
+    <string name="running_time">Running Time</string>
+    <string name="total_carbo">Total Carbohydrates(g)</string>
+    <string name="total_fat">Total Fat(g)</string>
+    <string name="total_protein">Total Protein(g)</string>
+    <string name="calori_hint">Enter calorie amount</string>
+    <string name="total_Carbo_hint">Enter carbohydrates amount</string>
+    <string name="total_fat_hint">Enter fat amount</string>
+    <string name="total_protein_hint">Enter protein amount</string>
+    <string name="time_hint">Enter time</string>
+
+
+    <string name="round">Round</string>
+    <string name="distance">Distance</string>
+
+    <string name="perform_analytic">Perform Analytics</string>
+    <string name="workouts">Workouts</string>
+    <string name="begin_workout">Begin Workout</string>
+    <string name="begin_training">Begin Training</string>
+    <string name="start">Start</string>
+    <string name="reset">Reset</string>
+    <string name="tap_start">Tap here to Start</string>
+    <string name="tap_pause">Tap here to Pause</string>
+    <string name="training_program_name">Training Program Name </string>
+    <string name="training_program_name_hint_text">Enter Program Name Here...</string>
+    <string name="assign_task_message">Do you want to assign this program to team?</string>
+    <string name="training_message">Do you want to Training</string>
+    <string name="messages">MESSAGES</string>
+    <string name="history">PURCHASE HISTORY</string>
+    <string name="yes_please">Yes, Please</string>
+    <string name="no_thanks">No, Thanks</string>
+    <string name="stop">Stop</string>
+    <string name="resume">Resume</string>
+    <string name="pause">Pause</string>
+
+    <string name="single">Single</string>
+    <string name="superset">Superset</string>
+    <string name="amrap">AMRAP</string>
+    <string name="tabata">TABATA</string>
+    <string name="cft">CFT</string>
+    <string name="emotm">EMOTM</string>
+    <string name="eomotom">EMOTOM</string>
+    <string name="cluster">CLUSTER</string>
+    <string name="hybrid">HYBRID</string>
+    <string name="circuit">CIRCUIT</string>
+
+    <string name="phase">Phase</string>
+
+    <string name="enter">Enter</string>
+    <string name="select">Select</string>
+    <string name="school_type">(Middle/Intermediatte,High School)</string>
+    <string name="sport_type"> - (Pick one or more)</string>
+    <string name="name">Name</string>
+    <string name="first_name">First Name</string>
+    <string name="address">Address</string>
+    <string name="last_name">Last Name</string>
+    <string name="birthday">Birthday</string>
+    <string name="school">School</string>
+    <string name="sport">Sports</string>
+    <string name="select_sport">Select Sports</string>
+    <string name="social_media">Social Media(s)</string>
+    <string name="select_position">Select Position</string>
+    <string name="language">Language</string>
+    <string name="gender">Gender</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="select_language">Select Language</string>
+    <string name="music">Music</string>
+    <string name="suite">Suite</string>
+    <string name="street_no">Street Number</string>
+    <string name="country">Country</string>
+    <string name="zip">Zip</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="position">Position/Title</string>
+    <string name="school_address">School Address</string>
+    <string name="skeletal_muscle_mass">Skeletal Muscle Mass</string>
+    <string name="body_fat_percent">Body Fat %</string>
+    <string name="athlete_managment">Athlete Management</string>
+    <string name="athlete_analytic">Athlete Analytics</string>
+    <string name="athlete_filecase">Athlete File Case</string>
+    <string name="pillars">Pillars</string>
+
+    <string name="coach_name">Coach Name</string>
+    <string name="email">Email</string>
+    <string name="enter_email">Enter Email Address</string>
+    <string name="age">Age</string>
+    <string name="class_grade">Class/Grade</string>
+
+    <string name="school_grade">School Grade</string>
+    <string name="select_school_grade">Enter School Grade</string>
+
+    <string name="schoo_name">Select Team</string>
+    <string name="select_schoo_name">Select Team Name</string>
+
+    <string name="reffered_coach_name">Referred Coach Name</string>
+    <string name="buy">Buy</string>
+    <string name="recent">Recent</string>
+    <string name="frequent">Frequent</string>
+    <string name="my_foods">My Foods</string>
+    <string name="meal">Meals</string>
+
+    <!-- Error message string -->
+    <string name="email_password_blank">Email and Password can not be blank...</string>
+    <string name="forgot_email_blank">Email address can not be blank...</string>
+    <string name="password_confirm_password_invalid">Password and Confirm Password is not same.</string>
+    <string name="password_confirm_password">Password does not match</string>
+
+    <string name="team_blank">Team can not be blank...</string>
+    <string name="invalid_email_address">Email address is not valid. Please enter valid email address and try again...</string>
+    <string name="missing_fields_coach">"Email Id", "Password", "School" and "Position/Title" are mandatory fields.</string>
+    <string name="missing_fields_athlete">"Email Id", "Password", "School" are mandatory fields.</string>
+    <string name="mandatory_all_fileds">All fields are mandatory.</string>
+    <string name="unalbe_load_data">Unable to get data from server. Please check your internet connection and try again...</string>
+    <string name="policy_text_missing">Policy text is missing. Please check your internet connection and try again...</string>
+    <string name="all_question_attement_error">Please attempt all question before submit.</string>
+    <string name="team_name_missing">Team name can not be blank.</string>
+    <string name="brand_name">Brand Name</string>
+    <string name="RESET_PASSWORD">RESET PASSWORD</string>
+    <string name="user_id">user_id</string>
+    <string name="NEWPASSWORD">Enter new password</string>
+    <string name="OldPASSWORD">Enter old password</string>
+    <string name="CondirmPassword">Enter confirm password</string>
+    <string name="optional">Optional</string>
+    <string name="required">Required</string>
+    <string name="random_password">random_password</string>
+    <string name="new_password">new_password</string>
+    <string name="description">Description</string>
+    <string name="serving_size">Serving Size</string>
+    <string name="serving_per_container">Servings Per Container</string>
+    <string name="brand_name_hint">ex. Campbell\'s</string>
+    <string name="description_hint">ex. Chiken Soup</string>
+    <string name="serving_size_hint">ex. 1 Cup</string>
+    <string name="serving_per_container_hint">ex. 1</string>
+    <string name="create_food">Create Food</string>
+    <string name="quick_add">Quick Add</string>
+    <string name="calories">Calories</string>
+
+
+    <!-- Json Tags parameters  login screen-->
+
+    <string name="user_id_tag">user_id</string>
+    <string name="user_image_tag">user_image</string>
+    <string name="emailId_tag">emailId</string>
+    <string name="password_tag">password</string>
+    <string name="school_tag">school</string>
+    <string name="position_title_tag">position_title</string>
+    <string name="user_type_tag">user_type</string>
+    <string name="background_image_tag">background_image</string>
+    <string name="first_name_tag">first_name</string>
+    <string name="last_name_tag">last_name</string>
+    <string name="dob_tag">dob</string>
+    <string name="gender_tag">gender</string>
+    <string name="Contact_us">Contact_us</string>
+    <string name="FAQ">FAQ</string>
+    <string name="Rate_us">Rate_us</string>
+    <string name="Settings">Settings</string>
+
+    <string name="language_tag">language</string>
+    <string name="suit_tag">suit</string>
+    <string name="street_tag">street</string>
+    <string name="zip_tag">zip</string>
+    <string name="country_tag">country</string>
+    <string name="state_tag">state</string>
+    <string name="city_tag">city</string>
+    <string name="school_address_tag">school_address</string>
+    <string name="sport_tag">sport</string>
+    <string name="social_head_tag">social_head</string>
+
+    <string name="team_id_tag">team_id</string>
+    <string name="athlete_photo_tag">athlete_photo</string>
+    <string name="coach_referby_tag">coach_referby</string>
+    <string name="coach_name_tag">coach_name</string>
+    <string name="team_name_tag">team_name</string>
+    <string name="coach_id_tag">coach_id</string>
+    <string name="athelte_id_tag">athelte_id</string>
+    <string name="athlete_attendance_tag">athlete_attendance</string>
+    <string name="sports_id_tag">sports_id</string>
+    <string name="athlete_name_tag">athlete_name</string>
+    <string name="age_tag">age</string>
+    <string name="classgrade_tag">classgrade</string>
+    <string name="latestUpdate_tag">latestUpdate</string>
+    <string name="policyText_tag">policyText</string>
+    <string name="latestVersion_tag">latestVersion</string>
+    <string name="id_tag">id</string>
+    <string name="position_title_id_tag">position_title_id</string>
+
+    <string name="position_title_name_tag">position_title_name</string>
+    <string name="questions_tag">questions</string>
+    <string name="category_tag">category_name</string>
+    <string name="options_tag">options</string>
+    <string name="options_id_tag">op_id</string>
+    <string name="options_names_tag">options_names</string>
+    <string name="school_id_tag">school_id</string>
+    <string name="school_name_tag">school_name</string>
+    <string name="address_tag">address</string>
+    <string name="language_id_tag">language_id</string>
+    <string name="language_name_tag">language_name</string>
+    <string name="sport_id_tag">sport_id</string>
+    <string name="sport_name_tag">sport_name</string>
+    <string name="user_name_tag">user_name</string>
+    <string name="status_tag">status</string>
+    <string name="height_tag">height</string>
+    <string name="weight_tag">weight</string>
+    <string name="smm_tag">smm</string>
+    <string name="body_fat_tag">body_fat</string>
+    <string name="program_id">program_id</string>
+    <string name="program_userid">program_userid</string>
+    <string name="program_name_tag">program_name</string>
+    <string name="description_tag">description</string>
+    <string name="price_tag">price</string>
+    <string name="video_tag">video</string>
+    <string name="selected_athlete_level">selected_athlete_level</string>
+    <string name="athlete_level">athlete_level</string>
+
+    <string name="training_schedule">SCHEDULE</string>
+
+    <!-- id -->
+    <string name="id_changePassword"></string>
+    <string name="id_coachboard">id_coachboard</string>
+    <string name="id_social_media">id_social_media</string>
+    <string name="id_training">id_training</string>
+    <string name="id_analytics">id_analytics</string>
+    <string name="id_competition_board">id_competition_board</string>
+    <string name="id_profile">id_profile</string>
+    <string name="id_help">id_help</string>
+    <string name="id_programs">id_programs</string>
+    <string name="id_account">id_account</string>
+    <string name="id_logout">id_logout</string>
+
+    <string-array name="gender_option">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="language_option">
+        <item>English</item>
+        <item>French</item>
+        <item>Italian</item>
+    </string-array>
+
+    <string-array name="sports_option">
+        <item>Cricket</item>
+        <item>Football</item>
+        <item>Vollyball</item>
+        <item>Softball</item>
+        <item>Wrestlling</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="password_type">password_type</string>
+    <string name="train_this_team">Train This Team</string>
+    <string name="_69_nm_s">69 m/s</string>
+    <string name="social_media_tag">social_media</string>
+    <string name="male">male</string>
+    <string name="id_white_board">WHITE BOARD</string>
+
+
+    <!--S Health-->
+    <string name="desc">Step Count</string>
+    <string name="title1">Today</string>
+    <string name="unit1">Steps</string>
+
+
+    <string name="connect_to_shealth">Connect to Samsung Health</string>
+
+    <string name="notice">Notice</string>
+    <string name="msg_perm_acquired">All permissions should be acquired</string>
+    <string name="msg_conn_not_available">Connection with Samsung Health is not available</string>
+    <string name="msg_req_install">Please install Samsung Health</string>
+    <string name="msg_req_upgrade">Please upgrade Samsung Health</string>
+    <string name="msg_req_enable">Please enable Samsung Health</string>
+    <string name="msg_req_agree">Please agree with Samsung Health policy</string>
+    <string name="msg_req_available">Please make Samsung Health available</string>
+    <string name="title_activity_graph">GraphActivity</string>
+
+
+    <string name="today">Today</string>
+    <!--    <string name="cancel">Cancel</string>-->
+    <!--    <string name="ok">ok</string>-->
+    <string name="new_event">New Event</string>
+    <string name="save">save</string>
+    <string name="title">title</string>
+    <string name="completed">Complete</string>
+    <!--    <string name="set">set</string>-->
+    <string name="select_color_instruction">select_color_instruction</string>
+    <string name="event_default_title">event_default_title</string>
+    <string name="no_events">no_events</string>
+    <string name="title_activity_calendar_view_with_notes_sdk21">
+        CalendarViewWithNotesActivitySDK21
+    </string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="fcm_token">AIzaSyBHXg-v7IzaKaEyc-peipu5MFTQWx-nK-Y</string>
+    <string name="shop">webview_shop</string>
+    <string name="title_activity_maps">Map</string>
+    <!--    <string name="delete"> delete</string>-->
+
+
+    <string name="title_activity_photo_editor">PhotoEditorActivity</string>
+
+
+    <string name="clear_all">Clear All</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="upload_dialog_title">Upload Image</string>
+    <string name="upload_picker_title">Select Picture</string>
+    <string name="directory_create_fail">Failed to create directory</string>
+    <string name="access_media_permissions_msg">To attach photos, we need to access media on your device</string>
+    <string name="continue_txt">Continue</string>
+    <string name="not_now">NOT NOW</string>
+    <string name="media_access_denied_msg">You denied storage access, no photos will be added.</string>
+
+    <string name="ic_close">"\ue918"</string>
+    <string name="ic_text">"\ue945"</string>
+    <string name="ic_draw">""\ue944</string>
+    <string name="ic_images">"\ue949"</string>
+    <string name="ic_save">"\ue946"</string>
+    <string name="ic_clear_all">"\ue947"</string>
+    <string name="ic_continue">"\ue948"</string>
+    <string name="ic_delete">"\ue92c"</string>
+    <string name="choose_from_gallery">Choose From Gallery</string>
+    <string name="choose_from_camera">Choose From Camera</string>
+    <string name="undo">Undo</string>
+    <string name="erase">Erase</string>
+    <string name="classes">CLASSES</string>
+    <string name="video_classes">VIDEO CLASSES</string>
+    <!--    <string name="done">Done</string>-->
+    <!--    <string name="save">Save</string>-->
+
+
+    <string name="invite_acitivity_name">Meeting Invite Example</string>
+
+    <string name="zm_rc_using_fingers_for_remote_control">Remotely control a desktop using gestures</string>
+    <string name="zm_rc_one_finger_tap">Tap with one finger</string>
+    <string name="zm_rc_one_finger_tap_description">Tap the screen with one finger to click the mouse</string>
+    <string name="zm_rc_one_finger_double_taps">Double tap with one finger</string>
+    <string name="zm_rc_one_finger_double_taps_description">Double tap with one finger to double click the mouse</string>
+    <string name="zm_rc_one_long_tap">Long press with one finger</string>
+    <string name="zm_rc_one_long_tap_description">Press the screen with one finger to right-click the mouse</string>
+    <string name="zm_rc_two_fingers_scroll">Swipe with two fingers</string>
+    <string name="zm_rc_two_fingers_scroll_description">Swipe with two fingers to scroll up and down</string>
+    <string name="zm_rc_two_fingers_pinch">Pinch with two fingers</string>
+    <string name="zm_rc_two_fingers_pinch_description">Pinch in and out with two fingers to zoom in and out</string>
+    <string name="zm_rc_mouse_icon">Mouse icon</string>
+    <string name="zm_rc_mouse_icon_description">Drag the mouse icon to move the remote mouse pointer</string>
+    <string name="zm_rc_tap_notice">Tap here to control %s\'s screen remotely</string>
+
+    <string name="alert_other_is_sharing">You cannot start screen share while the other participant is sharing.</string>
+
+    <string name="settings_custom_ui">Customized UI</string>
+    <string name="settings_switch_domain">Switch domain</string>
+    <string name="settings_hide_screen_share_toolbar_annotation">Hide annotation button in screen share</string>
+    <string name="settings_hide_screen_share_toolbar_stopshare">Hide stopshare button in screen share</string>
+
+
+</resources>

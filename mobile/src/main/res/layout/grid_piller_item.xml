@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2dp"
+        android:layout_weight="1"
+        android:background="#343436">
+
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForHoloCirculer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_indicator_margin"
+            android:layout_marginTop="@dimen/activity_indicator_margin"
+            android:layout_marginBottom="@dimen/activity_indicator_margin">
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForHoloCircleContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.org.godspeed.utility.HoloCircularProgressBar
+                    android:id="@+id/holoCirculActivation"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:marker_progress="0"
+                    app:progress="0.5"
+                    app:progress_background_color="#4e4e50"
+                    app:progress_color="#edbb57"
+                    app:stroke_width="3dp"
+                    app:thumb_visible="false"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/textViewActivationCirculValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="69\nm/s"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForActivationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/rLayoutForHoloCircleContainer">
+
+                <ImageView
+                    android:id="@+id/imageViewActivationIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/activity_indicator_margin"
+                    android:src="@drawable/activation_icon_gray" />
+
+                <TextView
+                    android:id="@+id/textViewActivationText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageViewActivationIcon"
+                    android:layout_alignLeft="@id/imageViewActivationIcon"
+                    android:hint="@string/activation"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_grid_palyer_name" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLayoutforActivationVolecity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rLayoutForHoloCirculer"
+            android:layout_alignLeft="@+id/rLayoutForHoloCirculer"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_indicator_margin">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/round_shap_both_side"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/textViewVelocity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/activity_indicator_margin"
+                    android:text="@string/velocity"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+
+                <ImageView
+                    android:id="@+id/imageViewVelocityDownArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/activity_indicator_margin"
+                    android:src="@drawable/drop_down_for_profile" />
+
+                <ImageView
+                    android:id="@+id/imageViewVelocityDash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/activity_indicator_margin"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/imageViewVelocityDownArrow"
+                    android:src="@drawable/dash_for_profile" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

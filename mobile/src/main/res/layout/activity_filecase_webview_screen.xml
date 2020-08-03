@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#313133">
+
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#313133">
+
+
+        <RelativeLayout
+            android:id="@+id/rLayoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewBackArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/normal_margin_set"
+                android:src="@drawable/back_arrow"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textViewScreenName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/filecase"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/choose_screen_text_size" />
+
+            <ImageView
+                android:id="@+id/imageViewSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/normal_margin_set"
+                android:src="@drawable/save_training"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForCalender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rLayoutHeader"
+            android:background="#000000">
+
+            <RelativeLayout
+                android:id="@+id/rLayoutFromDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_indicator_margin">
+
+                <TextView
+                    android:id="@+id/textViewFromDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/from"
+                    android:textColor="@color/color_gray_for_text"
+                    android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                <TextView
+                    android:id="@+id/textViewFromDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewFromDateText"
+                    android:layout_marginTop="@dimen/normal_margin_set"
+                    android:text="1 may, 2017"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                <ImageView
+                    android:id="@+id/imageViewFromDateDownArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textViewFromDate"
+                    android:layout_alignRight="@+id/rLayoutDividerFromDate"
+                    android:paddingTop="5dp"
+                    android:src="@drawable/drop_down_for_profile"
+                    android:tint="@color/color_white" />
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutDividerFromDate"
+                    android:layout_width="@dimen/column_width"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/textViewFromDate"
+                    android:layout_marginTop="@dimen/normal_margin_set"
+                    android:background="@color/color_gray_for_text" />
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutForPrint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rLayoutDividerFromDate"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/normal_margin_set">
+
+                    <ImageView
+                        android:id="@+id/imageViewPrintIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/print_icon" />
+
+                    <TextView
+                        android:id="@+id/textViewPrintFilecase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/text_box_margin"
+                        android:layout_toRightOf="@+id/imageViewPrintIcon"
+                        android:text="@string/print_filecase"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="@dimen/text_size_setting_items" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutToDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_indicator_margin"
+                android:layout_toRightOf="@+id/rLayoutFromDate">
+
+                <TextView
+                    android:id="@+id/textViewToDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/to"
+                    android:textColor="@color/color_gray_for_text"
+                    android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                <TextView
+                    android:id="@+id/textViewToDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewToDateText"
+                    android:layout_marginTop="@dimen/normal_margin_set"
+                    android:text="12 may, 2017"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                <ImageView
+                    android:id="@+id/imageViewToDateDownArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textViewToDate"
+                    android:layout_alignRight="@+id/rLayoutDividerToDate"
+                    android:paddingTop="5dp"
+                    android:src="@drawable/drop_down_for_profile"
+                    android:tint="@color/color_white" />
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutDividerToDate"
+                    android:layout_width="@dimen/column_width"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/textViewToDate"
+                    android:layout_marginTop="@dimen/normal_margin_set"
+                    android:background="@color/color_gray_for_text" />
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutForDownload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rLayoutDividerToDate"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/normal_margin_set">
+
+                    <ImageView
+                        android:id="@+id/imageViewDownloadIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/download" />
+
+                    <TextView
+                        android:id="@+id/textViewDownloadFilecase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/text_box_margin"
+                        android:layout_toRightOf="@+id/imageViewDownloadIcon"
+                        android:text="@string/download_filecase"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="@dimen/text_size_setting_items" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webViewFileCase"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@+id/rLayoutForHeader" />
+</RelativeLayout>

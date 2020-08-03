@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#00FFFFFF">
+
+
+    <LinearLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_dark_"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/closeFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="start">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/agencyr"
+                    android:padding="5dp"
+                    android:src="@drawable/cross"
+                    android:text="Close"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="20sp"
+                    android:tint="@color/textColorYellow" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:fontFamily="@font/agencyr"
+                android:text="Filter"
+                android:textAlignment="center"
+                android:textColor="@color/textColorYellow"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/applyFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:fontFamily="@font/agencyr"
+                android:text="Apply"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/textColorYellow"
+                android:textSize="20sp"
+                tools:ignore="RtlCompat" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_gray_for_health_profile_button_unselected"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="By Order"
+            android:textColor="@color/textColorYellow"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/filterby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/Ascending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:buttonTint="@color/textColorYellow"
+                android:checked="true"
+                android:text="Ascending "
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/Deascending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:buttonTint="@color/textColorYellow"
+                android:text="Deascending "
+
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_gray_for_health_profile_button_unselected"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="By Value"
+            android:textColor="@color/textColorYellow"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/filterbyValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RadioButton
+                android:id="@+id/ByName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:buttonTint="@color/textColorYellow"
+                android:text="By First Name"
+
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/ByLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+
+                android:buttonTint="@color/textColorYellow"
+                android:text="By Last Name"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/ByWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/textColorYellow"
+                android:text="By Weight"
+                android:textColor="@color/color_white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/ByAthleteLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/textColorYellow"
+                android:text="By Athlete Level"
+                android:textColor="@color/color_white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_gray_for_health_profile_button_unselected"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="By Measurement"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RadioGroup
+                android:id="@+id/filterbyAthleteData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/schoolFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_gray_for_health_profile_button_unselected"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/color_gray_for_health_profile_button_unselected"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="By School"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/resetSchool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:padding="5dp"
+                    android:src="@drawable/filter_icon"
+                    android:text="Reset"
+                    android:textAlignment="viewEnd"
+                    android:textSize="20sp"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/schoolFilterList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

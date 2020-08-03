@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageViewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/login_transparant_layer" />
+
+    <RelativeLayout
+        android:id="@+id/rLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/normal_margin_set"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:id="@+id/textViewScreenName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/create_food"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/choose_screen_text_size" />
+
+        <ImageView
+            android:id="@+id/imageViewSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/normal_margin_set"
+            android:src="@drawable/save_training" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rLayoutHeader"
+        android:background="#A3000000">
+
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForCreateFood"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForBrandName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewBrandName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/brand_name"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                <TextView
+                    android:id="@+id/textViewBrandNameOptional"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewBrandName"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="@dimen/text_box_margin"
+                    android:text="@string/optional"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+
+
+                <EditText
+                    android:id="@+id/editTextBrandName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:hint="@string/brand_name_hint"
+                    android:textAlignment="textEnd"
+                    android:textColor="#ffffff"
+                    android:textColorHint="@color/color_gray_for_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutDivider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rLayoutForBrandName"
+                android:background="#BFB0A6" />
+
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForDescriptionFood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rLayoutDivider1">
+
+                <TextView
+                    android:id="@+id/textViewDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/description"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                <TextView
+                    android:id="@+id/textViewDescriptionRequired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewDescription"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="@dimen/text_box_margin"
+                    android:text="@string/required"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+
+
+                <EditText
+                    android:id="@+id/editTextDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:hint="@string/description_hint"
+                    android:textAlignment="textEnd"
+                    android:textColor="#ffffff"
+                    android:textColorHint="@color/color_gray_for_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutDivider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rLayoutForDescriptionFood"
+                android:background="#BFB0A6" />
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForServingSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rLayoutDivider2">
+
+                <TextView
+                    android:id="@+id/textViewServingSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/serving_size"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                <TextView
+                    android:id="@+id/textViewServingSizeRequired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewServingSize"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="@dimen/text_box_margin"
+                    android:text="@string/required"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+
+
+                <EditText
+                    android:id="@+id/editTextServingSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:hint="@string/serving_size_hint"
+                    android:textAlignment="textEnd"
+                    android:textColor="#ffffff"
+                    android:textColorHint="@color/color_gray_for_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutDivider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rLayoutForServingSize"
+                android:background="#BFB0A6" />
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForServingContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rLayoutDivider3">
+
+                <TextView
+                    android:id="@+id/textViewServingContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/serving_per_container"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                <TextView
+                    android:id="@+id/textViewServingContainerRequired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewServingContainer"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="@dimen/text_box_margin"
+                    android:text="@string/required"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+
+
+                <EditText
+                    android:id="@+id/editTextServingContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:hint="@string/serving_per_container_hint"
+                    android:textAlignment="textEnd"
+                    android:textColor="#ffffff"
+                    android:textColorHint="@color/color_gray_for_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutDivider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rLayoutForServingContainer"
+                android:background="#BFB0A6" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForQuickFood"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rLayoutHeader">
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForCalories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/text_box_margin">
+
+            <TextView
+                android:id="@+id/textViewCalories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/calories"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/text_size_grid_palyer_name" />
+
+
+            <EditText
+                android:id="@+id/editTextCalories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:hint="@string/calori_hint"
+                android:textAlignment="textEnd"
+                android:textColor="#ffffff"
+                android:textColorHint="@color/color_gray_for_text" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLayoutDivider5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rLayoutForCalories"
+            android:background="#BFB0A6" />
+
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForCarbohydrats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rLayoutDivider5">
+
+            <TextView
+                android:id="@+id/textViewCarbohydrats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/total_carbo"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/text_size_grid_palyer_name" />
+
+            <EditText
+                android:id="@+id/c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:hint="@string/total_Carbo_hint"
+                android:textAlignment="textEnd"
+                android:textColor="#ffffff"
+                android:textColorHint="@color/color_gray_for_text" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLayoutDivider6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rLayoutForCarbohydrats"
+            android:background="#BFB0A6" />
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForFat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rLayoutDivider6">
+
+            <TextView
+                android:id="@+id/textViewFat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/total_fat"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/text_size_grid_palyer_name" />
+
+
+            <EditText
+                android:id="@+id/editTextFatValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:hint="@string/total_fat_hint"
+                android:textAlignment="textEnd"
+                android:textColor="#ffffff"
+                android:textColorHint="@color/color_gray_for_text" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLayoutDivider7"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rLayoutForFat"
+            android:background="#BFB0A6" />
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForProtein"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rLayoutDivider7">
+
+            <TextView
+                android:id="@+id/textViewProtein"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/total_protein"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/text_size_grid_palyer_name" />
+
+            <EditText
+                android:id="@+id/editTextProtein"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:hint="@string/total_protein_hint"
+                android:textAlignment="textEnd"
+                android:textColor="#ffffff"
+                android:textColorHint="@color/color_gray_for_text" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLayoutDivider8"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rLayoutForProtein"
+            android:background="#BFB0A6" />
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rLayoutDivider8">
+
+            <TextView
+                android:id="@+id/textViewTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/time"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/text_size_grid_palyer_name" />
+
+            <EditText
+                android:id="@+id/editTextTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:hint="@string/time_hint"
+                android:textAlignment="textEnd"
+                android:textColor="#ffffff"
+                android:textColorHint="@color/color_gray_for_text" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLayoutDivider9"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rLayoutForTime"
+            android:background="#BFB0A6" />
+
+    </RelativeLayout>
+</RelativeLayout>

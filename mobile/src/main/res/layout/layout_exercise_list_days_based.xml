@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/text_box_margin"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="@dimen/text_box_margin"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/bg_dark_">
+    <!--android:background="#3a3a3c"-->
+    <com.chauthai.swipereveallayout.SwipeRevealLayout
+        android:id="@+id/swipe_layoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mode="same_level"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/myLaX"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/delete_athlete"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/DeleteTransaction"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/right_round_border_two"
+                android:gravity="center"
+                android:text="Delete"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForDaysName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imageViewSelectUnSelectExerciseType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:src="@drawable/play_video_icon" />
+
+
+            <TextView
+                android:id="@+id/textViewExerciseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/text_box_margin"
+                android:layout_toLeftOf="@+id/rLayoutForWatchVideo"
+                android:layout_toRightOf="@+id/imageViewSelectUnSelectExerciseType"
+                android:ellipsize="end"
+                android:fontFamily="@font/agencyr"
+                android:text="Exercise Name Here"
+                android:textColor="@color/color_white"
+                android:textSize="13dp" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rLayoutForWatchVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/tt"
+                app:cardBackgroundColor="@color/textColorYellow"
+                app:cardCornerRadius="14dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imageViewVideoPlayIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/play_video_icon"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textViewWatchVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toRightOf="@+id/imageViewVideoPlayIcon"
+                        android:fontFamily="@font/agencyr"
+                        android:text="Buy Now"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <ImageView
+                        android:id="@+id/imageViewNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/textViewWatchVideo"
+                        android:adjustViewBounds="true"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/right_arrow"
+                        android:tint="@color/textColorYellow"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/tt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/imageViewNextX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/right_arrow"
+                    android:tint="@color/textColorYellow"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </com.chauthai.swipereveallayout.SwipeRevealLayout>
+</RelativeLayout>

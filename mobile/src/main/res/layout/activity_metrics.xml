@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lLayoutMain"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#3a3a3c">
+
+    <RelativeLayout
+        android:id="@+id/rLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/imageViewHeaderIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/activation_icon_header" />
+
+            <TextView
+                android:id="@+id/textViewScreenName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/text_box_margin"
+                android:layout_toRightOf="@+id/imageViewHeaderIcon"
+                android:gravity="center"
+                android:text="@string/activation"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/choose_screen_text_size" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageViewBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/activity_indicator_margin"
+            android:src="@drawable/back_arrow"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rLayoutHeader"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForLeftSideCalendar"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1.00"
+            android:background="@color/color_black_for_health_profile_button_selected">
+
+            <ListView
+                android:id="@+id/listViewCalendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/list_items_calendar" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForRightSide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/rLayoutForLeftSideCalendar"
+            android:layout_weight="1.00">
+
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForHoloCircleContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="3dp"
+                android:background="@color/color_black_for_health_profile_button_selected">
+
+                <com.org.godspeed.utility.HoloCircularProgressBar
+                    android:id="@+id/holoCirculDashed"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    app:dashed_circle="true"
+                    app:marker_progress="0"
+                    app:progress="0.25"
+                    app:progress_background_color="#4e4e50"
+                    app:progress_color="#ffffff"
+                    app:stroke_width="3dp"
+                    app:thumb_visible="false" />
+
+                <com.org.godspeed.utility.HoloCircularProgressBar
+                    android:id="@+id/holoCirculNormal"
+                    android:layout_width="225dp"
+                    android:layout_height="225dp"
+                    android:layout_centerInParent="true"
+                    app:dashed_circle="false"
+                    app:marker_progress="0"
+                    app:progress="0.4"
+                    app:progress_background_color="#4e4e50"
+                    app:progress_color="#edbb57"
+                    app:stroke_width="3dp"
+                    app:thumb_visible="false" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:id="@+id/textViewActivationText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/activation_duration"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <TextView
+                        android:id="@+id/textViewActivationMinutes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewActivationText"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/text_box_margin"
+                        android:gravity="center"
+                        android:text="45 min"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+
+                    <TextView
+                        android:id="@+id/textViewDurationAthlete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewActivationMinutes"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:gravity="center"
+                        android:text="@string/duration_athlete"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <TextView
+                        android:id="@+id/textViewDurationPrecentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewDurationAthlete"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/text_box_margin"
+                        android:gravity="center"
+                        android:text="25%"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutforAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutForHoloCircleContainer">
+
+                <!-- rLayoutForMetricsContainer:  Main Metrics Card Screen with Workout label  -->
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutForMetricsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/text_box_margin"
+                        android:background="@drawable/athlete_metrics_background">
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForMetricsTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/activity_indicator_margin">
+
+                            <TextView
+                                android:id="@+id/textViewMetrics"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="@dimen/text_box_margin"
+                                android:gravity="center"
+                                android:text="@string/metrics"
+                                android:textAllCaps="true"
+                                android:textColor="@color/color_white"
+                                android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutForWorkoutText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true">
+
+                                <TextView
+                                    android:id="@+id/textViewWorkout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                    android:layout_toLeftOf="@+id/imageViewRightArrowForWorkout"
+                                    android:gravity="center"
+                                    android:text="@string/workout"
+                                    android:textColor="@color/textColorYellow"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+
+                                <ImageView
+                                    android:id="@+id/imageViewRightArrowForWorkout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:padding="@dimen/text_box_margin"
+                                    android:src="@drawable/right_arrow" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutDividerMetricsTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/rLayoutForMetricsTitle"
+                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                            android:layout_marginRight="@dimen/activity_indicator_margin"
+                            android:background="@color/color_gray_for_toggle_unselected" />
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutforMetricsButtons"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rLayoutDividerMetricsTitle">
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutForVelocity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/metrics_round_button_background" />
+
+                                <TextView
+                                    android:id="@+id/textViewVelocity"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/velocity"
+                                    android:textColor="@color/textColorYellow"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutForJumpHeight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/metrics_round_button_background" />
+
+                                <TextView
+                                    android:id="@+id/textViewJumpHeight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/jump_height"
+                                    android:textColor="@color/textColorYellow"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutForRSI"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rLayoutForVelocity"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/metrics_round_button_background" />
+
+                                <TextView
+                                    android:id="@+id/textViewRSI"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/rsi"
+                                    android:textColor="@color/textColorYellow"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutForAgilityTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rLayoutForJumpHeight"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/metrics_round_button_background" />
+
+                                <TextView
+                                    android:id="@+id/textViewAgilityTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/agility_time"
+                                    android:textColor="@color/textColorYellow"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutForVerticalJump"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rLayoutForRSI"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/metrics_round_button_background" />
+
+                                <TextView
+                                    android:id="@+id/textViewVerticalJump"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/vertical_jump"
+                                    android:textColor="@color/textColorYellow"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutForSprintTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rLayoutForAgilityTime"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/metrics_round_button_background" />
+
+                                <TextView
+                                    android:id="@+id/textViewSprintTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/sprint_time"
+                                    android:textColor="@color/textColorYellow"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <!-- rLayoutForWorkoutContainer: Activation - > Workout Cards with four options like Prep, Movement, Elastic Moveemnt Skils -->
+                <RelativeLayout
+                    android:id="@+id/rLayoutForWorkoutContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/text_box_margin"
+                        android:background="@drawable/athlete_metrics_background">
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForWorkoutTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/activity_indicator_margin">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true">
+
+                                <TextView
+                                    android:id="@+id/textViewActivationWorkout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                    android:layout_toRightOf="@+id/imageViewLeftArrowForWorkout"
+                                    android:gravity="center"
+                                    android:text="@string/activation_workout"
+                                    android:textColor="@color/textColorYellow"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+
+                                <ImageView
+                                    android:id="@+id/imageViewLeftArrowForWorkout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:padding="@dimen/text_box_margin"
+                                    android:src="@drawable/left_arrow" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutDividerWorkoutTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/rLayoutForWorkoutTitle"
+                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                            android:layout_marginRight="@dimen/activity_indicator_margin"
+                            android:background="@color/color_gray_for_toggle_unselected" />
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutforWorkoutButtons"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rLayoutDividerWorkoutTitle">
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutForPrep"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/metrics_round_button_background" />
+
+                                <TextView
+                                    android:id="@+id/textViewPrep"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/prep"
+                                    android:textColor="@color/textColorYellow"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutForMovement"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/metrics_round_button_background" />
+
+                                <TextView
+                                    android:id="@+id/textViewMovement"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/movement"
+                                    android:textColor="@color/textColorYellow"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutForElasticity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rLayoutForPrep"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/metrics_round_button_background" />
+
+                                <TextView
+                                    android:id="@+id/textViewElasticity"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/elasticity"
+                                    android:textColor="@color/textColorYellow"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutForMovementSkill"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rLayoutForMovement"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/metrics_round_button_background" />
+
+                                <TextView
+                                    android:id="@+id/textviewMovementSkill"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/movement_skill"
+                                    android:textColor="@color/textColorYellow"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <!--rLayoutForWorkoutExerciseList: Activation workout option for Exercise list  -->
+                <RelativeLayout
+                    android:id="@+id/rLayoutForWorkoutExerciseList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/text_box_margin"
+                        android:background="@drawable/athlete_metrics_background">
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForExerciseTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/activity_indicator_margin">
+
+                            <RelativeLayout
+                                android:id="@+id/rLAyoutForWorkoutOptionTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true">
+
+                                <TextView
+                                    android:id="@+id/textViewWorkoutOptionTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                    android:layout_toRightOf="@+id/imageViewLeftArrowForExercise"
+                                    android:gravity="center"
+                                    android:text="@string/activation_workout"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+
+                                <ImageView
+                                    android:id="@+id/imageViewLeftArrowForExercise"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:padding="@dimen/text_box_margin"
+                                    android:src="@drawable/left_arrow" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutDividerExercise"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/rLayoutForExerciseTitle"
+                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                            android:layout_marginRight="@dimen/activity_indicator_margin"
+                            android:background="@color/color_gray_for_toggle_unselected" />
+
+                        <GridView
+                            android:id="@+id/gridViewExcercise"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rLayoutDividerExercise"
+                            android:layout_margin="@dimen/activity_indicator_margin"
+                            android:numColumns="2"
+                            tools:listitem="@layout/grid_items_exercise" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <!--rLayoutForWorkoutExerciseSetsList: for Exercise  Set List -->
+                <RelativeLayout
+                    android:id="@+id/rLayoutForWorkoutExerciseSetsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/text_box_margin"
+                        android:background="@drawable/athlete_metrics_background">
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForExerciseSetTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/activity_indicator_margin">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true">
+
+                                <TextView
+                                    android:id="@+id/textViewExerciseSetTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                    android:layout_toRightOf="@+id/imageViewLeftArrowForExerciseSet"
+                                    android:gravity="center"
+                                    android:text="@string/activation_workout"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+
+                                <ImageView
+                                    android:id="@+id/imageViewLeftArrowForExerciseSet"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:padding="@dimen/text_box_margin"
+                                    android:src="@drawable/left_arrow" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutDividerExerciseSet"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/rLayoutForExerciseSetTitle"
+                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                            android:layout_marginRight="@dimen/activity_indicator_margin"
+                            android:background="@color/color_gray_for_toggle_unselected" />
+
+
+                        <GridView
+                            android:id="@+id/gridViewExcerciseSetParameters"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rLayoutDividerExerciseSet"
+                            android:layout_margin="@dimen/activity_indicator_margin"
+                            android:numColumns="1"
+                            tools:listitem="@layout/list_view_items_exercise_set" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <!--rLayoutForRawHRGraph: for Raw HR Graph -->
+                <RelativeLayout
+                    android:id="@+id/rLayoutForRawHRGraph"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/text_box_margin"
+                        android:background="@drawable/athlete_metrics_background">
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForRawHRGraphTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/activity_indicator_margin">
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutForJumpHeightGraph"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true">
+
+
+                                <ImageView
+                                    android:id="@+id/imageViewLeftArrowForRawHRGraph"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:padding="@dimen/text_box_margin"
+                                    android:src="@drawable/left_arrow" />
+
+                                <TextView
+                                    android:id="@+id/textViewRawHRGraphTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                    android:layout_toRightOf="@+id/imageViewLeftArrowForRawHRGraph"
+                                    android:gravity="center"
+                                    android:text="@string/raw_hr"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+
+
+                                <TextView
+                                    android:id="@+id/textViewMonthYearWithTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/text_box_margin"
+                                    android:layout_toRightOf="@+id/textViewRawHRGraphTitle"
+                                    android:gravity="center"
+                                    android:text="10:50pm - 8:02am"
+                                    android:textColor="@color/color_gray_for_toggle_unselected"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+
+                                <RelativeLayout
+                                    android:id="@+id/rLayoutForEditGraph"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/activity_indicator_margin">
+
+                                    <ImageView
+                                        android:id="@+id/imageViewEditIcon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/edit_icon" />
+
+                                    <TextView
+                                        android:id="@+id/textViewEdit"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/text_box_margin"
+                                        android:layout_toRightOf="@+id/imageViewEditIcon"
+                                        android:gravity="center"
+                                        android:text="Edit"
+                                        android:textColor="@color/textColorYellow"
+                                        android:textSize="@dimen/text_size_grid_item_name" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutDividerRawHRGraph"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/rLayoutForRawHRGraphTitle"
+                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                            android:layout_marginRight="@dimen/activity_indicator_margin"
+                            android:background="@color/color_gray_for_toggle_unselected" />
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutGraphRawHR"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_below="@+id/rLayoutDividerRawHRGraph"
+                            android:layout_margin="@dimen/activity_indicator_margin"
+
+                            >
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/imageViewAppIconForAnimation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:paddingRight="@dimen/text_box_margin"
+                android:paddingBottom="@dimen/activity_indicator_margin"
+                android:src="@drawable/app_icon_for_click"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForBeginWorkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/text_box_margin"
+                android:layout_marginBottom="@dimen/text_box_margin"
+                android:paddingBottom="2dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/metrics_round_button_background" />
+
+                <TextView
+                    android:id="@+id/textViewBeginWorkout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/begin_workout"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

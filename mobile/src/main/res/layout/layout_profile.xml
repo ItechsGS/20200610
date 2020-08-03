@@ -1,0 +1,820 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Relayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3a3a3c">
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/LinearLayoutProfile"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:weightSum="2">-->
+    <RelativeLayout
+        android:id="@+id/rLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/activity_indicator_margin"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:id="@+id/textViewScreenName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/athletes_profile"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/choose_screen_text_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rLayoutHeader"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="1.00">
+
+
+        <RelativeLayout
+            android:id="@+id/rLAyoutAthleteProfileDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForProfilePic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="2dp"
+                android:background="#343436"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="#343436"
+                    android:gravity="center">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rLayoutC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForProfileImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/frameofIcon"
+                                android:layout_width="92dp"
+                                android:layout_height="100dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/myframe" />
+
+
+                            <com.christophesmet.android.views.maskableframelayout.MaskableFrameLayout
+                                android:layout_width="85dp"
+                                android:layout_height="92dp"
+                                android:layout_centerInParent="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                app:mask="@drawable/logo_f"
+                                app:porterduffxfermode="DST_IN">
+
+                                <ImageView
+                                    android:id="@+id/imageViewProfilePic"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/logo_f" />
+
+
+                            </com.christophesmet.android.views.maskableframelayout.MaskableFrameLayout>
+
+                            <ImageView
+                                android:id="@+id/AddimageAthlete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:paddingBottom="5dp"
+                                android:scaleType="center"
+
+                                android:src="@drawable/editimage" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/mnn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14dp"
+                            android:layout_toEndOf="@+id/rLayoutForProfileImage">
+
+
+                            <TextView
+                                android:id="@+id/textViewAthleteName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ellipsize="marquee"
+                                android:fontFamily="@font/agencyr"
+                                android:singleLine="true"
+                                android:text="@string/athleteName"
+                                android:textAllCaps="true"
+                                android:textColor="#ffffff"
+                                android:textSize="@dimen/team_name_textsize" />
+
+                            <RelativeLayout
+                                android:id="@+id/rAthleteLevel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/TextViewatheleteLevel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginLeft="@dimen/dimen_20"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:text="Select Level"
+                                    android:textColor="@color/textColorYellow"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:layout_toRightOf="@+id/TextViewatheleteLevel"
+                                    android:paddingLeft="3dp"
+                                    android:src="@drawable/drop_down_for_profile" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/Athlete_profile_health_body"
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:layout_below="@+id/mnn"
+                            android:layout_marginLeft="14dp"
+                            android:layout_toEndOf="@+id/rLayoutForProfileImage" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/SliderDotsX"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutForProfilePic"
+                android:background="#343436"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:padding="1dp" />
+
+
+            <LinearLayout
+                android:id="@+id/lLayoutForOptionBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/SliderDotsX"
+                android:background="#2a2a2c"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutForFileCase"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/imageViewFileCase"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/file_case_icon" />
+
+                        <TextView
+                            android:id="@+id/textViewFileCase"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imageViewFileCase"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:singleLine="true"
+                            android:text="@string/athletes_filecase"
+                            android:textColor="@color/textColorYellow"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/divider_options" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutForUpdateInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/imageViewUpdateInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/update_info_icon" />
+
+                        <TextView
+                            android:id="@+id/textViewUpdateInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imageViewUpdateInfo"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:singleLine="true"
+                            android:text="@string/update_info"
+                            android:textColor="@color/textColorYellow"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/divider_options" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutForHelthProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/text_box_margin"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/imageViewHelthProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/health_profile_icon" />
+
+                    <TextView
+                        android:id="@+id/textViewHelthProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imageViewHelthProfile"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:singleLine="true"
+                        android:text="@string/health_profile"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewClanderDrawerSliderIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutForProfilePic"
+                android:layout_marginTop="-30dp"
+                android:src="@drawable/calendar_icon_slider" />
+
+            <LinearLayout
+                android:id="@+id/rLAyoutForCalendarDialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayoutForOptionBar"
+                android:background="@color/profilebg"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/imageViewDoubleLeftArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/normal_margin_set"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:src="@drawable/calendar"
+                    android:tint="@color/Calender"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/textViewDate"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/agencyr"
+                    android:gravity="center"
+                    android:text="10-May-2018"
+                    android:textColor="@color/Calender"
+                    android:textSize="@dimen/text_size_grid_palyer_name" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/PillarRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLAyoutForCalendarDialog"
+                android:layout_marginTop="2dp"
+                android:background="#3a3a3c" />
+
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForSessionDownloadOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PillarRecycler"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/activity_horizontal_margin">
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutForSessionReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/activity_indicator_margin">
+
+                    <ImageView
+                        android:id="@+id/imageViewSession"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/session" />
+
+                    <TextView
+                        android:id="@+id/textViewSessionText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/imageViewSession"
+                        android:text="@string/session_review"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutForDownloadHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/activity_indicator_margin">
+
+                    <ImageView
+                        android:id="@+id/imageViewDownload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/download" />
+
+                    <TextView
+                        android:id="@+id/textViewDownloadText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/imageViewDownload"
+                        android:text="@string/download_history"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutDividerSession"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@id/rLayoutForSessionDownloadOption"
+                android:layout_alignLeft="@id/rLayoutForSessionDownloadOption"
+                android:layout_alignRight="@id/rLayoutForSessionDownloadOption"
+                android:layout_marginLeft="@dimen/activity_indicator_margin"
+                android:layout_marginRight="@dimen/activity_indicator_margin"
+                android:background="#4e4e50">
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rLayoutForCalender"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/rLayoutDividerSession"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/radius"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+
+                <LinearLayout
+                    android:id="@+id/LayoutDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/textviewradious"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/DayText"
+                        android:layout_width="match_parent"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Day"
+                        android:textAlignment="center"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.8dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/textColorYellow" />
+
+                <LinearLayout
+                    android:id="@+id/LayoutWeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/textviewradious"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/WeekText"
+                        android:layout_width="match_parent"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Week"
+                        android:textAlignment="center"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.8dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/textColorYellow" />
+
+                <LinearLayout
+                    android:id="@+id/LayoutMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/textviewradious"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/MonthText"
+                        android:layout_width="match_parent"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Month"
+                        android:textAlignment="center"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.8dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/textColorYellow" />
+
+                <LinearLayout
+                    android:id="@+id/LayoutYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/textviewradious"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/YearText"
+                        android:layout_width="match_parent"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Year"
+                        android:textAlignment="center"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="17sp"
+
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutForCalender"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+
+                    android:layout_marginBottom="8dp"
+                    tools:listitem="@layout/list_items_exercise" />
+
+                <LinearLayout
+                    android:id="@+id/SliderDots"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewPager"
+                    android:layout_margin="10dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/AthleteActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutForCalender"
+                android:orientation="horizontal"
+                tools:listitem="@layout/list_items_exercise" />
+        </RelativeLayout>
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/rLayoutForWorkoutcompelteInfo"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:visibility="gone">-->
+
+        <!--&lt;!&ndash;<ListView-->
+        <!--android:id="@+id/listViewCompletedWorkoutList"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--tools:listitem="@layout/layout_workout_complete" />&ndash;&gt;-->
+
+        <!--<include-->
+        <!--layout="@layout/layout_workout_complete"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <!--</RelativeLayout>-->
+
+    </ScrollView>
+
+
+    <!--    </LinearLayout>-->
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/rLayoutForBottomView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:background="#3a3a3c"-->
+    <!--        android:visibility="">-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_margin="1dp"-->
+    <!--            android:background="#313133">-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/imageViewMoreIcon"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_alignParentLeft="true"-->
+    <!--                android:contentDescription="TODO"-->
+    <!--                android:src="@drawable/setting_icon" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/textviewTrainThisTeam"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_alignTop="@+id/imageViewSettingIcon"-->
+    <!--                android:layout_alignBottom="@+id/imageViewSettingIcon"-->
+    <!--                android:layout_toRightOf="@+id/imageViewSettingIcon"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="Train This Team"-->
+    <!--                android:textAllCaps="true"-->
+    <!--                android:textColor="#ffffff"-->
+    <!--                android:textSize="@dimen/choose_screen_text_size_small"-->
+    <!--                android:visibility="gone" />-->
+
+    <!--            <RelativeLayout-->
+    <!--                android:id="@+id/rLayoutForBottomViewMoreOptions"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@+id/imageViewMoreIcon"-->
+    <!--                android:layout_margin="1dp"-->
+    <!--                android:background="#3a3a3c">-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:id="@+id/lLayoutForBottomViewSettingsOptions"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="1dp"-->
+    <!--                    android:background="#3a3a3c"-->
+    <!--                    android:orientation="horizontal"-->
+    <!--                    android:visibility="visible"-->
+    <!--                    android:weightSum="3">-->
+
+    <!--                    <RelativeLayout-->
+    <!--                        android:id="@+id/rLayoutForWorkoutAthlete"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:layout_marginTop="1dp"-->
+    <!--                        android:layout_marginRight="1dp"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:background="#313133">-->
+
+    <!--                        <ImageView-->
+    <!--                            android:id="@+id/imageViewWorkoutAthlete"-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_centerHorizontal="true"-->
+    <!--                            android:layout_marginTop="@dimen/activity_indicator_margin"-->
+    <!--                            android:src="@drawable/delete_athlete" />-->
+
+    <!--                        <TextView-->
+    <!--                            android:id="@+id/textviewDeleteAthlete"-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_below="@+id/imageViewWorkoutAthlete"-->
+    <!--                            android:layout_centerHorizontal="true"-->
+    <!--                            android:layout_margin="@dimen/text_box_margin"-->
+    <!--                            android:gravity="center"-->
+    <!--                            android:text="@string/workouts"-->
+    <!--                            android:textAllCaps="true"-->
+    <!--                            android:textColor="#ffffff"-->
+    <!--                            android:textSize="@dimen/text_size_setting_items" />-->
+    <!--                    </RelativeLayout>-->
+
+    <!--                    <RelativeLayout-->
+    <!--                        android:id="@+id/rLayoutForPerformAnalytics"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:layout_marginTop="1dp"-->
+    <!--                        android:layout_marginRight="1dp"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:background="#313133">-->
+
+    <!--                        <ImageView-->
+    <!--                            android:id="@+id/imageViewPerformAnalytics"-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_centerHorizontal="true"-->
+    <!--                            android:layout_marginTop="@dimen/activity_indicator_margin"-->
+    <!--                            android:src="@drawable/add_athlete" />-->
+
+    <!--                        <TextView-->
+    <!--                            android:id="@+id/textviewAddAthlete"-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_below="@+id/imageViewPerformAnalytics"-->
+    <!--                            android:layout_centerHorizontal="true"-->
+    <!--                            android:layout_margin="@dimen/text_box_margin"-->
+    <!--                            android:gravity="center"-->
+    <!--                            android:text="@string/perform_analytic"-->
+    <!--                            android:textAllCaps="true"-->
+    <!--                            android:textColor="#ffffff"-->
+    <!--                            android:textSize="@dimen/text_size_setting_items" />-->
+    <!--                    </RelativeLayout>-->
+
+    <!--                    <RelativeLayout-->
+    <!--                        android:id="@+id/rLayoutForHelp"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:layout_marginTop="1dp"-->
+    <!--                        android:layout_marginRight="1dp"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:background="#313133">-->
+
+    <!--                        <ImageView-->
+    <!--                            android:id="@+id/imageViewHelp"-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_centerHorizontal="true"-->
+    <!--                            android:layout_marginTop="@dimen/activity_indicator_margin"-->
+    <!--                            android:src="@drawable/help" />-->
+
+    <!--                        <TextView-->
+    <!--                            android:id="@+id/textviewAddCoach"-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_below="@+id/imageViewHelp"-->
+    <!--                            android:layout_centerHorizontal="true"-->
+    <!--                            android:layout_margin="@dimen/text_box_margin"-->
+    <!--                            android:gravity="center"-->
+    <!--                            android:text="@string/help"-->
+    <!--                            android:textAllCaps="true"-->
+    <!--                            android:textColor="#ffffff"-->
+    <!--                            android:textSize="@dimen/text_size_setting_items" />-->
+    <!--                    </RelativeLayout>-->
+
+    <!--                </LinearLayout>-->
+
+    <!--            </RelativeLayout>-->
+
+    <!--        </RelativeLayout>-->
+
+    <!--    </RelativeLayout>-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imageViewAppIconForAnimation"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:paddingRight="@dimen/text_box_margin"-->
+    <!--        android:paddingBottom="@dimen/activity_indicator_margin"-->
+    <!--        android:src="@drawable/logo_main"-->
+    <!--        android:visibility="" />-->
+
+
+</RelativeLayout>
+

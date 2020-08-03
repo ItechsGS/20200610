@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rLayoutMain"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#3a3a3c">
+
+    <SearchView
+        android:id="@+id/searchViewExerciseType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_box_margin"
+        android:clickable="true"
+        android:visibility="visible" />
+
+    <!--    <com.baoyz.swipemenulistview.SwipeMenuListView-->
+    <!--        android:id="@+id/listViewTrainingSet"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@+id/searchViewExerciseType"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        tools:listitem="@layout/list_view_items_training" />-->
+
+</RelativeLayout>

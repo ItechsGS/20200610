@@ -1,0 +1,118 @@
+<com.cpiz.android.bubbleview.BubbleLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/copyPaste"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_dark_rounded_dialo2g_">
+
+        <LinearLayout
+            android:id="@+id/Copy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/TextCopy"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Copy"
+                android:textColor="@color/color_white" />
+        </LinearLayout>
+        <!--<View-->
+        <!--android:layout_width="1dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:pointerIcon="arrow" />-->
+        <LinearLayout
+            android:id="@+id/Paste"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/TextPaste"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Paste"
+                android:textColor="@color/color_white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/AddCoachL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/TextAddCoach"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Add Coach"
+                android:textColor="@color/color_white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/AddAthleteByCoach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/AddAthleteByCoachText"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Add Athlete"
+                android:textColor="@color/color_white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SendMessageByCoach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/SendMessageByCoachText"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Send Message"
+                android:textColor="@color/color_white" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</com.cpiz.android.bubbleview.BubbleLinearLayout>
+

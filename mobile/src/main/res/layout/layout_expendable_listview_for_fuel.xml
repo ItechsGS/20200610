@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3a3a3c">
+
+    <RelativeLayout
+        android:id="@+id/rLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_indicator_margin">
+
+        <ImageView
+            android:id="@+id/imageViewBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/normal_margin_set"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:id="@+id/textViewScreenName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/fuel"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/choose_screen_text_size" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dividerOne"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rLayoutHeader"
+        android:background="@drawable/login_transparant_layer"></RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/expandableListViewForFuel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dividerOne"
+        android:background="@color/color_white"
+        android:cacheColorHint="#ffffff"
+        android:divider="@color/color_gray_for_text"
+        android:dividerHeight="0.5dp"
+        android:groupIndicator="@null">
+
+    </ExpandableListView>
+
+</RelativeLayout>

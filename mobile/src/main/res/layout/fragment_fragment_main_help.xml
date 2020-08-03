@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForDaysName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_box_margin"
+        android:background="@drawable/bg_dark_">
+
+        <ImageView
+            android:id="@+id/imageViewSelectUnSelectExerciseType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/normal_margin_set"
+            android:src="@drawable/plus_with_circle_icon"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/textViewExerciseName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/text_box_margin"
+            android:layout_toLeftOf="@+id/rLayoutForWatchVideo"
+            android:layout_toRightOf="@+id/imageViewSelectUnSelectExerciseType"
+            android:ellipsize="end"
+            android:text="Exercise Name Here"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_size_grid_item_name" />
+
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForWatchVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_indicator_margin"
+            android:layout_toLeftOf="@+id/imageViewNext"
+            android:paddingRight="@dimen/normal_margin_set"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageViewVideoPlayIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/play_video_icon" />
+
+            <TextView
+                android:id="@+id/textViewWatchVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/text_box_margin"
+                android:layout_toRightOf="@+id/imageViewVideoPlayIcon"
+                android:text="@string/watch_video"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorYellow"
+                android:textSize="@dimen/text_size_grid_item_name" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/imageViewNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/normal_margin_set"
+            android:src="@drawable/right_arrow"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3a3a3c">
+
+    <RelativeLayout
+        android:id="@+id/rLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/textViewScreenName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="SELECT TEAM"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/choose_screen_text_size" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageViewBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/normal_margin_set"
+            android:src="@drawable/back_arrow" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/imageViewSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/imageViewFilterTeam"
+                android:padding="@dimen/normal_margin_set"
+                android:src="@drawable/search" />
+
+            <ImageView
+                android:id="@+id/imageViewFilterTeam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/normal_margin_set"
+                android:src="@drawable/filtericon"
+                android:tint="@color/textColorYellow"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/X"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rLayoutHeader"
+        android:background="#525252" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/X">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/SelectTeam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rSearchAthleteText" />
+
+        <RelativeLayout
+            android:id="@+id/rSearchAthleteText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#3a3a3c"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/SearchAthleteText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_toStartOf="@+id/CancelButtonOfSearch"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/bg_dark_"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/search_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/search"
+                    android:tint="@color/Presentcolor" />
+
+                <EditText
+                    android:id="@+id/calc_txt_Prise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/calc_clear_txt_Prise"
+                    android:layout_toEndOf="@id/search_badge"
+                    android:background="@null"
+                    android:hint="Search..."
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:id="@+id/calc_clear_txt_Prise"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/delete_athlete_red_icon"
+                    android:tint="@color/color_for_absent_palyer" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/CancelButtonOfSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:padding="2dp"
+                android:text="Cancel"
+                android:textColor="@color/textColorYellow"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

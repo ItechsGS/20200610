@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "828763237350",
+    "firebase_url": "https://godspeed-1525763862528.firebaseio.com",
+    "project_id": "godspeed-1525763862528",
+    "storage_bucket": "godspeed-1525763862528.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828763237350:android:68626e052044f3166ac427",
+        "android_client_info": {
+          "package_name": "com.org.godspeed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "828763237350-3s2mtgmdb62am57520ecv9qb3gqvmsia.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.org.godspeed",
+            "certificate_hash": "d065169b89879bcbb1443a7af1ca12d15a16de41"
+          }
+        },
+        {
+          "client_id": "828763237350-125911jllj46rnob25nffvtfqc9mj31k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-cQ7TcT1sA-dPAeymzmYEsYwE3_nBR7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "828763237350-125911jllj46rnob25nffvtfqc9mj31k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "828763237350-eftnsnttpr2l6v0cnmknkmvno9v7mkpe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.GESA.Godspeed",
+                "app_store_id": "1477083863"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

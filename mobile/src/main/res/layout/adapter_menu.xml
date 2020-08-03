@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/lyt_menu_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+
+        android:gravity="center_vertical"
+        android:paddingTop="13dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="13dp">
+
+
+        <ImageView
+            android:id="@+id/img_menu_item"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter" />
+
+
+        <TextView
+            android:id="@+id/txt_menu_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/img_menu_item"
+            android:textColor="@color/textColorYellow"
+            android:textSize="@dimen/drawer_items_text_size" />
+
+        <LinearLayout
+            android:id="@+id/social"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_toRightOf="@+id/txt_menu_item_name"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="2dp"
+                android:src="@drawable/fb_logo" />
+
+            <ImageView
+                android:id="@+id/insta"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="2dp"
+
+                android:src="@drawable/insta_logo"
+                android:textColor="@color/textColorYellow" />
+
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="2dp"
+
+                android:src="@drawable/twitter_logo"
+                android:textColor="@color/textColorYellow"
+                android:textSize="@dimen/drawer_items_text_size" />
+        </LinearLayout>
+
+        <!-- <TextView
+             android:id="@+id/txt_count"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:background="@xml/btn_bg_green"
+             android:paddingLeft="15dp"
+             android:paddingRight="15dp"
+             android:text="5"
+             android:textColor="@color/white"
+             android:textSize="14sp" />
+    -->
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/dividerOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lyt_menu_items"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:src="@drawable/divider1"
+        android:visibility="visible" />
+
+
+</RelativeLayout><!--<?xml version="1.0" encoding="utf-8"?>--><!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--android:orientation="horizontal"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content">-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/lyt_menu_items"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+
+
+    <!--android:gravity="center_vertical"-->
+    <!--android:padding="10dp"-->
+    <!--android:layout_margin="@dimen/dimen_20">-->
+
+    <!--<ImageView--><!--android:id="@+id/img_menu_item"--><!--android:layout_width="20dp"--><!--android:layout_height="20dp"--><!--android:layout_weight="1"--><!--android:layout_gravity="center"--><!--android:adjustViewBounds="true"--><!--android:contentDescription="@string/app_name"--><!--android:scaleType="fitCenter" />-->
+
+    <!--<TextView--><!--android:id="@+id/txt_menu_item_name"--><!--android:layout_width="wrap_content"--><!--androprogramsRecyclrViewid:layout_height="wrap_content"--><!--android:layout_gravity="center"-->
+
+    <!--android:layout_weight="1"--><!--android:textColor="@color/textColorYellow"--><!--android:textSize="@dimen/drawer_items_text_size" />--><!--<LinearLayout--><!--android:id="@+id/social"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:orientation="horizontal"--><!--android:layout_gravity="center"-->
+
+    <!--android:visibility="gone"--><!--android:layout_weight="1"-->
+
+    <!--android:padding="10dp"--><!--android:layout_margin="@dimen/dimen_20"--><!--&gt;--><!--<ImageView--><!--android:id="@+id/facebook"--><!--android:layout_width="20dp"--><!--android:layout_height="20dp"-->
+
+    <!--android:src="@drawable/fb"/>--><!--<ImageView--><!--android:id="@+id/twitter"--><!--android:layout_width="20dp"--><!--android:layout_height="20dp"--><!--android:textColor="@color/textColorYellow"--><!--android:textSize="@dimen/drawer_items_text_size"--><!--android:src="@drawable/twitter"/>--><!--<ImageView--><!--android:id="@+id/insta"--><!--android:layout_width="20dp"--><!--android:layout_height="20dp"--><!--android:textColor="@color/textColorYellow"--><!--android:textSize="@dimen/drawer_items_text_size"--><!--android:src="@drawable/insta"/>-->
+    <!--</LinearLayout>-->
+
+    <!--&lt;!&ndash; <TextView--><!--android:id="@+id/txt_count"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_alignParentRight="true"--><!--android:layout_centerVertical="true"--><!--android:background="@xml/btn_bg_green"--><!--android:paddingLeft="15dp"--><!--android:paddingRight="15dp"--><!--android:text="5"--><!--android:textColor="@color/white"--><!--android:textSize="14sp" />--><!--&ndash;&gt;--><!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>--><!--<?xml version="1.0" encoding="utf-8"?>--><!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content">-->
+
+    <!--<RelativeLayout--><!--android:id="@+id/lyt_menu_items"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:gravity="center_vertical"--><!--android:padding="5dp"--><!--android:layout_margin="@dimen/dimen_20">-->
+
+    <!--<ImageView--><!--android:id="@+id/img_menu_item"--><!--android:layout_width="20dp"--><!--android:layout_height="20dp"--><!--android:layout_alignParentLeft="true"--><!--android:layout_centerVertical="true"--><!--android:adjustViewBounds="true"--><!--android:contentDescription="@string/app_name"--><!--android:scaleType="fitCenter" />-->
+
+    <!--<TextView--><!--android:id="@+id/txt_menu_item_name"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_centerVertical="true"--><!--android:layout_marginLeft="5dp"--><!--android:layout_toRightOf="@+id/img_menu_item"--><!--android:textColor="@color/textColorYellow"--><!--android:textSize="@dimen/drawer_items_text_size" />--><!--<LinearLayout--><!--android:id="@+id/social"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:orientation="horizontal"--><!--android:layout_toRightOf="@+id/txt_menu_item_name"--><!--android:visibility="gone"--><!--&gt;--><!--<ImageView--><!--android:id="@+id/facebook"--><!--android:layout_width="20dp"--><!--android:layout_height="20dp"--><!--android:layout_margin="2dp"--><!--android:src="@drawable/fb"/>--><!--<ImageView--><!--android:id="@+id/twitter"--><!--android:layout_width="20dp"--><!--android:layout_height="20dp"--><!--android:layout_margin="2dp"-->
+
+    <!--android:textColor="@color/textColorYellow"--><!--android:textSize="@dimen/drawer_items_text_size"--><!--android:src="@drawable/twitter"/>--><!--<ImageView--><!--android:id="@+id/insta"--><!--android:layout_width="20dp"--><!--android:layout_height="20dp"--><!--android:layout_margin="2dp"-->
+
+    <!--android:textColor="@color/textColorYellow"--><!--android:textSize="@dimen/drawer_items_text_size"--><!--android:src="@drawable/insta"/>--><!--</LinearLayout>--><!--&lt;!&ndash; <TextView--><!--android:id="@+id/txt_count"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_alignParentRight="true"--><!--android:layout_centerVertical="true"--><!--android:background="@xml/btn_bg_green"--><!--android:paddingLeft="15dp"--><!--android:paddingRight="15dp"--><!--android:text="5"--><!--android:textColor="@color/white"--><!--android:textSize="14sp" />--><!--&ndash;&gt;--><!--</RelativeLayout>-->
+
+    <!--</RelativeLayout>--><!--&lt;!&ndash;<?xml version="1.0" encoding="utf-8"?>&ndash;&gt;--><!--&lt;!&ndash;<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;--><!--&lt;!&ndash;android:orientation="horizontal"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<LinearLayout&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/lyt_menu_items"&ndash;&gt;--><!--&lt;!&ndash;android:orientation="horizontal"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+
+    <!--&lt;!&ndash;android:gravity="center_vertical"&ndash;&gt;--><!--&lt;!&ndash;android:padding="10dp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_margin="@dimen/dimen_20">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<ImageView&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/img_menu_item"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="20dp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="20dp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;--><!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;--><!--&lt;!&ndash;android:adjustViewBounds="true"&ndash;&gt;--><!--&lt;!&ndash;android:contentDescription="@string/app_name"&ndash;&gt;--><!--&lt;!&ndash;android:scaleType="fitCenter" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/txt_menu_item_name"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+
+    <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;--><!--&lt;!&ndash;android:textColor="@color/textColorYellow"&ndash;&gt;--><!--&lt;!&ndash;android:textSize="@dimen/drawer_items_text_size" />&ndash;&gt;--><!--&lt;!&ndash;<LinearLayout&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/social"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:orientation="horizontal"&ndash;&gt;--><!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+
+    <!--&lt;!&ndash;android:visibility="gone"&ndash;&gt;--><!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+
+    <!--&lt;!&ndash;android:padding="10dp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_margin="@dimen/dimen_20"&ndash;&gt;--><!--&lt;!&ndash;&gt;&ndash;&gt;--><!--&lt;!&ndash;<ImageView&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/facebook"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="20dp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="20dp"&ndash;&gt;-->
+
+    <!--&lt;!&ndash;android:src="@drawable/fb"/>&ndash;&gt;--><!--&lt;!&ndash;<ImageView&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/twitter"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="20dp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="20dp"&ndash;&gt;--><!--&lt;!&ndash;android:textColor="@color/textColorYellow"&ndash;&gt;--><!--&lt;!&ndash;android:textSize="@dimen/drawer_items_text_size"&ndash;&gt;--><!--&lt;!&ndash;android:src="@drawable/twitter"/>&ndash;&gt;--><!--&lt;!&ndash;<ImageView&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/insta"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="20dp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="20dp"&ndash;&gt;--><!--&lt;!&ndash;android:textColor="@color/textColorYellow"&ndash;&gt;--><!--&lt;!&ndash;android:textSize="@dimen/drawer_items_text_size"&ndash;&gt;--><!--&lt;!&ndash;android:src="@drawable/insta"/>&ndash;&gt;--><!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;&lt;!&ndash; <TextView&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/txt_count"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_alignParentRight="true"&ndash;&gt;--><!--&lt;!&ndash;android:layout_centerVertical="true"&ndash;&gt;--><!--&lt;!&ndash;android:background="@xml/btn_bg_green"&ndash;&gt;--><!--&lt;!&ndash;android:paddingLeft="15dp"&ndash;&gt;--><!--&lt;!&ndash;android:paddingRight="15dp"&ndash;&gt;--><!--&lt;!&ndash;android:text="5"&ndash;&gt;--><!--&lt;!&ndash;android:textColor="@color/white"&ndash;&gt;--><!--&lt;!&ndash;android:textSize="14sp" />&ndash;&gt;--><!--&lt;!&ndash;&ndash;&gt;&ndash;&gt;--><!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->

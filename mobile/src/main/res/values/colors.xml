@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#000000</color>
+    <color name="color_gray_for_toggle_unselected">#4b4b4f</color>
+    <color name="color_black_for_toggle_selected">#262628</color>
+    <color name="color_gray_for_health_profile_button_unselected">#616165</color>
+    <color name="color_gray_for_text">#88888d</color>
+    <color name="color_black_for_health_profile_button_selected">#313133</color>
+    <!--    <color name="textColorYellow">#edbb57</color>-->
+    <color name="Maincolor">#edbb57</color>
+    <color name="Presentcolor">#edbb57</color>
+    <color name="text_shadow">#ff9e9e9e</color>
+    <color name="Calender">#7c7c80</color>
+    <color name="profilebg">#2e2e30</color>
+    <color name="color_for_absent_palyer">#848489</color>
+    <color name="color_white">#ffffff</color>04dd00
+    <color name="color_Green">#04dd00</color>
+
+    <color name="color_green_value">#376a48</color>
+    <color name="color_red_value">#fa3c49</color>
+    <color name="color_white001">#FFFFFF</color>
+    <color name="option_1_color">#a0484b</color>
+    <color name="option_2_color">#a37054</color>
+    <color name="option_3_color">#a6985c</color>
+    <color name="option_4_color">#768a59</color>
+    <color name="option_5_color">#477d54</color>
+    <color name="color_transparant">#E6000000</color>
+    <color name="TrainingSetColor">#cdcdcd</color>
+
+    <color name="drakp">#212123</color>
+
+    <color name="color_Greenlight">#34b853</color>
+    <color name="light_orange">#ff9120</color>
+    <color name="light_grey">#83a3a2</color>
+    <color name="color_orange">#d65514</color>
+    <color name="light_blue">#2f9ad0</color>
+
+
+    <!--    New COLOR FROM IOS-->
+    <color name="textColorBrown">#232525</color>
+    <color name="textPlaceholder">#88888D</color>
+    <color name="textColorWhite">#FFFFFF</color>
+    <color name="textWhite">#FFFFFF</color>
+    <color name="textTableHeaderBrown">#574C48</color>
+    <color name="bgColor">#313133</color>
+    <color name="bgColorDark">#2D2D2F</color>
+    <color name="bgColorLight">#3A3A3C</color>
+
+    <color name="bgTFLight">#424242</color>
+    <color name="rowBgColor_Even">#E6E6E6</color>
+    <color name="rowBgColor_Odd">#FFFFFF</color>
+    <color name="headerBGColor">#939393</color>
+    <color name="navBarColor">#313133</color>
+    <!--    < name="ww">#848489</>-->
+
+
+    <color name="textColorYellow">#EDBB57</color>
+    <color name="cellBGColor">#EEEEEE</color>
+    <color name="subHeaderColor">#999999</color>
+    <color name="subHeaderColor1">#535353</color>
+
+    <color name="blueColorProgress">#024F7D</color>
+    <color name="progressBarColor">#EDBB57</color>
+
+
+    <color name="seperatorColor">#3A3A3C</color>
+    <color name="seperatorColorLight">#DDDCDF</color>
+
+    <color name="darkGreenColor">#04DD00</color>
+    <color name="lblTextColorDark">#474747</color>
+
+
+    <color name="array_color_1">#EDBB57</color>
+    <color name="array_color_2">#FD852D</color>
+    <color name="array_color_3">#FC291C</color>
+    <color name="array_color_4">#0F8912</color>
+    <color name="array_color_5">#1AB281</color>
+    <color name="array_color_6">#1AB250</color>
+    <color name="array_color_7">#1AB250</color>
+
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blue_color_picker">#0066FF</color>
+    <color name="brown_color_picker">#AF593E</color>
+    <color name="green_color_picker">#01A368</color>
+    <color name="orange_color_picker">#FF861F</color>
+    <color name="red_color_picker">#ED0A3F</color>
+    <color name="red_orange_color_picker">#FF3F34</color>
+    <color name="sky_blue_color_picker">#76D7EA</color>
+    <color name="violet_color_picker">#8359A3</color>
+    <color name="yellow_color_picker">#FBE870</color>
+    <color name="yellow_green_color_picker">#C5E17A</color>
+
+
+    <color name="twilight_blue">#0a316d</color>
+    <color name="navy">#021430</color>
+    <color name="cool_grey">#9fa6b0</color>
+    <color name="duck_egg_blue">#d6f1f9</color>
+    <color name="sick_green">#acd433</color>
+    <color name="grapefruit">#ff6363</color>
+    <color name="black_63">#a1000000</color>
+    <color name="windows_blue">#3495af</color>
+
+
+</resources>

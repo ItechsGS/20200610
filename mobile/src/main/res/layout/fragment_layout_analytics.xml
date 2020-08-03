@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3a3a3c"
+    android:orientation="horizontal">
+
+    <!--
+    **************************IMPORTANT***********************************
+     change this id attribute values as "frag2_icon" and "frag2_text" for
+     fragment_layout_two.xml and "frag3_icon" and "frag3_text" for
+     fragment_layout_three.xml
+    **********************************************************************
+      -->
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/horizontal_scroll_margin"
+        android:background="#313133">
+
+        <LinearLayout
+            android:id="@+id/lLayoutForTeamName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/activity_indicator_margin">
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/horizontalScrollView"
+        android:layout_marginTop="2dp"
+        android:fillViewport="true"
+
+        android:scrollbars="horizontal|vertical">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:scrollbars="horizontal|vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/lLayoutForTopHeaderView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#3a3a3c"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:id="@+id/tableLayoutTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="1">
+
+                        <TableRow
+                            android:id="@+id/tableRowHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutAthleteName"
+                                android:layout_width="@dimen/column_width"
+                                android:layout_height="@dimen/column_height"
+                                android:layout_weight="1"
+                                android:background="#343436">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true">
+
+                                    <ImageView
+                                        android:id="@+id/imageViewUserIcon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_marginLeft="@dimen/activity_indicator_margin"
+                                        android:src="@drawable/username_icon" />
+
+                                    <TextView
+                                        android:id="@+id/textViewAthleteName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/imageViewUserIcon"
+                                        android:hint="@string/overAll"
+                                        android:text="@string/athleteName"
+                                        android:textColor="#ffffff"
+                                        android:textSize="@dimen/text_size_grid_palyer_name" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutActivationWithIcon"
+                                android:layout_width="@dimen/column_width"
+                                android:layout_height="@dimen/column_height"
+                                android:layout_marginLeft="2dp"
+
+                                android:layout_weight="1"
+                                android:background="#343436">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rLayoutForActivationTitle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginLeft="@dimen/activity_indicator_margin"
+                                        android:layout_marginRight="@dimen/activity_indicator_margin">
+
+                                        <ImageView
+                                            android:id="@+id/imageViewActivationIcon"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                                            android:adjustViewBounds="true"
+                                            android:src="@drawable/activation_icon" />
+
+                                        <TextView
+                                            android:id="@+id/textViewActivationIcon"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                                            android:layout_toRightOf="@+id/imageViewActivationIcon"
+                                            android:text="@string/activation"
+                                            android:textAllCaps="true"
+                                            android:textColor="#ffffff"
+                                            android:textSize="@dimen/text_size_grid_item_name" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rLayoutforActionvationVolecity"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/rLayoutForActivationTitle"
+                                        android:layout_alignLeft="@+id/rLayoutForActivationTitle"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="@dimen/activity_indicator_margin"
+                                        android:background="@drawable/round_shap_both_side"
+
+                                        >
+
+                                        <TextView
+                                            android:id="@+id/textViewVelocity"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                                            android:text="@string/velocity"
+
+                                            android:textColor="@color/textColorYellow"
+                                            android:textSize="@dimen/text_size_grid_item_name" />
+
+                                        <ImageView
+                                            android:id="@+id/imageViewVelocityDownArrow"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginRight="@dimen/activity_indicator_margin"
+                                            android:src="@drawable/drop_down_yellow" />
+
+                                        <ImageView
+                                            android:id="@+id/imageViewVelocityDash"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginRight="2dp"
+                                            android:layout_toLeftOf="@id/imageViewVelocityDownArrow"
+                                            android:src="@drawable/dash" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutMaxPower"
+                                android:layout_width="@dimen/column_width"
+                                android:layout_height="@dimen/column_height"
+                                android:layout_marginLeft="2dp"
+                                android:layout_weight="1"
+                                android:background="#343436"
+                                android:padding="@dimen/activity_indicator_margin">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rLayoutForBuildTitle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginLeft="@dimen/activity_indicator_margin"
+                                        android:layout_marginRight="@dimen/activity_indicator_margin">
+
+                                        <ImageView
+                                            android:id="@+id/imageViewBuildIcon"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                                            android:src="@drawable/build_icon" />
+
+                                        <TextView
+                                            android:id="@+id/textViewBuildIcon"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                                            android:layout_toRightOf="@+id/imageViewBuildIcon"
+                                            android:hint="@string/activation"
+                                            android:text="@string/build"
+                                            android:textAllCaps="true"
+                                            android:textColor="#ffffff"
+                                            android:textSize="@dimen/text_size_grid_item_name" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rLayoutforBuildVolecity"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/rLayoutForBuildTitle"
+                                        android:layout_alignLeft="@+id/rLayoutForBuildTitle"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/round_shap_both_side">
+
+                                        <TextView
+                                            android:id="@+id/textViewMaxPower"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                                            android:hint="@string/activation"
+                                            android:text="@string/max_power"
+                                            android:textColor="@color/textColorYellow"
+                                            android:textSize="@dimen/text_size_grid_item_name" />
+
+                                        <ImageView
+                                            android:id="@+id/imageViewMaxPowerDownArrow"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginRight="@dimen/activity_indicator_margin"
+                                            android:src="@drawable/drop_down_yellow" />
+
+                                        <ImageView
+                                            android:id="@+id/imageViewBuildDash"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginRight="2dp"
+                                            android:layout_toLeftOf="@+id/imageViewMaxPowerDownArrow"
+
+                                            android:src="@drawable/dash" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutEnergyMaxHr"
+                                android:layout_width="@dimen/column_width"
+                                android:layout_height="@dimen/column_height"
+                                android:layout_marginLeft="2dp"
+                                android:layout_weight="1"
+                                android:background="#343436"
+                                android:padding="@dimen/activity_indicator_margin">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rLayoutForEnergyTitle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginLeft="@dimen/activity_indicator_margin"
+                                        android:layout_marginRight="@dimen/activity_indicator_margin">
+
+                                        <ImageView
+                                            android:id="@+id/imageViewEnergyIcon"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                                            android:src="@drawable/energy_icon" />
+
+                                        <TextView
+                                            android:id="@+id/textViewEnergyIcon"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                                            android:layout_toRightOf="@+id/imageViewEnergyIcon"
+                                            android:hint="@string/activation"
+                                            android:text="@string/energy"
+                                            android:textAllCaps="true"
+                                            android:textColor="#ffffff"
+                                            android:textSize="@dimen/text_size_grid_item_name" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rLayoutforEnergyHR"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/rLayoutForEnergyTitle"
+                                        android:layout_alignLeft="@+id/rLayoutForEnergyTitle"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/round_shap_both_side">
+
+                                        <TextView
+                                            android:id="@+id/textViewMaxHR"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                                            android:hint="@string/activation"
+                                            android:text="@string/max_hr"
+                                            android:textColor="@color/textColorYellow"
+                                            android:textSize="@dimen/text_size_grid_item_name" />
+
+                                        <ImageView
+                                            android:id="@+id/imageViewMaxHrDownArrow"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginRight="@dimen/activity_indicator_margin"
+                                            android:src="@drawable/drop_down_yellow" />
+
+                                        <ImageView
+                                            android:id="@+id/imageViewEnergyDash"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginRight="2dp"
+                                            android:layout_toLeftOf="@+id/imageViewMaxHrDownArrow"
+                                            android:src="@drawable/dash" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutRegenSleepTitle"
+                                android:layout_width="@dimen/column_width"
+                                android:layout_height="@dimen/column_height"
+                                android:layout_marginLeft="2dp"
+                                android:layout_weight="1"
+                                android:background="#343436"
+                                android:padding="@dimen/activity_indicator_margin">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rLayoutForSleepTitle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/imageViewSleepIcon"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                                            android:src="@drawable/re_gen" />
+
+                                        <TextView
+                                            android:id="@+id/textViewSleepIcon"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                                            android:layout_toRightOf="@+id/imageViewSleepIcon"
+                                            android:hint="@string/activation"
+                                            android:text="@string/regen"
+                                            android:textAllCaps="true"
+                                            android:textColor="#ffffff"
+                                            android:textSize="@dimen/text_size_grid_item_name" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rLayoutforRegenSleep"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/rLayoutForSleepTitle"
+                                        android:layout_alignLeft="@+id/rLayoutForSleepTitle"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/round_shap_both_side">
+
+                                        <TextView
+                                            android:id="@+id/textViewMaxSleep"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                                            android:hint="@string/activation"
+                                            android:text="@string/sleep"
+                                            android:textColor="@color/textColorYellow"
+                                            android:textSize="@dimen/text_size_grid_item_name" />
+
+                                        <ImageView
+                                            android:id="@+id/imageViewSleepDownArrow"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginRight="@dimen/activity_indicator_margin"
+                                            android:src="@drawable/drop_down_yellow" />
+
+                                        <ImageView
+                                            android:id="@+id/imageViewSleepDash"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginRight="2dp"
+                                            android:layout_toLeftOf="@+id/imageViewSleepDownArrow"
+                                            android:src="@drawable/dash" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lLayoutForBottomView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#3a3a3c"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:id="@+id/tableLayoutBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="1">
+
+                        <TableRow
+                            android:id="@+id/tableRow1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1">
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutOverallAverage"
+                                android:layout_width="@dimen/column_width"
+                                android:layout_height="@dimen/column_height"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="1"
+                                android:background="#343436">
+
+                                <TextView
+                                    android:id="@+id/textViewOverallAverages"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:text="@string/overAll"
+                                    android:textColor="@color/textColorYellow"
+                                    android:textSize="@dimen/text_size_grid_palyer_name" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutAverageActivation"
+                                android:layout_width="@dimen/column_width"
+                                android:layout_height="@dimen/column_height"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="1"
+                                android:background="#343436">
+
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true">
+
+                                    <TextView
+                                        android:id="@+id/textViewAverageAct"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:hint="@string/activation"
+                                        android:text="Average Activation"
+                                        android:textColor="@color/color_gray_for_toggle_unselected"
+                                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                                    <TextView
+                                        android:id="@+id/textViewActivation"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/textViewAverageAct"
+                                        android:hint="@string/activation"
+                                        android:text="46 m/s"
+                                        android:textColor="@color/textColorYellow"
+                                        android:textSize="@dimen/text_size_grid_palyer_name" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutAverageBuild"
+                                android:layout_width="@dimen/column_width"
+                                android:layout_height="@dimen/column_height"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="1"
+                                android:background="#343436">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true">
+
+                                    <TextView
+                                        android:id="@+id/textViewAverageBuild"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Average Activation"
+                                        android:text="Average Build"
+                                        android:textColor="@color/color_gray_for_toggle_unselected"
+                                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                                    <TextView
+                                        android:id="@+id/textViewBuild"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/textViewAverageBuild"
+                                        android:text="46 m/s"
+                                        android:textColor="@color/textColorYellow"
+                                        android:textSize="@dimen/text_size_grid_palyer_name" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutAverageEnergy"
+                                android:layout_width="@dimen/column_width"
+                                android:layout_height="@dimen/column_height"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="1"
+                                android:background="#343436">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true">
+
+                                    <TextView
+                                        android:id="@+id/textViewAverageEnergy"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Average Activation"
+                                        android:text="Average Energy"
+                                        android:textColor="@color/color_gray_for_toggle_unselected"
+                                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                                    <TextView
+                                        android:id="@+id/textViewEnergy"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/textViewAverageEnergy"
+                                        android:hint="@string/activation"
+                                        android:text="46 m/s"
+                                        android:textColor="@color/textColorYellow"
+                                        android:textSize="@dimen/text_size_grid_palyer_name" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rLayoutAverageRegen"
+                                android:layout_width="@dimen/column_width"
+                                android:layout_height="@dimen/column_height"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="1"
+                                android:background="#343436"
+
+                                >
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true">
+
+                                    <TextView
+                                        android:id="@+id/textViewAverageRegen"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Average Activation"
+                                        android:text="Average Re-Gen"
+                                        android:textColor="@color/color_gray_for_toggle_unselected"
+                                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                                    <TextView
+                                        android:id="@+id/textViewRegen"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/textViewAverageRegen"
+                                        android:hint="@string/activation"
+                                        android:text="46 m/s"
+                                        android:textColor="@color/textColorYellow"
+                                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+
+                <include
+                    android:id="@+id/tableLayoutConent"
+                    layout="@layout/table_content_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/lLayoutForBottomView"
+                    android:layout_below="@+id/lLayoutForTopHeaderView"
+                    android:fitsSystemWindows="true"></include>
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+</RelativeLayout>

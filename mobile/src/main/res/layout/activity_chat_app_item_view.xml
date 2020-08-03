@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#3a3a3c"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/chat_left_msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/message_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/test_arrow"
+            android:background="@drawable/bg_msg_left"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="7dp"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/chat_left_msg_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:maxWidth="200dp"
+                android:text="demo Text"
+                android:textColor="#222"
+                android:textSize="17sp" />
+
+            <TextClock
+                android:id="@+id/msg_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/chat_left_msg_text_view"
+                android:layout_toEndOf="@+id/chat_left_msg_text_view"
+                android:text="1:30 P.M."
+                android:textColor="#888"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/is_Read_iv"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignBottom="@+id/chat_left_msg_text_view"
+                android:layout_marginLeft="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_toEndOf="@+id/msg_time"
+                android:tint="@color/light_blue"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/test_arrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="-6dp"
+            android:background="@null"
+            android:scaleX="-1.5"
+            android:src="@drawable/v_bubble_corner_left" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/chat_right_msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/message_sendx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/test_arrowx"
+            android:background="@drawable/bg_msg_right"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="7dp"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/chat_right_msg_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:maxWidth="200dp"
+                android:text="demo Text"
+                android:textColor="#222"
+                android:textSize="17sp" />
+
+            <TextClock
+                android:id="@+id/msg_timex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/chat_right_msg_text_view"
+                android:layout_toEndOf="@+id/chat_right_msg_text_view"
+                android:text="1:30 P.M."
+                android:textColor="#888"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/is_Read_ivx"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignBottom="@+id/chat_right_msg_text_view"
+                android:layout_marginLeft="2dp"
+                android:layout_marginBottom="2dp"
+
+                android:layout_toEndOf="@+id/msg_timex"
+                android:tint="@color/light_blue"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/test_arrowx"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="1dp"
+            android:background="@null"
+            android:scaleX="1.5"
+            android:src="@drawable/v_bubble_corner_right" />
+    </RelativeLayout>
+
+</LinearLayout>

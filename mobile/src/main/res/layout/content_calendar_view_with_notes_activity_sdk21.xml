@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="org.hugoandrade.calendarviewapp.CalendarViewWithNotesActivity">
+
+    <RelativeLayout
+        android:id="@+id/Rview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/TextOfYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    <!--    <org.hugoandrade.calendarviewlib.CalendarView-->
+    <!--        android:id="@+id/calendarView"-->
+    <!--        android:layout_below="@+id/Rview"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="400dp"-->
+    <!--        app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+    <!--        app:content_background_color="#fff"-->
+    <!--        app:week_header_background_color="#fff"-->
+    <!--        app:week_header_text_color="@color/colorPrimary"-->
+    <!--        app:current_day_circle_enable="true"-->
+    <!--        app:month_header_show="false"-->
+    <!--        app:week_header_movable="false" >-->
+
+
+    <!--    </org.hugoandrade.calendarviewlib.CalendarView>-->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calendarView"
+        android:layout_weight="0.7" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:padding="30dp"
+        android:src="@drawable/add_athlete" />
+</RelativeLayout>

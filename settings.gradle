@@ -1,0 +1,2 @@
+include ':mobile', ':wear', ':commonlib', ':mobilertc',':library', ':material-calendarview-2.0.1'
+include ':app', ':photoeditorsdk'

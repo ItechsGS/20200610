@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3a3a3c"
+    android:orientation="horizontal">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/TeamNameList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#313133"
+        android:orientation="vertical" />
+
+
+    <RelativeLayout
+        android:id="@+id/rLayoutforAddTeamButton"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/horizontal_scroll_margin"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/imageViewAddTeamButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/add_button" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForBottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#3a3a3c">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:background="#313133"
+
+            android:elevation="10dp">
+
+            <ImageView
+                android:id="@+id/imageViewSettingIcon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/setting_icon" />
+
+            <TextView
+                android:id="@+id/textviewTrainThisTeam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageViewSettingIcon"
+                android:layout_alignBottom="@+id/imageViewSettingIcon"
+                android:layout_toLeftOf="@+id/imageViewSummaryIcon"
+                android:layout_toRightOf="@+id/imageViewSettingIcon"
+                android:gravity="center"
+                android:text="Train This Team"
+                android:textAllCaps="true"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/choose_screen_text_size_small" />
+
+            <RelativeLayout
+                android:id="@+id/imageViewSummaryIcon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/health_profile_icon"
+                    android:tint="@color/color_black_for_toggle_selected"
+                    android:visibility="gone"
+
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForBottomViewSettingsOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewSettingIcon"
+                android:layout_margin="1dp"
+                android:background="#3a3a3c">
+
+                <LinearLayout
+                    android:id="@+id/lLayoutForBottomViewSettingsOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#3a3a3c"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="4">
+
+                    <RelativeLayout
+                        android:id="@+id/rLayoutForDeleteAthlete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:background="#313133">
+
+                        <ImageView
+                            android:id="@+id/imageViewDeleteAthlete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/activity_indicator_margin"
+                            android:src="@drawable/delete_athlete" />
+
+                        <TextView
+                            android:id="@+id/textviewDeleteAthlete"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="Delete Athlete"
+                            android:textAllCaps="true"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/text_size_setting_items" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rLayoutForAddAthlete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:background="#313133">
+
+                        <ImageView
+                            android:id="@+id/imageViewAddAthlete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/activity_indicator_margin"
+                            android:src="@drawable/add_athlete" />
+
+                        <TextView
+                            android:id="@+id/textviewAddAthlete"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="@string/add_athlete"
+                            android:textAllCaps="true"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/text_size_setting_items" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rLayoutForAddCoach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:background="#313133">
+
+                        <ImageView
+                            android:id="@+id/imageViewAddCoach"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/activity_indicator_margin"
+                            android:src="@drawable/add_coach" />
+
+                        <TextView
+                            android:id="@+id/textviewAddCoach"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="@string/add_another_coach"
+                            android:textAllCaps="true"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/text_size_setting_items" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rLayoutForAddTeam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:background="#313133">
+
+                        <ImageView
+                            android:id="@+id/imageViewAddTeam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/activity_indicator_margin"
+                            android:src="@drawable/assign_icon"
+                            android:tint="@color/color_gray_for_text" />
+
+                        <TextView
+                            android:id="@+id/textviewAddTeam"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="@string/add_team"
+                            android:textAllCaps="true"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/text_size_setting_items" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rLayoutForBottomView"
+        android:layout_below="@+id/TeamNameList">
+
+        <LinearLayout
+            android:id="@+id/page_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForSwipeViews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:visibility="visible">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/coachBoardRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/grid_view_items" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/page_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <RelativeLayout
+        android:id="@+id/rSearchAthleteText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3a3a3c"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/SearchAthleteText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/CancelButtonOfSearch"
+            android:animateLayoutChanges="true"
+            android:padding="15dp">
+
+            <EditText
+                android:id="@+id/calc_txt_Prise"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_semi_rounded"
+                android:hint="Search..."
+                android:padding="10dp"
+                android:singleLine="true"
+
+                android:textColor="@color/textColorYellow"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/calc_clear_txt_Prise"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/delete_athlete_red_icon"
+                android:tint="@color/color_for_absent_palyer" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/CancelButtonOfSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:padding="2dp"
+            android:text="Cancel"
+            android:textColor="@color/textColorYellow"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

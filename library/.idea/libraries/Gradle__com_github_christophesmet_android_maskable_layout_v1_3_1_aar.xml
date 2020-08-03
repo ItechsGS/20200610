@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.christophesmet:android_maskable_layout:v1.3.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6d627fd0bdec902f397fb66c13d569d4/android_maskable_layout-v1.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6d627fd0bdec902f397fb66c13d569d4/android_maskable_layout-v1.3.1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.christophesmet/android_maskable_layout/v1.3.1/2b6c8b2603392606a811550f3a5a25a4f43af0a0/android_maskable_layout-v1.3.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

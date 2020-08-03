@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rLayoutMain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#313133">
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForLogoImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewLogo"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textAllCaps="true"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/choose_screen_text_size" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/dividerOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rLayoutForLogoImage"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/text_box_margin"
+        android:src="@drawable/divider_drawer_item"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForTraning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dividerOne"
+        android:layout_alignLeft="@+id/dividerOne"
+        android:layout_marginTop="@dimen/text_box_margin">
+
+        <ImageView
+            android:id="@+id/imageViewTraning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:adjustViewBounds="true"
+            android:src="@drawable/training_menu_icon" />
+
+        <TextView
+            android:id="@+id/textViewTraning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageViewTraning"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:text="@string/training"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorYellow"
+            android:textSize="@dimen/drawer_items_text_size" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/dividerTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rLayoutForTraning"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:src="@drawable/divider_drawer_item" />
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForAnalytics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dividerTwo"
+        android:layout_alignLeft="@+id/dividerTwo"
+        android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+        <ImageView
+            android:id="@+id/imageViewAnalytics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:adjustViewBounds="true"
+            android:src="@drawable/analytics_menu_icon" />
+
+        <TextView
+            android:id="@+id/textViewAnalytics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageViewAnalytics"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:text="@string/analytics"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorYellow"
+            android:textSize="@dimen/drawer_items_text_size" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/dividerThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rLayoutForAnalytics"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:src="@drawable/divider_drawer_item" />
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dividerThree"
+
+        android:layout_alignLeft="@+id/dividerThree"
+        android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+
+        <ImageView
+            android:id="@+id/imageViewHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:adjustViewBounds="true"
+            android:src="@drawable/help" />
+
+        <TextView
+            android:id="@+id/textViewHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageViewHelp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:text="@string/help"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorYellow"
+            android:textSize="@dimen/drawer_items_text_size" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/dividerFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rLayoutForHelp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:src="@drawable/divider_drawer_item" />
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForLogoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dividerFour"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin">
+
+        <ImageView
+            android:id="@+id/imageViewLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/logout" />
+
+        <TextView
+            android:id="@+id/textViewLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageViewLogout"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:text="@string/logout"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorYellow"
+            android:textSize="@dimen/drawer_items_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/itemLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/login_transparant_layer"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="55dp">
+
+            <ImageView
+                android:id="@+id/drawer_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/add_button" />
+
+            <TextView
+                android:id="@+id/drawer_itemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:text="@string/athletes"
+                android:textSize="@dimen/choose_screen_text_size_small" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="1dp"
+            android:background="#DADADC"
+
+            ></View>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lLayoutMain"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#3a3a3c">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="6">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutForActivationHoloCircleContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/text_box_margin">
+
+                    <com.org.godspeed.utility.HoloCircularProgressBar
+                        android:id="@+id/holoCirculDashed_Activation"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        app:dashed_circle="true"
+                        app:marker_progress="0"
+                        app:progress="0.5"
+                        app:progress_background_color="#4e4e50"
+                        app:progress_color="#ffffff"
+                        app:stroke_width="3dp"
+                        app:thumb_visible="false" />
+
+                    <com.org.godspeed.utility.HoloCircularProgressBar
+                        android:id="@+id/holoCirculNormal_Activation"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        app:dashed_circle="false"
+                        app:marker_progress="0"
+                        app:progress="0.5"
+                        app:progress_background_color="#4e4e50"
+                        app:progress_color="#edbb57"
+                        app:stroke_width="3dp"
+                        app:thumb_visible="false" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/imageViewActivationIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:src="@drawable/activation_icon_header" />
+
+                        <TextView
+                            android:id="@+id/textViewActivation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageViewActivationIcon"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="@string/activation"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rLAyoutForAppLogoWithInformationForActivation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/text_box_margin">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo_frame" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/textViewMetricsNameForActivation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="@string/velocity"
+                            android:textColor="@color/color_gray_for_text"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+
+                        <TextView
+                            android:id="@+id/textViewMetricsValueForActivation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewMetricsNameForActivation"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="45"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+
+                        <TextView
+                            android:id="@+id/textViewMetricsTypeForActivation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewMetricsValueForActivation"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="1dp"
+                            android:gravity="center"
+                            android:text="m/s"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/rLAyoutForAppLogoWithInformationForActivation"
+                    android:layout_toRightOf="@+id/rLayoutForActivationHoloCircleContainer">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textViewActivationMinutes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="45"
+                            android:textColor="@color/textColorYellow"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                        <TextView
+                            android:id="@+id/textViewActivationMinutesType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewActivationMinutes"
+                            android:layout_marginLeft="@dimen/text_box_margin"
+
+                            android:gravity="center"
+                            android:text="min"
+                            android:textColor="@color/textColorYellow"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                        <TextView
+                            android:id="@+id/textViewDurationPrecentage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewActivationMinutesType"
+                            android:layout_margin="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="25%"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutForSkillsHoloCircleContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/text_box_margin">
+
+                    <com.org.godspeed.utility.HoloCircularProgressBar
+                        android:id="@+id/holoCirculDashed_Skills"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        app:dashed_circle="true"
+                        app:marker_progress="0"
+                        app:progress="0.5"
+                        app:progress_background_color="#4e4e50"
+                        app:progress_color="#ffffff"
+                        app:stroke_width="3dp"
+                        app:thumb_visible="false" />
+
+                    <com.org.godspeed.utility.HoloCircularProgressBar
+                        android:id="@+id/holoCirculNormal_Skills"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        app:dashed_circle="false"
+                        app:marker_progress="0"
+                        app:progress="0.5"
+                        app:progress_background_color="#4e4e50"
+                        app:progress_color="#edbb57"
+                        app:stroke_width="3dp"
+                        app:thumb_visible="false" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/imageViewSkillIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:src="@drawable/skills" />
+
+                        <TextView
+                            android:id="@+id/textViewSkillsText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageViewSkillIcon"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="@string/skills"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rLAyoutForAppLogoWithInformationForSkill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/text_box_margin">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo_frame" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/textViewMetricsNameForSkill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="@string/power"
+                            android:textColor="@color/color_gray_for_text"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+
+                        <TextView
+                            android:id="@+id/textViewMetricsValueForSkill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewMetricsNameForSkill"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="12"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+
+                        <TextView
+                            android:id="@+id/textViewMetricsTypeForSkill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewMetricsValueForSkill"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="1dp"
+                            android:gravity="center"
+                            android:text="@string/watts"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/rLAyoutForAppLogoWithInformationForSkill"
+                    android:layout_toRightOf="@+id/rLayoutForSkillsHoloCircleContainer">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textViewBuildMinutesForSkill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="58"
+                            android:textColor="@color/textColorYellow"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                        <TextView
+                            android:id="@+id/textViewBuildMinutesTypeForSkill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewBuildMinutesForSkill"
+                            android:layout_marginLeft="@dimen/text_box_margin"
+
+                            android:gravity="center"
+                            android:text="min"
+                            android:textColor="@color/textColorYellow"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                        <TextView
+                            android:id="@+id/textViewBuildDurationPrecentageForSkill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewBuildMinutesTypeForSkill"
+                            android:layout_margin="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="30%"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutForEnergyHoloCircleContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/text_box_margin">
+
+                    <com.org.godspeed.utility.HoloCircularProgressBar
+                        android:id="@+id/holoCirculDashed_Energy"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        app:dashed_circle="true"
+                        app:marker_progress="0"
+                        app:progress="0.5"
+                        app:progress_background_color="#4e4e50"
+                        app:progress_color="#ffffff"
+                        app:stroke_width="3dp"
+                        app:thumb_visible="false" />
+
+                    <com.org.godspeed.utility.HoloCircularProgressBar
+                        android:id="@+id/holoCirculNormal_Energy"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        app:dashed_circle="false"
+                        app:marker_progress="0"
+                        app:progress="0.5"
+                        app:progress_background_color="#4e4e50"
+                        app:progress_color="#edbb57"
+                        app:stroke_width="3dp"
+                        app:thumb_visible="false" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/imageViewEnergyIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:src="@drawable/energy_icon" />
+
+                        <TextView
+                            android:id="@+id/textViewEnergy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageViewEnergyIcon"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="@string/energy"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rLAyoutForAppLogoWithInformationForEnergy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/text_box_margin">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo_frame" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/textViewMetricsNameForEnergy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="@string/heart_rate"
+                            android:textColor="@color/color_gray_for_text"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+
+                        <TextView
+                            android:id="@+id/textViewMetricsValueForEnergy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewMetricsNameForEnergy"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="72"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+
+                        <TextView
+                            android:id="@+id/textViewMetricsTypeForEnergy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewMetricsValueForEnergy"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="1dp"
+                            android:gravity="center"
+                            android:text="@string/beats_per_min"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/rLAyoutForAppLogoWithInformationForEnergy"
+                    android:layout_toRightOf="@+id/rLayoutForEnergyHoloCircleContainer">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textViewBuildMinutesForEnergy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="1:30"
+                            android:textColor="@color/textColorYellow"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                        <TextView
+                            android:id="@+id/textViewBuildMinutesTypeForEnergy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewBuildMinutesForEnergy"
+                            android:layout_marginLeft="@dimen/text_box_margin"
+
+                            android:gravity="center"
+                            android:text="hrs"
+                            android:textColor="@color/textColorYellow"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                        <TextView
+                            android:id="@+id/textViewBuildDurationPrecentageForEnergy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewBuildMinutesTypeForEnergy"
+                            android:layout_margin="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="70%"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutForBuildHoloCircleContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/text_box_margin">
+
+                    <com.org.godspeed.utility.HoloCircularProgressBar
+                        android:id="@+id/holoCirculDashed_Build"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        app:dashed_circle="true"
+                        app:marker_progress="0"
+                        app:progress="0.5"
+                        app:progress_background_color="#4e4e50"
+                        app:progress_color="#ffffff"
+                        app:stroke_width="3dp"
+                        app:thumb_visible="false" />
+
+                    <com.org.godspeed.utility.HoloCircularProgressBar
+                        android:id="@+id/holoCirculNormal_Build"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        app:dashed_circle="false"
+                        app:marker_progress="0"
+                        app:progress="0.5"
+                        app:progress_background_color="#4e4e50"
+                        app:progress_color="#edbb57"
+                        app:stroke_width="3dp"
+                        app:thumb_visible="false" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/imageViewBuildIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:src="@drawable/build_icon" />
+
+                        <TextView
+                            android:id="@+id/textViewBuild"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageViewBuildIcon"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="@string/build"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rLAyoutForAppLogoWithInformationForBuild"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/text_box_margin">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo_frame" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/textViewMetricsNameForBuild"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="@string/power"
+                            android:textColor="@color/color_gray_for_text"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+
+                        <TextView
+                            android:id="@+id/textViewMetricsValueForBuild"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewMetricsNameForBuild"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="12"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+
+                        <TextView
+                            android:id="@+id/textViewMetricsTypeForBuild"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewMetricsValueForBuild"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="1dp"
+                            android:gravity="center"
+                            android:text="@string/watts"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/rLAyoutForAppLogoWithInformationForBuild"
+                    android:layout_toRightOf="@+id/rLayoutForBuildHoloCircleContainer">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textViewBuildMinutesForBuild"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="58"
+                            android:textColor="@color/textColorYellow"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                        <TextView
+                            android:id="@+id/textViewBuildMinutesTypeForBuild"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewBuildMinutesForBuild"
+                            android:layout_marginLeft="@dimen/text_box_margin"
+
+                            android:gravity="center"
+                            android:text="min"
+                            android:textColor="@color/textColorYellow"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                        <TextView
+                            android:id="@+id/textViewBuildDurationPrecentageForBuild"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewBuildMinutesTypeForBuild"
+                            android:layout_margin="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="30%"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutForRegenHoloCircleContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/text_box_margin">
+
+                    <com.org.godspeed.utility.HoloCircularProgressBar
+                        android:id="@+id/holoCirculDashed_Regen"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        app:dashed_circle="true"
+                        app:marker_progress="0"
+                        app:progress="0.5"
+                        app:progress_background_color="#4e4e50"
+                        app:progress_color="#ffffff"
+                        app:stroke_width="3dp"
+                        app:thumb_visible="false" />
+
+                    <com.org.godspeed.utility.HoloCircularProgressBar
+                        android:id="@+id/holoCirculNormal_Regen"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        app:dashed_circle="false"
+                        app:marker_progress="0"
+                        app:progress="0.5"
+                        app:progress_background_color="#4e4e50"
+                        app:progress_color="#edbb57"
+                        app:stroke_width="3dp"
+                        app:thumb_visible="false" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/imageViewRegenIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:src="@drawable/re_gen" />
+
+                        <TextView
+                            android:id="@+id/textViewRegen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageViewRegenIcon"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="@string/regen"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rLAyoutForAppLogoWithInformationForRegen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/text_box_margin">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo_frame" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/textViewMetricsNameForRegen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="@string/sleep"
+                            android:textColor="@color/color_gray_for_text"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+
+                        <TextView
+                            android:id="@+id/textViewMetricsValueForRegen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewMetricsNameForRegen"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="8"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+
+                        <TextView
+                            android:id="@+id/textViewMetricsTypeForRegen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewMetricsValueForRegen"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="1dp"
+                            android:gravity="center"
+                            android:text="hrs"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/rLAyoutForAppLogoWithInformationForRegen"
+                    android:layout_toRightOf="@+id/rLayoutForRegenHoloCircleContainer">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textViewBuildMinutesForRegen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="45"
+                            android:textColor="@color/textColorYellow"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                        <TextView
+                            android:id="@+id/textViewBuildMinutesTypeForRegen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewBuildMinutesForRegen"
+                            android:layout_marginLeft="@dimen/text_box_margin"
+
+                            android:gravity="center"
+                            android:text="min"
+                            android:textColor="@color/textColorYellow"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                        <TextView
+                            android:id="@+id/textViewBuildDurationPrecentageForRegen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewBuildMinutesTypeForRegen"
+                            android:layout_margin="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="80%"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutForFuelHoloCircleContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/text_box_margin">
+
+                    <com.org.godspeed.utility.HoloCircularProgressBar
+                        android:id="@+id/holoCirculDashed_Fuel"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        app:dashed_circle="true"
+                        app:marker_progress="0"
+                        app:progress="0.5"
+                        app:progress_background_color="#4e4e50"
+                        app:progress_color="#ffffff"
+                        app:stroke_width="3dp"
+                        app:thumb_visible="false" />
+
+                    <com.org.godspeed.utility.HoloCircularProgressBar
+                        android:id="@+id/holoCirculNormal_Fuel"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        app:dashed_circle="false"
+                        app:marker_progress="0"
+                        app:progress="0.5"
+                        app:progress_background_color="#4e4e50"
+                        app:progress_color="#edbb57"
+                        app:stroke_width="3dp"
+                        app:thumb_visible="false" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/imageViewFuelIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:src="@drawable/fuel" />
+
+                        <TextView
+                            android:id="@+id/textViewFuel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageViewFuelIcon"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="@string/fuel"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rLAyoutForAppLogoWithInformationForFuel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/text_box_margin">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo_frame" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/textViewMetricsNameForFuel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="@string/power"
+                            android:textColor="@color/color_gray_for_text"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+
+                        <TextView
+                            android:id="@+id/textViewMetricsValueForFuel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewMetricsNameForFuel"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="12"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+
+                        <TextView
+                            android:id="@+id/textViewMetricsTypeForFuel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewMetricsValueForFuel"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="1dp"
+                            android:gravity="center"
+                            android:text="@string/watts"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_item_name" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/rLAyoutForAppLogoWithInformationForFuel"
+                    android:layout_toRightOf="@+id/rLayoutForFuelHoloCircleContainer">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textViewBuildMinutesForFuel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="58"
+                            android:textColor="@color/textColorYellow"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                        <TextView
+                            android:id="@+id/textViewBuildMinutesTypeForFuel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewBuildMinutesForFuel"
+                            android:layout_marginLeft="@dimen/text_box_margin"
+
+                            android:gravity="center"
+                            android:text="min"
+                            android:textColor="@color/textColorYellow"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                        <TextView
+                            android:id="@+id/textViewBuildDurationPrecentageForFuel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewBuildMinutesTypeForFuel"
+                            android:layout_margin="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="30%"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/lLayoutMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/text_box_margin"
+        android:background="@drawable/bg_dark_"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+
+        <TextView
+            android:id="@+id/textViewExerciseSetParameters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:text="Set:1"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_size_grid_item_name" />
+
+        <TextView
+            android:id="@+id/textViewExerciseRepsParameters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="Reps:1"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_size_grid_item_name" />
+
+        <TextView
+            android:id="@+id/textViewExerciseWtParameters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="Wt:120lb"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_size_grid_item_name" />
+
+        <TextView
+            android:id="@+id/textViewExercisePerParameters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="Per:75%"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_size_grid_item_name" />
+
+
+        <ImageView
+            android:id="@+id/imageViewAddExercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/text_box_margin"
+            android:layout_weight="1"
+            android:src="@drawable/plus_with_circle_icon" />
+
+    </LinearLayout>
+</RelativeLayout>

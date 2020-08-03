@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:id="@+id/ForTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center"
+        android:paddingStart="8dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="3dp"
+        android:paddingBottom="14dp">
+
+        <RelativeLayout
+            android:id="@+id/rLayoutofTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_border_gray"
+
+            android:foreground="@drawable/ripple">
+
+            <TextView
+                android:id="@+id/teamName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:maxLines="1"
+                android:padding="7dp"
+                android:textAlignment="center"
+                android:textSize="@dimen/team_name_textsize" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/TypeArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:rotation="180"
+            android:src="@drawable/back_arrow"
+            android:tint="@color/color_gray_for_text"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ForPerfom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+
+        android:layout_marginRight="5dp"
+        android:gravity="center_vertical"
+        android:paddingEnd="3dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rLayoutofPerfrom"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_border_gray">
+
+            <TextView
+                android:id="@+id/PerfromName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="@string/team"
+                android:textAlignment="center"
+                android:textSize="@dimen/team_name_textsize" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout><!--//android:layout_margin="10dp"  android:padding="10dp"-->

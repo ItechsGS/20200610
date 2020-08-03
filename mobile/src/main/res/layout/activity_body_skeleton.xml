@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3a3a3c"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3a3a3c"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rLayoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewBackArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/normal_margin_set"
+                android:src="@drawable/back_arrow" />
+
+            <TextView
+                android:id="@+id/textViewScreenName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/health_profile"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/choose_screen_text_size" />
+
+            <ImageView
+                android:id="@+id/Sekeleton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/skelton"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/MainLayoutForAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rLayoutHeader"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForProfileData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rLayoutHeader"
+                android:background="#343436"
+                android:paddingTop="@dimen/activity_indicator_margin"
+                android:paddingBottom="@dimen/activity_indicator_margin">
+
+                <TextView
+                    android:id="@+id/textViewBodyCompositionHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:text="@string/body_composition_history"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewBodyCompositionHistory"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForWeightText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewBodyCompositionHistory"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/text_box_margin"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/textViewWeightLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/weight"
+                                android:textColor="@color/textColorYellow"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:id="@+id/textViewWeightValue1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textViewWeightLabel"
+                                android:text="-"
+                                android:textColor="@color/color_white"
+                                android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                            <TextView
+                                android:id="@+id/textViewDash1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textViewWeightLabel"
+                                android:layout_toRightOf="@+id/textViewWeightValue1"
+                                android:text=" - "
+                                android:textColor="@color/color_white"
+                                android:textSize="@dimen/text_size_grid_palyer_name"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/textViewWeightValue2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textViewWeightLabel"
+                                android:layout_toRightOf="@+id/textViewDash1"
+                                android:text="155.2"
+                                android:textColor="@color/color_white"
+                                android:textSize="@dimen/text_size_grid_palyer_name"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForSMMText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_below="@+id/textViewBodyCompositionHistory"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/text_box_margin"
+                            android:layout_toRightOf="@+id/rLayoutForWeightText"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/textViewSMMLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/smm"
+                                android:textColor="@color/textColorYellow"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:id="@+id/textViewSMMValue1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textViewSMMLabel"
+                                android:text="-"
+                                android:textColor="@color/color_white"
+                                android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                            <TextView
+                                android:id="@+id/textViewDash2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textViewSMMLabel"
+                                android:layout_toRightOf="@+id/textViewSMMValue1"
+                                android:text=" - "
+                                android:textColor="@color/color_white"
+                                android:textSize="@dimen/text_size_grid_palyer_name"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/textViewSMMValue2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textViewSMMLabel"
+                                android:layout_toRightOf="@+id/textViewDash2"
+                                android:text="79.2"
+                                android:textColor="@color/color_white"
+                                android:textSize="@dimen/text_size_grid_palyer_name"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForPBFText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewBodyCompositionHistory"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/text_box_margin"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/textViewPBFLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/weight"
+                                android:textColor="@color/textColorYellow"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:id="@+id/textViewPBFValue1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textViewPBFLabel"
+                                android:text="-"
+                                android:textColor="@color/color_white"
+                                android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                            <TextView
+                                android:id="@+id/textViewDash3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textViewPBFLabel"
+                                android:layout_toRightOf="@+id/textViewPBFValue1"
+                                android:text=" - "
+                                android:textColor="@color/color_white"
+                                android:textSize="@dimen/text_size_grid_palyer_name"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/textViewPBFValue2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textViewPBFLabel"
+                                android:layout_toRightOf="@+id/textViewDash3"
+                                android:text="9.3"
+                                android:textColor="@color/color_white"
+                                android:textSize="@dimen/text_size_grid_palyer_name"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForECWText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_below="@+id/textViewBodyCompositionHistory"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/text_box_margin"
+                            android:layout_toRightOf="@+id/rLayoutForWeightText"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/textViewECWLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/smm"
+                                android:textColor="@color/textColorYellow"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:id="@+id/textViewECWValue1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textViewECWLabel"
+                                android:text="-"
+
+                                android:textColor="@color/color_white"
+                                android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                            <TextView
+                                android:id="@+id/textViewDash4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textViewECWLabel"
+                                android:layout_toRightOf="@+id/textViewECWValue1"
+                                android:text=" - "
+                                android:textColor="@color/color_white"
+                                android:textSize="@dimen/text_size_grid_palyer_name"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/textViewECWValue2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textViewECWLabel"
+                                android:layout_toRightOf="@+id/textViewDash4"
+                                android:text="0.375"
+                                android:textColor="@color/color_white"
+                                android:textSize="@dimen/text_size_grid_palyer_name"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForProfileOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutForProfileData"
+                android:layout_marginTop="@dimen/activity_indicator_margin"
+                android:layout_marginBottom="@dimen/activity_indicator_margin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin">
+
+                    <TextView
+                        android:id="@+id/textViewInjuris"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/injuris"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/activity_indicator_margin"
+                        android:layout_toRightOf="@+id/textViewInjuris"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForViewProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageViewViewIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/view_icon" />
+
+                            <TextView
+                                android:id="@+id/textViewViewProfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/text_box_margin"
+                                android:layout_toRightOf="@+id/imageViewViewIcon"
+                                android:text="@string/view"
+                                android:textAllCaps="true"
+                                android:textColor="@color/textColorYellow"
+                                android:textSize="@dimen/text_size_grid_palyer_name" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForEditProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                            android:layout_toRightOf="@+id/rLayoutForViewProfile"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageViewEditIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/edit_icon" />
+
+                            <TextView
+                                android:id="@+id/textViewEditProfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/text_box_margin"
+                                android:layout_toRightOf="@+id/imageViewEditIcon"
+                                android:text="@string/edit"
+                                android:textAllCaps="true"
+                                android:textColor="@color/textColorYellow"
+                                android:textSize="@dimen/text_size_grid_palyer_name" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForPrintProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_indicator_margin"
+                            android:layout_toRightOf="@+id/rLayoutForEditProfile"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageViewPrintIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/print_icon" />
+
+                            <TextView
+                                android:id="@+id/textViewPrintProfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/text_box_margin"
+                                android:layout_toRightOf="@+id/imageViewPrintIcon"
+                                android:maxLines="1"
+                                android:text="@string/print"
+                                android:textAllCaps="true"
+                                android:textColor="@color/textColorYellow"
+                                android:textSize="@dimen/text_size_grid_palyer_name" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dividerOne"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rLayoutForProfileOption"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@color/color_white" />
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForCalender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dividerOne">
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutForCalenderControls"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/Sekeleton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/skelton" />
+
+
+                    <LinearLayout
+                        android:id="@+id/rLAyoutForCalendarDialog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/lLayoutForOptionBar"
+                        android:layout_centerInParent="true"
+                        android:layout_weight="1"
+                        android:background="#39393B"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/arrowRLeftCalender"
+                            android:layout_width="20dp"
+
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/left_arrow"
+                            android:tint="@color/textColorYellow" />
+
+                        <ImageView
+                            android:id="@+id/imageViewCalender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/normal_margin_set"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
+                            android:src="@drawable/calendar"
+                            android:tint="@color/Calender"
+                            android:visibility="visible" />
+
+
+                        <TextView
+                            android:id="@+id/textViewDate"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_centerHorizontal="true"
+
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="10-May-2018"
+                            android:textColor="@color/Calender"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                        <ImageView
+                            android:id="@+id/arrowRightCalender"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/right_arrow"
+                            android:tint="@color/textColorYellow" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/RlayoutSetting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/llayoutText"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/radius"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:id="@+id/rLayoutMatric"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@drawable/textviewradious"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/TextM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center"
+                                    android:text="M"
+                                    android:textAlignment="center"
+                                    android:textSize="15sp"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lLayoutImperial"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="#edbb57"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/TextF"
+                                    android:layout_width="30dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center"
+                                    android:text="F"
+                                    android:textAlignment="center"
+                                    android:textSize="15sp"
+
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForBodyView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_weight="1"
+
+            android:background="@color/color_white">
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:clickable="false">
+
+
+            </WebView>
+
+            <ImageView
+                android:id="@+id/FullScreen"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="20dp"
+
+                android:layout_weight="1"
+                android:src="@drawable/full_screen_icon" />
+            <!--<ImageView-->
+            <!--android:id="@+id/imageViewBody"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:src="@drawable/body_injury" />-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLayoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:animateLayoutChanges="true"
+
+            android:background="#39393B"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rLayoutMuscularButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageViewMuscular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/health_profile_selected_button_icon" />
+
+
+                <TextView
+                    android:id="@+id/textViewMuscular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/muscular"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_black_for_health_profile_button_selected"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rLayoutBoneButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@+id/rLayoutMuscularButton">
+
+                <ImageView
+                    android:id="@+id/imageViewBone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/health_profile_unselected_button_icon" />
+
+
+                <TextView
+                    android:id="@+id/textViewBone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/bone"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_gray_for_health_profile_button_unselected"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!-- layout for showing body parts in full screen mode -->
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForFullScreenBodyPart"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1"
+        android:animateLayoutChanges="true"
+        android:background="#313133"
+        android:visibility="visible">
+
+
+        <!-- layout for edit injury and notes -->
+        <LinearLayout
+            android:id="@+id/lLayoutForViewEditInjury"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:visibility="visible"
+            android:weightSum="2">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#3a3a3c">
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutForTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#313133">
+
+                    <TextView
+                        android:id="@+id/textViewInjuryTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:text="@string/injuris"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                    <ImageView
+                        android:id="@+id/imageViewCloseView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/cross" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lLayoutForInjuryHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rLayoutForTitle"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/textViewInjuryPart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/activity_horizontal_margin"
+                        android:paddingBottom="@dimen/activity_horizontal_margin"
+                        android:text="@string/injury_part"
+                        android:textColor="@color/color_white"
+                        android:textSize="17sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/activity_horizontal_margin"
+                        android:paddingBottom="@dimen/activity_horizontal_margin"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/textViewReportedOn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:gravity="center"
+
+                            android:maxLines="1"
+                            android:text="@string/reported_on"
+                            android:textColor="@color/color_white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/textViewRecovered"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:gravity="center"
+
+                            android:maxLines="1"
+                            android:text="@string/recovered"
+                            android:textColor="@color/color_white"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/lLayoutForInjuryHeading"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/rLayoutForTitle"-->
+                <!--android:paddingTop="@dimen/activity_horizontal_margin"-->
+                <!--android:paddingBottom="@dimen/activity_horizontal_margin">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/textViewInjuryPart"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+                <!--android:text="@string/injury_part"-->
+                <!--android:textColor="@color/color_white"-->
+                <!--android:textSize="17sp" />-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentEnd="true">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/textViewReportedOn"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_toStartOf="@+id/textViewRecovered"-->
+                <!--android:text="@string/reported_on"-->
+                <!--android:textColor="@color/color_white"-->
+                <!--android:textSize="17sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/textViewRecovered"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+                <!--android:layout_marginRight="@dimen/activity_horizontal_margin"-->
+                <!--android:text="@string/recovered"-->
+                <!--android:textColor="@color/color_white"-->
+                <!--android:textSize="17sp" />-->
+                <!--</LinearLayout>-->
+
+                <!--</RelativeLayout>-->
+
+                <RelativeLayout
+                    android:id="@+id/dividerOneInjuryHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/lLayoutForInjuryHeading"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:background="@color/color_gray_for_health_profile_button_unselected"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listViewInjuryNameAndDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/dividerOneInjuryHeader"
+                    android:visibility="visible"
+                    tools:listitem="@layout/list_items_injury" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- layout for showing injury notes -->
+        <LinearLayout
+            android:id="@+id/lLayoutForViewInjuryNotes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#3a3a3c"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutForInjuryNotesTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="#313133">
+
+                    <ImageView
+                        android:id="@+id/imageViewAddInjuryNotes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/plus_with_circle_icon" />
+
+                    <TextView
+                        android:id="@+id/textViewInjuryName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_toEndOf="@+id/imageViewAddInjuryNotes"
+                        android:text="RECTUS FEMORIS"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                    <TextView
+                        android:id="@+id/textViewDash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/textViewInjuryName"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="-"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_for_absent_palyer"
+                        android:textSize="@dimen/text_size_grid_item_name"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textViewInjuryType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/textViewDash"
+
+                        android:text="Muscle"
+                        android:textColor="@color/color_for_absent_palyer"
+                        android:textSize="@dimen/text_size_grid_palyer_name"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/imageViewCloseInjuryNotes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/cross" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lLayoutForNoteHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rLayoutForInjuryNotesTitle"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:paddingBottom="@dimen/activity_horizontal_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:text="Notes"
+                        android:textColor="@color/color_white"
+                        android:textSize="17sp" />
+
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/RecyclerviewForNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rLayoutForInjuryNotesTitle" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

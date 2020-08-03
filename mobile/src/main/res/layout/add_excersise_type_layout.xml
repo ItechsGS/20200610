@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lLayoutforexercisetype"
+    android:layout_width="90dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+
+    android:background="@drawable/round_border_gray"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/exercisetype_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/agencyr"
+        android:gravity="center"
+        android:maxLines="1"
+
+        android:padding="5dp"
+        android:textAllCaps="true"
+        android:textColor="@color/color_white"
+        android:textSize="16sp" />
+
+</LinearLayout>

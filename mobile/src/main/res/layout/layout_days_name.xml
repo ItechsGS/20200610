@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForDaysName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@color/color_black_for_health_profile_button_selected"
+        android:padding="@dimen/text_box_margin"
+
+        >
+
+        <TextView
+            android:id="@+id/textViewDaysName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/text_box_margin"
+            android:clickable="false"
+            android:text="Day 1"
+            android:textColor="@color/color_white"
+
+            android:textSize="@dimen/drawer_items_text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForAddExercise"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+
+        >
+
+        <ImageView
+            android:id="@+id/imageViewPlusIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/text_box_margin"
+            android:layout_toLeftOf="@+id/textViewAddExercise"
+            android:src="@drawable/plus_with_circle_icon" />
+
+        <TextView
+            android:id="@+id/textViewAddExercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/text_box_margin"
+            android:text="@string/add_excercise"
+            android:textColor="@color/textColorYellow"
+            android:textSize="@dimen/text_size_grid_item_name" />
+    </RelativeLayout>
+</RelativeLayout>

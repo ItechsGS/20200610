@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../GodSpeed - MAIN.iml" filepath="$PROJECT_DIR$/../GodSpeed - MAIN.iml" group="GodSpeed - MAIN" />
+      <module fileurl="file://$PROJECT_DIR$/../app/app.iml" filepath="$PROJECT_DIR$/../app/app.iml" group="GodSpeed - MAIN/app" />
+      <module fileurl="file://$PROJECT_DIR$/../commonlib/commonlib.iml" filepath="$PROJECT_DIR$/../commonlib/commonlib.iml" group="GodSpeed - MAIN/commonlib" />
+      <module fileurl="file://$PROJECT_DIR$/library.iml" filepath="$PROJECT_DIR$/library.iml" group="GodSpeed - MAIN/library" />
+      <module fileurl="file://$PROJECT_DIR$/../material-calendarview-2.0.1/material-calendarview-2.0.1.iml" filepath="$PROJECT_DIR$/../material-calendarview-2.0.1/material-calendarview-2.0.1.iml" group="GodSpeed - MAIN/material-calendarview-2.0.1" />
+      <module fileurl="file://$PROJECT_DIR$/../mobile/mobile.iml" filepath="$PROJECT_DIR$/../mobile/mobile.iml" group="GodSpeed - MAIN/mobile" />
+      <module fileurl="file://$PROJECT_DIR$/../mobilertc/mobilertc.iml" filepath="$PROJECT_DIR$/../mobilertc/mobilertc.iml" group="GodSpeed - MAIN/mobilertc" />
+      <module fileurl="file://$PROJECT_DIR$/../photoeditorsdk/photoeditorsdk.iml" filepath="$PROJECT_DIR$/../photoeditorsdk/photoeditorsdk.iml" group="GodSpeed - MAIN/photoeditorsdk" />
+      <module fileurl="file://$PROJECT_DIR$/../wear/wear.iml" filepath="$PROJECT_DIR$/../wear/wear.iml" group="GodSpeed - MAIN/wear" />
+    </modules>
+  </component>
+</project>

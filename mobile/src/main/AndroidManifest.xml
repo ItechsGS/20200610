@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.org.godspeed">
+    <!--
+     The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- for background-service boot -->
+    <!-- for background-service boot -->
+
+    <uses-feature android:glEsVersion="0x00020000" />
+
+    <!--    <permission-->
+    <!--        android:name="com.org.godspeed.zoom_video.permission.KUBI_MESSAGE"-->
+    <!--        android:protectionLevel="signature" />-->
+
+    <!--    <uses-permission android:name="com.org.godspeed.zoom_video.permission.KUBI_MESSAGE" />-->
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.location.gps" /> <!-- For Smart Wearable Devices -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".utility.UILApplication"
+        android:allowBackup="true"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="stateHidden|adjustResize|adjustPan"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="m">
+
+        <activity
+            android:name=".allOtherClasses.SplashScreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".allOtherClasses.VideoListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ProgramPurchase.purchase_membership"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.chat_activity"
+            android:screenOrientation="portrait" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.geo.AIzaSyA-cQ7TcT1sA-dPAeymzmYEsYwE3_nBR7o" -->
+        <!-- android:value="AIzaSyA-cQ7TcT1sA-dPAeymzmYEsYwE3_nBR7o" /> -->
+        <!-- <service -->
+        <!-- android:name=".service.FireBase_Service" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true"></service> -->
+        <receiver android:name=".BootCompletedIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.REBOOT" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.BackgroundLocationUpdateService" />
+        <service android:name=".service.FireBase_Service">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- <meta-data android:name="firebase_analytics_collection_deactivated" android:value="true" /> -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBHXg-v7IzaKaEyc-peipu5MFTQWx-nK-Y" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider216577716131501"
+            android:exported="true" />
+
+        <activity
+            android:name=".allOtherClasses.GraphActivity"
+            android:label="@string/title_activity_graph"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service android:name=".service.SchoolDataService" />
+        <service android:name=".service.BackgroundDownloadNotificationService" /> <!-- For S Health -->
+        <activity
+            android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="${applicationId}.braintree" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.samsung.android.health.permission.read"
+            android:value="com.samsung.health.step_count;             com.samsung.health.user_profile;             com.samsung.health.heart_rate;             com.samsung.health.sleep;             com.samsung.shealth.step_daily_trend;             com.samsung.health.water_intake;             com.samsung.health.oxygen_saturation;" />
+
+        <activity
+            android:name=".allOtherClasses.SelectAthlete"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" /> <!-- <activity -->
+        <!-- android:name=".calenderAA.CalendarViewWithNotesActivitySDK21" -->
+        <!-- android:launchMode="singleTask" /> -->
+        <activity
+            android:name=".allOtherClasses.SelectTeamAndAthleteScreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.AbrActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.HelpScreenData"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".utility.Reset_Password"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <!-- <receiver android:name=".gps.GpsLocationReceiver"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.location.PROVIDERS_CHANGED" /> -->
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- <uses-library -->
+        <!-- android:name="org.apache.http.legacy" -->
+        <!-- android:required="false" /> -->
+        <activity
+            android:name=".allOtherClasses.LoginScreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.ProfileScreenActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.ChooseUserTypeScreen"
+            android:launchMode="singleTask"
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.CoachNevigationDrawerScreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".allOtherClasses.BodySkeletonInfoScreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+
+            android:windowSoftInputMode="adjustPan" /> <!-- <activity -->
+        <!-- android:name=".allOtherClasses.MetricesActivity" -->
+        <!-- android:launchMode="singleTask" /> -->
+        <activity
+            android:name=".allOtherClasses.AthleteExerciseSetActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.FileCaseWebViewScreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.CoachAddExerciseScreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.DaysWiseExerciseList"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.ExerciseTypeScreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.ExerciseNameScreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.ExerciseSetMetricsScreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.AddTeamCoachAthleteScreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.Session_summery"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".allOtherClasses.UserProfileScreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.PrivacyAndQuestionnariesScreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.VideoViewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.FuelScreenExpendibleList"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.AddFuelTypeScreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.Create_Quick_Add_Food_Fuel_Screen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".allOtherClasses.exercise_Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".map_activity.MapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".utility.ExoPlayerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+        <activity
+            android:name=".imageTest.PhotoEditorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+        <activity
+            android:name=".imageTest.MainActivityX"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+        <activity android:name=".WalletActivity" />
+
+
+        <activity
+            android:name=".zoom_video.ui.InitAuthSDKActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZMTheme.MainWindow">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".zoom_video.ui.APIUserStartJoinMeetingActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/ZMTheme.MainWindow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".zoom_video.ui.LoginUserStartJoinMeetingActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/ZMTheme.MainWindow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".zoom_video.ui.EmailUserLoginActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/ZMTheme.MainWindow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".zoom_video.ui.SSOUserLoginActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/ZMTheme.MainWindow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".zoom_video.otherfeatures.scheduleforloginuser.PreMeetingExampleActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/ZMTheme.MainWindow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".zoom_video.otherfeatures.scheduleforloginuser.ScheduleMeetingExampleActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/ZMTheme.MainWindow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".zoom_video.otherfeatures.MyInviteActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/invite_acitivity_name"
+            android:theme="@style/ZMTheme.MainWindow">
+            <intent-filter>
+                <action android:name=".zoom_video.intent.action.MeetingInvite" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".zoom_video.otherfeatures.MyWaitJoinActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:theme="@style/ZMTheme.MainWindow">
+            <intent-filter>
+                <action android:name=".zoom_video.intent.action.JoinBeforeHost" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".zoom_video.otherfeatures.MyCallMeByPhoneActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:theme="@style/ZMTheme.MainWindow">
+            <intent-filter>
+                <action android:name=".zoom_video.intent.action.CallMyPhone" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".zoom_video.inmeetingfunction.customizedmeetingui.MyMeetingActivity"
+            android:configChanges="screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZMTheme.SubWindow" />
+
+        <activity
+            android:name=".zoom_video.ui.MeetingSettingActivity"
+            android:configChanges="screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name=".zoom_video.inmeetingfunction.customizedmeetingui.RawDataMeetingActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity android:name=".zoom_video.ui.QAActivity" />
+        <activity
+            android:name=".zoom_video.ui.BreakoutRoomsAdminActivity"
+            android:configChanges="screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name=".zoom_video.ui.BoEditActivity"
+            android:configChanges="screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name=".zoom_video.inmeetingfunction.zoommeetingui.CustomZoomUIActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:theme="@style/ZMTheme.SubWindow" />
+    </application>
+
+</manifest>

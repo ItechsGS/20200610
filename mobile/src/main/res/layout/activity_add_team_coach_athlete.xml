@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#313133">
+
+
+    <RelativeLayout
+        android:id="@+id/rLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/normal_margin_set"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:id="@+id/textViewScreenName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/add_coach"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/choose_screen_text_size" />
+
+        <ImageView
+            android:id="@+id/imageViewSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/normal_margin_set"
+            android:src="@drawable/save_training" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dividerWebview"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rLayoutHeader"
+        android:background="#000000" />
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForAddTeamCoachAthlete"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dividerWebview"
+        android:background="#313133">
+
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForAddCoach"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/rLAyoutForCoachName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:id="@+id/textViewCoachName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/coach_name"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextCoachName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewCoachName"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@null"
+                    android:hint="Enter Coach Name"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_gray_for_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutDivider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rLAyoutForCoachName"
+                android:background="@color/subHeaderColor1" />
+
+            <RelativeLayout
+                android:id="@+id/rLAyoutForEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutDivider1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:id="@+id/textViewEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/agencyr"
+                    android:text="@string/email"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewEmail"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@null"
+                    android:hint="Enter Email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_gray_for_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutDivider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rLAyoutForEmail"
+                android:background="@color/subHeaderColor1"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rLAyoutForPosition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutDivider2"
+                android:layout_marginLeft="10dp"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:id="@+id/textViewPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/position"
+
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextPosition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewPosition"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/position"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_gray_for_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutDivider21"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rLAyoutForPosition"
+                android:background="@color/subHeaderColor1" />
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/rLayoutForAddTeam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <RelativeLayout
+                    android:id="@+id/rLAyoutForTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/textViewTeam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/agencyr"
+                        android:text="@string/team"
+                        android:textColor="@color/Presentcolor"
+
+                        android:textSize="@dimen/edit_text_textsize" />
+
+                    <EditText
+                        android:id="@+id/editTextTeam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewTeam"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@null"
+                        android:hint="Enter Team Name"
+
+                        android:textColor="#ffffff"
+                        android:textColorHint="@color/color_gray_for_text"
+                        android:textSize="@dimen/edit_text_textsize" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutDivider11"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/rLAyoutForTeam"
+                    android:background="@color/subHeaderColor1" />
+
+                <RelativeLayout
+                    android:id="@+id/rLAyoutForSport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rLayoutDivider11"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/textViewSport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/sport"
+                        android:textColor="@color/Presentcolor"
+                        android:textSize="@dimen/edit_text_textsize" />
+
+                    <EditText
+                        android:id="@+id/editTextSport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewSport"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@null"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"
+                        android:hint="Select Sport's"
+                        android:textColor="#ffffff"
+                        android:textColorHint="@color/color_gray_for_text"
+                        android:textSize="@dimen/edit_text_textsize" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rLayoutDivider22"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rLAyoutForSport"
+                    android:background="@color/subHeaderColor1" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewForAddclassTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rLayoutDivider22" />
+
+                <!--                <RelativeLayout-->
+                <!--                    android:id="@+id/rLayoutDivider222"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="1dp"-->
+                <!--                    android:layout_below="@id/recyclerViewForAddclassTime"-->
+                <!--                    android:background="@color/subHeaderColor1" />-->
+
+                <RelativeLayout
+                    android:id="@+id/rLAyoutForCoachOfTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/recyclerViewForAddclassTime"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_dark_rounded"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textViewrLAyoutForCoachOfTeam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/agencyr"
+                        android:text="Coaches"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="@dimen/edit_text_textsize" />
+
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewForCoachOfTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rLAyoutForCoachOfTeam" />
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForAddAthlete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+
+            <RelativeLayout
+                android:id="@+id/rLAyoutForName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/textViewName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="10dp"
+
+                    android:text="@string/first_name"
+
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/edit_text_textsize" />
+
+                <EditText
+                    android:id="@+id/editTextName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewName"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@null"
+                    android:hint="Enter First Name"
+                    android:singleLine="true"
+                    android:textColor="#ffffff"
+                    android:textColorHint="@color/color_gray_for_text"
+                    android:textSize="@dimen/edit_text_textsize" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutDivider1x"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rLAyoutForName"
+                android:background="@color/subHeaderColor1" />
+
+            <RelativeLayout
+                android:id="@+id/rLAyoutForLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutDivider1x"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textViewLastName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/last_name"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/edit_text_textsize" />
+
+                <EditText
+                    android:id="@+id/editTextLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewLastName"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@null"
+                    android:hint="Enter Last Name"
+                    android:singleLine="true"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_gray_for_text"
+                    android:textSize="@dimen/edit_text_textsize" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rLayoutDivider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rLAyoutForLastName"
+                android:background="@color/subHeaderColor1" />
+
+
+            <RelativeLayout
+                android:id="@+id/rLAyoutForEmailAthlete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutDivider3"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textViewEmailAthlete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/email"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/edit_text_textsize" />
+
+                <EditText
+                    android:id="@+id/editTextEmailAthlete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewEmailAthlete"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@null"
+                    android:hint="@string/enter_email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_gray_for_text"
+                    android:textSize="@dimen/edit_text_textsize" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutDivider7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rLAyoutForEmailAthlete"
+                android:background="@color/subHeaderColor1" />
+
+            <RelativeLayout
+                android:id="@+id/rLAyoutForAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutDivider7"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textViewAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/age"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/edit_text_textsize" />
+
+                <EditText
+                    android:id="@+id/editTextAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewAge"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@null"
+                    android:hint="Enter Age"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_gray_for_text"
+                    android:textSize="@dimen/edit_text_textsize" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutDivider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rLAyoutForAge"
+                android:background="@color/subHeaderColor1" />
+
+            <RelativeLayout
+                android:id="@+id/rLAyoutForGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutDivider4"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textViewGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/gender"
+                    android:textColor="@color/Presentcolor"
+                    android:textSize="@dimen/edit_text_textsize" />
+
+                <EditText
+                    android:id="@+id/editTextGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewGender"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:hint="Select Gender"
+                    android:singleLine="true"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_gray_for_text"
+                    android:textSize="@dimen/edit_text_textsize" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutDivider5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rLAyoutForGender"
+                android:background="@color/subHeaderColor1" />
+
+            <RelativeLayout
+                android:id="@+id/rLAyoutForClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutDivider5"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textViewClass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/school_grade"
+                    android:textColor="@color/Presentcolor"
+                    android:textSize="@dimen/edit_text_textsize" />
+
+                <EditText
+                    android:id="@+id/editTextClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewClass"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@null"
+                    android:hint="@string/select_school_grade"
+                    android:singleLine="true"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_gray_for_text"
+                    android:textSize="@dimen/edit_text_textsize" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutDividerx"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rLAyoutForClass"
+                android:background="@color/subHeaderColor1" />
+
+            <RelativeLayout
+                android:id="@+id/rLayoutforSelectTeam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutDividerx"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textViewSelectTeamText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/schoo_name"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/edit_text_textsize" />
+
+                <EditText
+                    android:id="@+id/editTextSelectTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewSelectTeamText"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/select_schoo_name"
+                    android:singleLine="true"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_gray_for_text"
+                    android:textSize="@dimen/edit_text_textsize" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutDivider6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rLayoutforSelectTeam"
+                android:background="@color/subHeaderColor1" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/imageViewForZoomInOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/logo_big"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.cpiz.android.bubbleview.BubbleLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainRlyofAddset"
+    android:layout_width="230dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/ReventName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/border_for_2_corner_gray">
+
+                <TextView
+                    android:id="@+id/EventName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="hahah"
+                    android:textColor="@color/color_white"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:src="@drawable/save_training"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/color_white">
+
+                <TextView
+                    android:id="@+id/eventData"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/ReventName"
+                    android:layout_margin="3dp"
+                    android:text=""
+
+
+                    android:textAlignment="viewStart"
+
+                    android:textColor="@color/color_black_for_toggle_selected"
+
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lAddset"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/ReventName"
+                android:background="@drawable/bg_white_rounded_dialog"
+                android:orientation="vertical"
+                android:visibility="gone" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</com.cpiz.android.bubbleview.BubbleLinearLayout>
+
+
+    <!--    <?xml version="1.0" encoding="utf-8"?>-->
+
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="230dp"-->
+    <!--android:layout_height="200dp"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/mainRlyofAddset"-->
+    <!--app:cardCornerRadius="10dp"-->
+    <!--android:orientation="vertical"-->
+
+    <!--android:background="@drawable/round_border_gray">-->
+
+
+    <!--<RelativeLayout-->
+    <!--    android:id="@+id/ReventName"-->
+
+    <!--    android:layout_alignParentTop="true"-->
+    <!--    android:layout_height="50dp"-->
+    <!--    android:background="@drawable/border_for_2_corner_gray"-->
+    <!--    android:layout_width="match_parent">-->
+    <!--    <TextView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerVertical="true"-->
+    <!--        android:id="@+id/EventName"-->
+    <!--        android:gravity="center"-->
+    <!--        android:text="hahah"-->
+    <!--        android:textSize="@dimen/button_text_size"-->
+    <!--        android:textColor="@color/color_white"/>-->
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="40dp"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_centerVertical="true"-->
+    <!--        android:padding="10dp"-->
+    <!--        android:src="@drawable/save_training" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<TextView-->
+    <!--    android:id="@+id/eventData"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:visibility="gone"-->
+    <!--    android:layout_height="fill_parent"-->
+    <!--    android:layout_below="@+id/ReventName"-->
+    <!--    android:text="hahah"-->
+    <!--    android:maxLines="1"-->
+    <!--    android:textAlignment="viewStart"-->
+    <!--    android:textAppearance="?android:attr/textAppearanceMedium"-->
+    <!--    android:textColor="#000000"-->
+    <!--    android:textSize="20sp" />-->
+
+    <!--<LinearLayout-->
+    <!--    android:id="@+id/lAddset"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:layout_below="@+id/ReventName"-->
+    <!--    android:background="@drawable/bg_white_rounded_dialog"-->
+    <!--    android:orientation="vertical"-->
+    <!--    android:visibility="gone" />-->
+
+
+    <!--</RelativeLayout>-->

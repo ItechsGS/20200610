@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rLayoutForComplexExercise"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/activity_indicator_margin">
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForMobility"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/horizontal_scroll_margin"
+        android:layout_marginTop="2dp"
+        android:background="#313133">
+
+        <TextView
+            android:id="@+id/textviewGroundMobility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_indicator_margin"
+            android:text="@string/ground_mobility"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/choose_screen_text_size_small" />
+
+
+        <ImageView
+
+            android:id="@+id/imageViewAddButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/textViewAddExercise"
+            android:src="@drawable/plus_with_circle_icon" />
+
+        <TextView
+            android:id="@+id/textViewAddExercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_indicator_margin"
+            android:layout_marginRight="@dimen/activity_indicator_margin"
+            android:paddingTop="@dimen/activity_indicator_margin"
+            android:paddingBottom="@dimen/activity_indicator_margin"
+            android:text="@string/add_excercise"
+            android:textColor="@color/textColorYellow"
+            android:textSize="@dimen/text_size_grid_item_name" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rLayoutForMobility"
+        android:background="@drawable/shap_rectangle">
+
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForComplexExerciseSet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="#313133"
+
+            >
+
+            <TextView
+                android:id="@+id/textviewComplex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_indicator_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:text="@string/complex"
+                android:textColor="@color/headerBGColor"
+                android:textSize="@dimen/text_size_grid_item_name" />
+
+            <TextView
+                android:id="@+id/textviewAddRemoveExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_indicator_margin"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_toLeftOf="@+id/textViewDeleteComplexSet"
+                android:text="@string/add_remove_excercise"
+                android:textColor="@color/textColorYellow"
+                android:textSize="@dimen/text_size_grid_item_name" />
+
+            <TextView
+                android:id="@+id/textViewDeleteComplexSet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_indicator_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_indicator_margin"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:text="@string/delete"
+                android:textColor="@color/textColorYellow"
+                android:textSize="@dimen/text_size_grid_item_name" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForComplexSet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rLayoutForComplexExerciseSet"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="#3a3a3c">
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForSetExercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewExercise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/activity_indicator_margin"
+                    android:text="@string/exercise"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/choose_screen_text_size_small" />
+
+                <ImageView
+                    android:id="@+id/imageViewWatchSetVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/textViewWatchVideoComplexSet"
+                    android:src="@drawable/play_video_icon" />
+
+                <TextView
+                    android:id="@+id/textViewWatchVideoComplexSet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/activity_indicator_margin"
+                    android:text="@string/add_excercise"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForAddExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutForSetExercise"
+                android:layout_marginLeft="@dimen/activity_indicator_margin">
+
+                <ImageView
+                    android:id="@+id/imageViewAddSet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/activity_indicator_margin"
+                    android:src="@drawable/plus_with_circle_icon" />
+
+                <TextView
+                    android:id="@+id/textViewAddComplexSet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/activity_indicator_margin"
+                    android:layout_toRightOf="@id/imageViewAddSet"
+                    android:paddingTop="@dimen/activity_indicator_margin"
+                    android:paddingBottom="@dimen/activity_indicator_margin"
+                    android:text="@string/add_set"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutForAddExercise"
+                android:layout_alignLeft="@+id/rLayoutForAddExercise"
+                android:layout_marginRight="@dimen/activity_indicator_margin"
+                android:layout_marginBottom="2dp">
+
+                <LinearLayout
+                    android:id="@+id/lLayoutForSetOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_indicator_margin"
+                    android:background="@drawable/shap_round_corner"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/textViewComplexSet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="Set: 1"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <TextView
+                        android:id="@+id/textViewComplexReps"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="Reps: 12"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <TextView
+                        android:id="@+id/textViewComplexWt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="Wt: 150lb"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <TextView
+                        android:id="@+id/textViewComplexPer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="Per: 75%"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lLayoutForSetTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lLayoutForSetOne"
+                    android:layout_marginBottom="@dimen/activity_indicator_margin"
+                    android:background="@drawable/shap_round_corner"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/textViewComplexSetOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Set: 1"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <TextView
+                        android:id="@+id/textViewComplexRepsOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Reps: 12"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <TextView
+                        android:id="@+id/textViewComplexWtOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Wt: 150lb"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <TextView
+                        android:id="@+id/textViewComplexPerOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Per: 75%"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

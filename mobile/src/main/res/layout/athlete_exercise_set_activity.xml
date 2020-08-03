@@ -1,0 +1,1409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/hs"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3a3a3c">
+
+
+    <RelativeLayout
+        android:id="@+id/rLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+
+        android:gravity="center_vertical|center"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/imageViewBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/activity_indicator_margin"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back_arrow" />
+
+        <LinearLayout
+            android:id="@+id/lLayoutForTrainingTypesNames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/imageViewSession"
+            android:layout_toRightOf="@+id/imageViewBackArrow"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:scaleType="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageViewHeaderIconLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_weight="0.5"
+                android:scaleType="center"
+                android:src="@drawable/left_arrow" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="2dp"
+                android:layout_toRightOf="@+id/imageViewHeaderIcon"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textViewScreenName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:scaleType="center"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewScreenData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:scaleType="center"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewHeaderIconRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_weight="0.5"
+                android:autoSizeTextType="uniform"
+                android:scaleType="center"
+                android:src="@drawable/right_arrow" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/imageViewSession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/activity_indicator_margin"
+            android:scaleType="matrix"
+            android:src="@drawable/session"
+            android:tint="@color/textColorYellow"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/WorkOutLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@+id/rLayoutHeader">
+
+        <RelativeLayout
+            android:id="@+id/Titile-1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000" />
+
+        <TextView
+            android:id="@+id/forSHOW"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Titile-1"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+
+            android:id="@+id/horizontalScrollViewTrainingPillerType1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Titile-1">
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollViewTrainingPillerType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#313133"
+                android:scrollbars="none"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/lLayoutForTrainingTypes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:orientation="horizontal"
+                    android:paddingStart="10dp"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="9dp"
+                    android:visibility="gone">
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/typesExercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+        </RelativeLayout>
+        <!--        <androidx.viewpager.widget.ViewPager-->
+        <!--            android:id="@+id/pager"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_above="@+id/Vdivivder"-->
+        <!--            android:layout_below="@id/horizontalScrollViewTrainingPillerType1"-->
+        <!--            android:padding="3dp">-->
+
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/page_one"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:orientation="vertical" />-->
+        <RelativeLayout
+            android:id="@+id/rLayoutforRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/Vdivivder"
+
+            android:layout_below="@id/horizontalScrollViewTrainingPillerType1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/typesDataExecersise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:visibility="visible" />
+        </RelativeLayout>
+        <!--            <LinearLayout-->
+        <!--                android:id="@+id/page_two"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:orientation="vertical" />-->
+        <!--        </androidx.viewpager.widget.ViewPager>-->
+        <LinearLayout
+            android:id="@+id/WodLayoutB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layoutForViewsAthlete"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/Vdivivder"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/WodLayoutB"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/divider" />
+
+        <RelativeLayout
+            android:id="@+id/layoutForViewsAthlete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+
+                android:id="@+id/timerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/buttonForView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/HideImageView"
+                        android:layout_width="100dp"
+                        android:layout_height="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:src="@drawable/up_arrow"
+                        android:tint="@color/textColorYellow" />
+                </RelativeLayout>
+
+                <com.chauthai.swipereveallayout.SwipeRevealLayout
+                    android:id="@+id/swipe_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buttonForView"
+                    app:dragEdge="bottom"
+                    app:mode="same_level">
+
+                    <RelativeLayout
+                        android:id="@+id/rLayoutForCalory_AvgHr_MaxHr_Option"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_below="@+id/buttonForView"
+                        android:layout_marginBottom="5dp"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/m"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/imageViewCalory"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+
+                                    android:src="@drawable/calories_icon" />
+
+                                <TextView
+                                    android:id="@+id/textViewCalories"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/imageViewCalory"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/normal_margin_set"
+                                    android:text="@string/calories"
+                                    android:textColor="@color/color_gray_for_text"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+
+                                <TextView
+                                    android:id="@+id/textViewCaloriesValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/textViewCalories"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/normal_margin_set"
+                                    android:maxLength="4"
+                                    android:text="0"
+
+                                    android:textColor="@color/color_white"
+                                    android:textSize="@dimen/text_size_grid_palyer_name" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/imageViewAvgHr"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/avg_hr_icon" />
+
+                                <TextView
+                                    android:id="@+id/textViewAvgHr"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/imageViewAvgHr"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/normal_margin_set"
+                                    android:text="@string/avg"
+                                    android:textColor="@color/color_gray_for_text"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+
+                                <TextView
+                                    android:id="@+id/textViewAvgHrValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/textViewAvgHr"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/normal_margin_set"
+                                    android:maxLength="4"
+                                    android:text="0"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="@dimen/text_size_grid_palyer_name" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/imageViewMaxHr"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/max_hr_icon" />
+
+                                <TextView
+                                    android:id="@+id/textViewMaxHr"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/imageViewMaxHr"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/normal_margin_set"
+                                    android:text="@string/max_hr"
+                                    android:textColor="@color/color_gray_for_text"
+                                    android:textSize="@dimen/text_size_grid_item_name" />
+
+                                <TextView
+                                    android:id="@+id/textViewMaxHrValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/textViewMaxHr"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/normal_margin_set"
+                                    android:maxLength="4"
+                                    android:text="0"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="@dimen/text_size_grid_palyer_name" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/rLayoutRunningTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="3dp"
+
+                            >
+
+                            <LinearLayout
+                                android:id="@+id/RlayoutViewRunningTimeValue"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+
+                                    android:background="@drawable/yellow_border_transparent_background"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone"
+                                    android:weightSum="3">
+
+                                    <RelativeLayout
+                                        android:id="@+id/ltextViewRunningTimeValueMinute"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerVertical="true"
+                                        android:layout_weight="1"
+                                        android:gravity="center">
+
+                                        <TextView
+                                            android:id="@+id/textViewRunningTimeValueMinute"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="40dp"
+                                            android:layout_centerInParent="true"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="3dp"
+                                            android:autoSizeTextType="uniform"
+                                            android:fontFamily="@font/agencyr"
+                                            android:gravity="center"
+                                            android:maxLines="1"
+                                            android:scaleX="1.5"
+                                            android:scaleY="2.8"
+                                            android:text="00:"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/color_white"
+                                            android:textSize="30sp"
+                                            android:translationY="0dp" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/ltextViewRunningTimeValueSeconds"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toRightOf="@+id/ltextViewRunningTimeValueMinute"
+                                        android:layout_weight="1"
+
+                                        android:gravity="center">
+
+                                        <TextView
+                                            android:id="@+id/textViewRunningTimeValueseconds"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="40dp"
+                                            android:layout_marginLeft="3dp"
+
+                                            android:autoSizeTextType="uniform"
+                                            android:fontFamily="@font/agencyr"
+                                            android:gravity="center"
+                                            android:maxLines="1"
+                                            android:scaleX="1.5"
+                                            android:scaleY="2.8"
+                                            android:text="00."
+                                            android:textColor="@color/color_white"
+                                            android:textSize="30sp"
+                                            android:translationY="0dp" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/ltextViewRunningTimeValueMiliseconds"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toRightOf="@+id/ltextViewRunningTimeValueSeconds"
+                                        android:layout_weight="1"
+                                        android:gravity="center">
+
+                                        <TextView
+
+                                            android:id="@+id/textViewRunningTimeValueMiliseconds"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="40dp"
+                                            android:autoSizeTextType="uniform"
+
+                                            android:fontFamily="@font/agencyr"
+                                            android:gravity="center"
+                                            android:maxLines="1"
+                                            android:scaleX="1.5"
+                                            android:scaleY="2.8"
+                                            android:text="00"
+                                            android:textColor="@color/color_white"
+                                            android:translationY="0dp" />
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginBottom="2dp"
+
+                                        android:layout_weight="0.3"
+                                        android:fontFamily="@font/agencyr"
+                                        android:gravity="center"
+                                        android:text="Total Workout Time"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/textColorYellow"
+                                        android:textSize="16sp" />
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_weight="0.1"
+                                        android:orientation="vertical"
+                                        app:cardBackgroundColor="#525252"
+                                        app:cardCornerRadius="10dp">
+
+                                        <LinearLayout
+                                            android:id="@+id/LTotalWorkOutTimer"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+
+                                            android:orientation="horizontal">
+
+                                            <LinearLayout
+                                                android:id="@+id/LStartTotalTimer"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_margin="2dp"
+                                                android:layout_weight="1"
+                                                android:gravity="center"
+                                                android:orientation="vertical">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="25dp"
+                                                    android:fontFamily="@font/agencyb"
+                                                    android:gravity="center"
+                                                    android:singleLine="true"
+                                                    android:src="@drawable/clock"
+                                                    android:text="00:00"
+                                                    android:textSize="22sp"
+
+
+                                                    android:tint="@color/textColorYellow" />
+
+                                                <TextView
+                                                    android:id="@+id/TotalTimerText"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/agencyb"
+                                                    android:gravity="center"
+                                                    android:singleLine="true"
+                                                    android:text="START"
+                                                    android:textAllCaps="true"
+                                                    android:textColor="@color/textColorYellow"
+                                                    android:textSize="18sp" />
+                                            </LinearLayout>
+
+                                            <View
+                                                android:layout_width="0.5dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#676767" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_margin="2dp"
+                                                android:layout_weight="1"
+                                                android:gravity="center"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:id="@+id/StartTimer"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="30dp"
+                                                    android:fontFamily="@font/agencyb"
+                                                    android:gravity="center"
+                                                    android:singleLine="true"
+                                                    android:text="00:00"
+                                                    android:textColor="@color/color_white"
+                                                    android:textSize="22sp" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/agencyb"
+                                                    android:gravity="center"
+                                                    android:singleLine="true"
+                                                    android:text="EDIT TIME"
+                                                    android:textColor="@color/color_white"
+                                                    android:textSize="18sp" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0.6dp"
+                                            android:background="@color/textColorYellow"
+                                            android:visibility="gone" />
+
+                                    </androidx.cardview.widget.CardView>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1.3"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                android:weightSum="2">
+
+
+                                <RelativeLayout
+                                    android:id="@+id/rLayoutStartButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_weight="1"
+
+                                    android:background="@drawable/button_borderforstart"
+
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/textViewStart"
+                                        android:layout_width="70dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_centerVertical="true"
+                                        android:fontFamily="@font/agencyr"
+                                        android:gravity="center"
+                                        android:maxLines="1"
+                                        android:text="@string/start"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/color_black_for_health_profile_button_selected"
+                                        android:textSize="22sp" />
+                                    <!--                                <TextView-->
+                                    <!--                                    android:id="@+id/textViewStart"-->
+                                    <!--                                    android:layout_width="wrap_content"-->
+                                    <!--                                    android:layout_height="match_parent"-->
+                                    <!--                                    android:layout_centerInParent="true"-->
+                                    <!--                                    android:layout_centerHorizontal="true"-->
+                                    <!--                                    android:layout_centerVertical="true"-->
+                                    <!--                                    android:autoSizeTextType="uniform"-->
+
+                                    <!--                                    android:gravity="center"-->
+                                    <!--                                    android:maxLines="1"-->
+                                    <!--                                    android:text="Start"-->
+                                    <!--                                    android:textAllCaps="true"-->
+                                    <!--                                    android:textColor="@color/color_black_for_health_profile_button_selected"-->
+                                    <!--                                    android:textSize="22sp" />-->
+                                </RelativeLayout>
+
+
+                                <RelativeLayout
+                                    android:id="@+id/rLayoutResetButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/button_borderfor_reset"
+
+                                    >
+
+
+                                    <TextView
+                                        android:id="@+id/textViewReset"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerInParent="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_centerVertical="true"
+                                        android:autoSizeTextType="uniform"
+                                        android:fontFamily="@font/agencyr"
+                                        android:gravity="center"
+                                        android:maxLines="1"
+                                        android:text="@string/reset"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/color_black_for_health_profile_button_selected"
+                                        android:textSize="22sp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/LayoutCoachNotesForExercise"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+
+                                >
+
+                                <!--                                <LinearLayout-->
+                                <!--                                    android:layout_width="match_parent"-->
+                                <!--                                    android:layout_height="match_parent"-->
+                                <!--                                    android:layout_weight="1"-->
+                                <!--                                    android:gravity="center_vertical"-->
+                                <!--                                -->
+                                <!--                                    android:orientation="vertical">-->
+
+                                <!--&lt;!&ndash;                                    android:layout_marginTop="13dp"&ndash;&gt;-->
+                                <!--&lt;!&ndash;                                    android:layout_marginBottom="10dp"&ndash;&gt;-->
+                                <!--                                    <TextView-->
+                                <!--                                        android:layout_width="match_parent"-->
+                                <!--                                        android:layout_height="match_parent"-->
+                                <!--                                        android:fontFamily="@font/agencyr"-->
+
+                                <!--                                        android:text="Total Workout Time"-->
+                                <!--                                        android:layout_weight="0.4"-->
+                                <!--                                        android:layout_marginBottom="2dp"-->
+                                <!--                                        android:gravity="center"-->
+                                <!--                                        android:visibility=""-->
+                                <!--                                        android:textAlignment="center"-->
+                                <!--                                        android:textColor="@color/textColorYellow"-->
+                                <!--                                        android:textSize="16sp" />-->
+
+
+                                <!--                                    <androidx.cardview.widget.CardView-->
+                                <!--                                        android:layout_width="match_parent"-->
+                                <!--                                        android:layout_height="match_parent"-->
+                                <!--                                        app:cardBackgroundColor="#EDEDED"-->
+                                <!--                                        android:layout_weight="0.1"-->
+                                <!--                                        app:cardCornerRadius="10dp"-->
+
+                                <!--                                        android:layout_marginBottom="10dp"-->
+                                <!--                                        android:orientation="vertical">-->
+                                <!--                                   -->
+
+                                <!--                                        <LinearLayout-->
+                                <!--                                            android:layout_width="match_parent"-->
+                                <!--                                            android:layout_height="match_parent"-->
+                                <!--                                            android:orientation="horizontal">-->
+                                <!--                                            <LinearLayout-->
+                                <!--                                                android:layout_width="match_parent"-->
+                                <!--                                                android:layout_height="match_parent"-->
+                                <!--                                                android:layout_weight="1"-->
+                                <!--                                                android:gravity="center"-->
+                                <!--                                                android:layout_margin="2dp"-->
+                                <!--                                                android:orientation="vertical">-->
+
+                                <!--                                                <ImageView-->
+                                <!--                                                    android:layout_width="match_parent"-->
+                                <!--                                                    android:layout_height="30dp"-->
+                                <!--                                                    android:fontFamily="@font/agencyb"-->
+                                <!--                                                    android:gravity="center"-->
+                                <!--                                                    android:singleLine="true"-->
+                                <!--                                                    android:text="00:00"-->
+                                <!--                                                    android:textSize="22sp"-->
+                                <!--                                                    android:src="@drawable/ic_clock"-->
+                                <!--                                                    android:textColor="#676767" />-->
+
+                                <!--                                                <TextView-->
+                                <!--                                                    android:layout_width="match_parent"-->
+                                <!--                                                    android:layout_height="wrap_content"-->
+                                <!--                                                    android:fontFamily="@font/agencyb"-->
+                                <!--                                                    android:singleLine="true"-->
+                                <!--                                                    android:text="START"-->
+                                <!--                                                    android:gravity="center"-->
+                                <!--                                                    android:textSize="18sp"-->
+                                <!--                                                    android:textColor="#676767" />-->
+                                <!--                                            </LinearLayout>-->
+                                <!--                                            <View-->
+                                <!--                                                android:layout_width="0.5dp"-->
+                                <!--                                                android:layout_height="match_parent"-->
+                                <!--                                                android:background="#676767"/>-->
+
+                                <!--                                            <LinearLayout-->
+                                <!--                                                android:layout_width="match_parent"-->
+                                <!--                                                android:layout_height="match_parent"-->
+                                <!--                                                android:layout_weight="1"-->
+                                <!--                                                android:gravity="center"-->
+                                <!--                                                android:layout_margin="2dp"-->
+                                <!--                                                android:orientation="vertical">-->
+
+                                <!--                                                <TextClock-->
+                                <!--                                                    android:layout_width="match_parent"-->
+                                <!--                                                    android:layout_height="30dp"-->
+                                <!--                                                    android:fontFamily="@font/agencyb"-->
+                                <!--                                                    android:gravity="center"-->
+                                <!--                                                    android:singleLine="true"-->
+                                <!--                                                    android:text="00:00"-->
+                                <!--                                                    android:textSize="22sp"-->
+                                <!--                                                    android:textColor="#676767" />-->
+
+                                <!--                                                <TextView-->
+                                <!--                                                    android:layout_width="match_parent"-->
+                                <!--                                                    android:layout_height="wrap_content"-->
+                                <!--                                                    android:fontFamily="@font/agencyb"-->
+                                <!--                                                    android:singleLine="true"-->
+                                <!--                                                    android:text="EDIT TIME"-->
+                                <!--                                                    android:gravity="center"-->
+                                <!--                                                    android:textSize="18sp"-->
+                                <!--                                                    android:textColor="#676767" />-->
+                                <!--                                            </LinearLayout>-->
+                                <!--                                        </LinearLayout>-->
+                                <!--                                        <View-->
+                                <!--                                            android:layout_width="match_parent"-->
+                                <!--                                            android:layout_height="0.6dp"-->
+                                <!--                                            android:visibility="gone"-->
+                                <!--                                            android:background="@color/textColorYellow"/>-->
+
+                                <!--                                    </androidx.cardview.widget.CardView>-->
+                                <!--                                </LinearLayout>-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginBottom="2dp"
+
+                                        android:layout_weight="0.3"
+                                        android:fontFamily="@font/agencyr"
+                                        android:gravity="center"
+                                        android:text="Rest Timer"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/textColorYellow"
+                                        android:textSize="16sp" />
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_weight="0.1"
+                                        android:orientation="vertical"
+
+                                        app:cardBackgroundColor="#525252"
+                                        app:cardCornerRadius="10dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+
+                                            android:orientation="horizontal">
+
+                                            <LinearLayout
+                                                android:id="@+id/LRestTotalTimer"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_margin="2dp"
+                                                android:layout_weight="1"
+
+                                                android:gravity="center"
+                                                android:orientation="vertical">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="25dp"
+                                                    android:gravity="center"
+                                                    android:singleLine="true"
+                                                    android:src="@drawable/clock"
+
+                                                    android:textSize="22sp"
+                                                    android:tint="@color/textColorYellow" />
+
+                                                <TextView
+                                                    android:id="@+id/RestTimerText"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/agencyb"
+                                                    android:gravity="center"
+                                                    android:singleLine="true"
+                                                    android:text="START"
+                                                    android:textAllCaps="true"
+
+                                                    android:textColor="@color/textColorYellow"
+                                                    android:textSize="18sp" />
+                                            </LinearLayout>
+
+                                            <View
+                                                android:layout_width="0.5dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#676767" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_margin="2dp"
+                                                android:layout_weight="1"
+                                                android:gravity="center"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:id="@+id/RestTimer"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="30dp"
+                                                    android:fontFamily="@font/agencyb"
+                                                    android:gravity="center"
+                                                    android:singleLine="true"
+                                                    android:text="00:00"
+                                                    android:textColor="@color/color_white"
+                                                    android:textSize="22sp" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/agencyb"
+                                                    android:gravity="center"
+                                                    android:singleLine="true"
+
+                                                    android:text="SET TIME"
+                                                    android:textColor="@color/color_white"
+                                                    android:textSize="18sp" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0.6dp"
+                                            android:background="@color/textColorYellow"
+                                            android:visibility="gone" />
+
+                                    </androidx.cardview.widget.CardView>
+                                </LinearLayout>
+
+                                <ScrollView
+                                    android:id="@+id/notedScrollView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/CoachNotesForExercise"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+
+                                        android:gravity="start"
+                                        android:textColor="@color/color_white"
+                                        android:textSize="@dimen/small_textsize1" />
+                                </ScrollView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1.4"
+                                android:background="@drawable/button_border"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                android:weightSum="3">
+
+                                <RelativeLayout
+                                    android:id="@+id/ltextViewRunningTimeValueMinuteshow"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerVertical="true"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:id="@+id/textViewRunningTimeValueMinuteshow"
+                                        android:layout_width="70dp"
+                                        android:layout_height="40dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:gravity="center"
+                                        android:maxLines="1"
+
+                                        android:text="00:"
+                                        android:textColor="#000000"
+                                        android:textSize="60sp" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/ltextViewRunningTimeValueSecondsshow"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@+id/ltextViewRunningTimeValueMinute"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:id="@+id/textViewRunningTimeValuesecondsshow"
+                                        android:layout_width="70dp"
+                                        android:layout_height="40dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:gravity="center"
+                                        android:maxLines="1"
+                                        android:text="00."
+                                        android:textColor="#000000"
+                                        android:textSize="60sp" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/ltextViewRunningTimeValueMilisecondsshow"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@+id/ltextViewRunningTimeValueSeconds"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:id="@+id/textViewRunningTimeValueMilisecondsshow"
+                                        android:layout_width="70dp"
+                                        android:layout_height="40dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:gravity="center"
+                                        android:maxLines="1"
+                                        android:text="00"
+                                        android:textColor="#000000"
+                                        android:textSize="60sp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+
+                            <!--</RelativeLayout>-->
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </com.chauthai.swipereveallayout.SwipeRevealLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rLayoutforAnimation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForMetricsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/text_box_margin"
+                    android:background="@drawable/athlete_metrics_background">
+
+                    <RelativeLayout
+                        android:id="@+id/rLayoutForMetricsTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/normal_margin_set">
+
+                        <TextView
+                            android:id="@+id/textViewMetrics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/text_box_margin"
+                            android:gravity="center"
+                            android:text="@string/metrics"
+                            android:textAllCaps="true"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true">
+
+                            <TextView
+                                android:id="@+id/textViewWorkout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                android:layout_toLeftOf="@+id/imageViewRightArrowForWorkout"
+                                android:gravity="center"
+                                android:text="@string/workout"
+                                android:textColor="@color/textColorYellow"
+                                android:textSize="@dimen/text_size_grid_item_name" />
+
+                            <ImageView
+                                android:id="@+id/imageViewRightArrowForWorkout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/text_box_margin"
+                                android:src="@drawable/right_arrow" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rLayoutDividerMetricsTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/rLayoutForMetricsTitle"
+                        android:layout_marginLeft="@dimen/activity_indicator_margin"
+                        android:layout_marginRight="@dimen/activity_indicator_margin"
+                        android:background="@color/color_gray_for_toggle_unselected" />
+
+                    <RelativeLayout
+                        android:id="@+id/rLayoutforMetricsButtons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rLayoutDividerMetricsTitle">
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForVelocity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/activity_indicator_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/metrics_round_button_background" />
+
+                            <TextView
+                                android:id="@+id/textViewVelocity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/velocity"
+                                android:textColor="@color/textColorYellow"
+                                android:textSize="@dimen/text_size_grid_item_name" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForJumpHeight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/text_box_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/metrics_round_button_background" />
+
+                            <TextView
+                                android:id="@+id/textViewJumpHeight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/jump_height"
+                                android:textColor="@color/textColorYellow"
+                                android:textSize="@dimen/text_size_grid_item_name" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForRSI"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rLayoutForVelocity"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/text_box_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/metrics_round_button_background" />
+
+                            <TextView
+                                android:id="@+id/textViewRSI"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/rsi"
+                                android:textColor="@color/textColorYellow"
+                                android:textSize="@dimen/text_size_grid_item_name" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForAgilityTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rLayoutForJumpHeight"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/text_box_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/metrics_round_button_background" />
+
+                            <TextView
+                                android:id="@+id/textViewAgilityTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/agility_time"
+                                android:textColor="@color/textColorYellow"
+                                android:textSize="@dimen/text_size_grid_item_name" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForVerticalJump"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rLayoutForRSI"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/text_box_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/metrics_round_button_background" />
+
+                            <TextView
+                                android:id="@+id/textViewVerticalJump"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/vertical_jump"
+                                android:textColor="@color/textColorYellow"
+                                android:textSize="@dimen/text_size_grid_item_name" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rLayoutForSrintTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rLayoutForAgilityTime"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/text_box_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/metrics_round_button_background" />
+
+                            <TextView
+                                android:id="@+id/textViewSprintTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/sprint_time"
+                                android:textColor="@color/textColorYellow"
+                                android:textSize="@dimen/text_size_grid_item_name" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/SummaryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rLayoutHeader"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/Titile-1X"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/SummaryRecyler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Titile-1X" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/closeVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp"
+            android:padding="20dp"
+            android:src="@drawable/close_icon_video"
+            android:tint="@color/color_white" />
+
+        <VideoView
+            android:id="@+id/videoViewPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageViewAppIconForAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingRight="@dimen/text_box_margin"
+        android:paddingBottom="@dimen/activity_indicator_margin"
+        android:src="@drawable/logo_main"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/resetButtonLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sce"
+        android:text="reset Log"
+        android:textColor="@color/color_white"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/sce"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView1ForLog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_white_rounded"
+
+            android:textSize="20sp" />
+    </ScrollView>
+</RelativeLayout>

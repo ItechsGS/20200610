@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRlyofAddset"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@drawable/bg_white_rounded_dialog_for_training"
+    android:elevation="10dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ReventName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EventNameX"
+        android:layout_margin="20dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/EventName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="#0D0D0D"
+            android:textSize="@dimen/button_text_size" />
+
+        <TextView
+            android:id="@+id/EventNameX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EventName"
+            android:layout_centerVertical="true"
+
+            android:gravity="center"
+            android:text="Do you want to..."
+            android:textColor="#0D0D0D"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/EditextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/EditTextMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fontFamily="@font/agencyr"
+            android:hint="Enter message" />
+
+        <ImageView
+            android:id="@+id/SendMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:rotation="180"
+
+            android:src="@drawable/back_arrow"
+            android:tint="@color/color_black_for_toggle_selected" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_below="@+id/EditTextMessage"
+            android:layout_marginTop="3dp"
+            android:background="#424242" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/SingleRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/YesX"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/EventNameX"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+
+
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#0D0D0D" />
+
+            <TextView
+                android:id="@+id/Yes"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/view1"
+                android:gravity="center_vertical"
+                android:text="Yes"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#437FDF"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="#3D3D3D" />
+
+        <LinearLayout
+            android:id="@+id/CancelXc"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/EventNameX"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+
+
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#0D0D0D" />
+
+            <TextView
+                android:id="@+id/CancelX"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/view1"
+                android:gravity="center_vertical"
+                android:text="Cancel"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#437FDF"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TripleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/BeginTraining"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/EventNameX"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+
+
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="#0D0D0D" />
+
+            <TextView
+                android:id="@+id/begin"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/view1"
+                android:gravity="center_vertical"
+                android:text="Begin Training"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#437FDF"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/workoutSummary"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/EventNameX"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+
+
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="#0D0D0D" />
+
+            <TextView
+                android:id="@+id/workout"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/view1"
+                android:gravity="center_vertical"
+                android:text="Workout Summary"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#437FDF"
+                android:textSize="20sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Cancel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/EventNameX"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+
+
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="#0D0D0D" />
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/view1"
+                android:gravity="center_vertical"
+                android:text="Cancel"
+                android:textAlignment="center"
+
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#437FDF"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/eventData"
+                android:layout_marginTop="5dp"
+                android:background="#0D0D0D" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    <item>-->
+    <!--        <shape>-->
+    <!--&lt;!&ndash;            <size&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:height="2dip"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:width="2dip" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;            <solid android:color="@android:color/transparent" />&ndash;&gt;-->
+    <!--        </shape>-->
+    <!--    </item>-->
+    <item android:drawable="@drawable/gslogosmall" />
+    <!--    <size-->
+    <!--        android:height="10dip"-->
+    <!--        android:width="10dip" />-->
+
+    <!--    <solid android:color="@android:color/transparent" />-->
+
+</layer-list>

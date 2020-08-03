@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3a3a3c">
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForPrivacyHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForHeadingTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_margin_set"
+            android:layout_marginRight="@dimen/normal_margin_set">
+
+            <TextView
+                android:id="@+id/textViewPrivacyTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/normal_margin_set"
+                android:text="@string/privacy_policy"
+                android:textAllCaps="true"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/choose_screen_text_size" />
+
+            <TextView
+                android:id="@+id/textViewPrivacyAgree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/normal_margin_set"
+                android:text="@string/agree"
+                android:textColor="@color/textColorYellow"
+                android:textSize="@dimen/drawer_items_text_size" />
+
+            <TextView
+                android:id="@+id/textViewCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/normal_margin_set"
+                android:text="@string/cancel"
+                android:textColor="@color/textColorYellow"
+                android:textSize="@dimen/drawer_items_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dividerWebview"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rLayoutForHeadingTitle"
+            android:background="#000000" />
+
+        <WebView
+            android:id="@+id/webViewAgreementContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/dividerWebview" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForQuestionHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForQuestionHeadingTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_margin_set"
+            android:layout_marginRight="@dimen/normal_margin_set">
+
+            <TextView
+                android:id="@+id/textViewSkip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/normal_margin_set"
+                android:text="@string/skip"
+                android:textColor="@color/textColorYellow"
+                android:textSize="@dimen/drawer_items_text_size" />
+
+            <TextView
+                android:id="@+id/textViewQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/normal_margin_set"
+                android:text="@string/questionaries"
+                android:textAllCaps="true"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/choose_screen_text_size" />
+
+            <TextView
+                android:id="@+id/textViewDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/normal_margin_set"
+                android:text="@string/Submit"
+                android:textColor="@color/textColorYellow"
+                android:textSize="@dimen/drawer_items_text_size" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Titile-1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rLayoutForQuestionHeadingTitle"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:id="@+id/ase"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Titile-1"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_20"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/Survey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_white"
+                    android:textSize="22dp"
+
+                    />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/pager_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="#3a3a3c"
+                android:clipChildren="false">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:clipChildren="false" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/choose_screen_text_size" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

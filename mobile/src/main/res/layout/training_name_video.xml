@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/check"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="0dp"
+
+    android:orientation="vertical">
+    <!--    android:background="@drawable/semi_radius"-->
+
+
+    <com.chauthai.swipereveallayout.SwipeRevealLayout
+
+        android:id="@+id/ExcerciseNameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/semi_radius"
+        android:visibility="gone"
+        app:dragEdge="right"
+        app:mode="same_level">
+
+        <LinearLayout
+            android:id="@+id/myLaX"
+            android:layout_width="wrap_content"
+
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/DoseNameAndchangeWod"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@+id/DeleteTraining"
+                android:background="#0000ff"
+                android:gravity="center"
+                android:text="Add Dose"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/DeleteTrainingExerciseWod"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/right_round_border_two"
+                android:gravity="center"
+                android:text="Delete"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/L11"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/semi_radius"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/imageViewVideoPlayIcon1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:src="@drawable/play_video_icon"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/ExcerciseName1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_margin="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:focusableInTouchMode="true"
+                android:gravity="start"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/color_black_for_toggle_selected"
+                android:textSize="18sp"
+                tools:ignore="EllipsizeMaxLines" />
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+
+
+                android:layout_margin="5dp">
+
+                <ImageView
+
+                    android:id="@+id/hide1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toStartOf="@+id/infoSets1"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:scaleType="center"
+                    android:src="@drawable/up_arrow"
+                    android:tint="@color/textColorYellow"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/infoSets1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/info"
+                    android:tint="@color/textColorYellow"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </com.chauthai.swipereveallayout.SwipeRevealLayout>
+
+    <com.chauthai.swipereveallayout.SwipeRevealLayout
+        android:id="@+id/swipe_layoutS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/semi_radius"
+        android:visibility="visible"
+        app:dragEdge="right"
+        app:mode="same_level">
+
+        <LinearLayout
+            android:id="@+id/myLa"
+            android:layout_width="wrap_content"
+
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/DoseNameAndchange"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@+id/DeleteTraining"
+                android:background="#0000ff"
+                android:gravity="center"
+                android:text="Add Dose"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/DeleteTrainingExercise"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/right_round_border_two"
+                android:gravity="center"
+                android:text="Delete"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ExcerciseNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/imageViewVideoPlayIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp"
+                    android:src="@drawable/play_video_icon"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/ExcerciseName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_margin="5dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:focusableInTouchMode="true"
+                    android:gravity="start"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="@color/color_black_for_toggle_selected"
+                    android:textSize="18sp"
+                    tools:ignore="EllipsizeMaxLines" />
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_margin="5dp">
+
+                    <ImageView
+
+                        android:id="@+id/hide"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toStartOf="@+id/infoSets"
+                        android:layout_weight="1"
+                        android:padding="3dp"
+                        android:scaleType="center"
+                        android:src="@drawable/up_arrow"
+                        android:tint="@color/textColorYellow"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/infoSets"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/info"
+                        android:tint="@color/textColorYellow"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lLayoutofRecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/training_withoutcolor_round_border"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/training_withoutcolor_round_border"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <RelativeLayout
+                        android:id="@+id/view_foregroundDay1"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="30dp"
+                        android:background="#fffa37"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/set1"
+                                android:layout_width="75dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:gravity="center"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:maxLines="1"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:text="-"
+
+                                android:textColor="@color/color_black_for_toggle_selected"
+                                android:textSize="17sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/set2"
+                                android:layout_width="75dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/set1"
+                                android:layout_weight="1"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:gravity="center"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:maxLines="1"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:text="-"
+                                android:textColor="@color/color_black_for_toggle_selected"
+                                android:textSize="17sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/set3"
+                                android:layout_width="75dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/set2"
+                                android:layout_weight="1"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:gravity="center"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:maxLines="1"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:text="-"
+                                android:textColor="@color/color_black_for_toggle_selected"
+                                android:textSize="17sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/set4"
+                                android:layout_width="75dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/set3"
+                                android:layout_weight="1"
+                                android:ellipsize="marquee"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:gravity="center"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:text="-"
+                                android:textColor="@color/color_black_for_toggle_selected"
+                                android:textSize="17sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/set5"
+                                android:layout_width="75dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/set4"
+                                android:layout_weight="1"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:gravity="center"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:maxLines="1"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:text="-"
+                                android:textColor="@color/color_black_for_toggle_selected"
+                                android:textSize="17sp"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/view_foregroundDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/Addsets"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+
+                        android:background="@drawable/training_withoutcolor_round_border_two"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/AddsetsText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:padding="5dp"
+                            android:text="Add new sets..."
+                            android:textColor="#007aff"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <!--<androidx.recyclerview.widget.RecyclerView-->
+                <!--android:id="@+id/ExcerciseDoseDetails"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:visibility="gone"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:focusableInTouchMode="true"-->
+                <!--android:background="@drawable/training_withoutcolor_round_border"-->
+                <!--android:layout_below="@id/ExcerciseNameLayout"/>-->
+            </LinearLayout>
+            <!--<com.chauthai.swipereveallayout.SwipeRevealLayout android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:mode="same_level"-->
+            <!--app:dragEdge="right"-->
+            <!--android:id="@+id/swipe_layoutX"-->
+            <!--android:background="@drawable/training_withoutcolor_round_border"-->
+            <!--android:layout_margin="10dp">-->
+            <!---->
+            <!--</com.chauthai.swipereveallayout.SwipeRevealLayout>-->
+
+
+        </LinearLayout>
+
+    </com.chauthai.swipereveallayout.SwipeRevealLayout>
+
+
+</LinearLayout>

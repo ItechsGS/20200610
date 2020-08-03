@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#262626"
+    android:gravity="center"
+
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rLayoutC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:id="@+id/hah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/frameofIcon"
+                android:layout_width="89dp"
+                android:layout_height="97dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/myframe" />
+
+
+            <com.christophesmet.android.views.maskableframelayout.MaskableFrameLayout
+                android:layout_width="88dp"
+                android:layout_height="96dp"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                app:mask="@drawable/logo_main"
+                app:porterduffxfermode="DST_IN">
+
+                <ImageView
+                    android:id="@+id/imageViewProfilePic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/logo" />
+
+
+            </com.christophesmet.android.views.maskableframelayout.MaskableFrameLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/textViewAthleteDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@+id/hah"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/Circle"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical"
+                android:src="@drawable/circle_blank" />
+
+            <TextView
+                android:id="@+id/textViewAthleteName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/Circle"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="@string/athleteName"
+                android:textAllCaps="true"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/Level1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/textViewAthleteName"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textColor="@color/headerBGColor"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/EditTraining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:src="@drawable/edit_icon_training" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/mnc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewAthleteDetail"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/hah"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewAthleteName"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/hah"
+                android:layout_weight="0.5"
+                android:gravity="center_horizontal|center_vertical|center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+
+                <TextView
+                    android:id="@+id/LevelText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/hah"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="Level"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textIsSelectable="true"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/Level1Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/hah"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="Scale"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textIsSelectable="true"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/Level2Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/hah"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="Reps"
+                    android:textAllCaps="true"
+                    android:textColor="@color/headerBGColor"
+                    android:textIsSelectable="true"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/Level3Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/hah"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="Rank"
+                    android:textAllCaps="true"
+                    android:textColor="@color/headerBGColor"
+                    android:textIsSelectable="true"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/Level4Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/hah"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="Notes"
+                    android:textAllCaps="true"
+                    android:textColor="@color/headerBGColor"
+                    android:textIsSelectable="true"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewAthleteName"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/hah"
+                android:layout_weight="0.5"
+                android:gravity="center_horizontal|center_vertical|center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/Level2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="4"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/Level2Type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="2dp"
+                        android:paddingTop="7dp"
+                        android:singleLine="true"
+                        android:text="@string/kg"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff"
+                        android:textSize="11sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/Level3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/hah"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:singleLine="true"
+                    android:text="-"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/Level4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/hah"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:singleLine="true"
+                    android:text="-"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+                <!--<TextView-->
+                <!--android:id="@+id/Level4"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_toEndOf="@+id/hah"-->
+                <!--android:layout_weight="1"-->
+                <!--android:ellipsize="marquee"-->
+                <!--android:gravity="center"-->
+                <!--android:singleLine="true"-->
+                <!--android:text="-"-->
+                <!--android:textAllCaps="true"-->
+                <!--android:textColor="#ffffff"-->
+
+                <!--android:textSize="16sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/Level5"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_toEndOf="@+id/hah"-->
+                <!--android:layout_weight="1"-->
+                <!--android:ellipsize="marquee"-->
+                <!--android:gravity="center"-->
+                <!--android:singleLine="true"-->
+                <!--android:text="-"-->
+                <!--android:textAllCaps="true"-->
+                <!--android:textColor="#ffffff"-->
+
+                <!--android:textSize="16sp" />-->
+
+                <LinearLayout
+                    android:id="@+id/Level5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_margin="3dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/info" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rmsgLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewAthleteDetail"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/hah"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/msgText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/agencyr"
+                android:textColor="#D5D5D5"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/msgTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/msgText"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/agencyr"
+                android:textColor="#D5D5D5"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_toEndOf="@+id/hah"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--&gt;-->
+
+
+        <!--</LinearLayout>-->
+
+
+    </RelativeLayout>
+
+</LinearLayout>

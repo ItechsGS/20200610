@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3a3a3c">
+
+    <!--    <view
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+             />-->
+    <!--
+    **************************IMPORTANT***********************************
+     change this id attribute values as "frag2_icon" and "frag2_text" for
+     fragment_layout_two.xml and "frag3_icon" and "frag3_text" for
+     fragment_layout_three.xml
+    **********************************************************************
+      -->
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/horizontal_scroll_margin"
+        android:background="#313133">
+
+        <LinearLayout
+            android:id="@+id/lLayoutForTeamName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/activity_indicator_margin">
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollViewExerciseSet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/horizontalScrollView">
+
+        <RelativeLayout
+            android:id="@+id/rLayoutMainForExerciseSets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rLayoutIncludeComplexSet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/layoutComplexSet"
+                    layout="@layout/layout_training_list"></include>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutIncludeRegularSet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutIncludeComplexSet">
+
+                <include
+                    android:id="@+id/layoutRegularSet"
+                    layout="@layout/layout_training_list"></include>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForMovementPrep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutIncludeRegularSet"
+                android:layout_margin="@dimen/activity_indicator_margin"
+                android:background="#313133">
+
+                <TextView
+                    android:id="@+id/textviewMovementPrep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/activity_indicator_margin"
+                    android:layout_marginLeft="@dimen/activity_indicator_margin"
+                    android:text="@string/movement_prep"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/choose_screen_text_size_small" />
+
+                <ImageView
+
+                    android:id="@+id/imageViewAddButtonMovementPre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/activity_indicator_margin"
+                    android:layout_marginBottom="@dimen/activity_indicator_margin"
+                    android:layout_toLeftOf="@+id/textViewAddExerciseMovementPre"
+                    android:src="@drawable/plus_with_circle_icon" />
+
+                <TextView
+                    android:id="@+id/textViewAddExerciseMovementPre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/activity_indicator_margin"
+                    android:text="@string/add_excercise"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForMovementSkill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutForMovementPrep"
+                android:layout_marginLeft="@dimen/activity_indicator_margin"
+
+                android:layout_marginRight="@dimen/activity_indicator_margin"
+                android:background="#313133">
+
+                <TextView
+                    android:id="@+id/textviewMovementSkill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/activity_indicator_margin"
+                    android:layout_marginLeft="@dimen/activity_indicator_margin"
+                    android:text="@string/movement_skill"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/choose_screen_text_size_small" />
+
+                <ImageView
+
+                    android:id="@+id/imageViewAddButtonMovmentSkill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/activity_indicator_margin"
+                    android:layout_marginBottom="@dimen/activity_indicator_margin"
+                    android:layout_toLeftOf="@+id/textViewAddExerciseMovementSkill"
+                    android:src="@drawable/plus_with_circle_icon" />
+
+                <TextView
+                    android:id="@+id/textViewAddExerciseMovementSkill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/activity_indicator_margin"
+                    android:text="@string/add_excercise"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForAddExerciseList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9d000000"
+        android:clickable="true">
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForAddExerciseFromListLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#3a3a3c">
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForAddExerciseFromList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#313133">
+
+                <TextView
+                    android:id="@+id/textViewAddExerciseFromList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/activity_indicator_margin"
+                    android:layout_marginLeft="@dimen/activity_indicator_margin"
+                    android:text="@string/add_excercise"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/choose_screen_text_size_small" />
+
+                <TextView
+
+                    android:id="@+id/textViewCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/textViewDone"
+                    android:paddingTop="@dimen/activity_indicator_margin"
+                    android:paddingBottom="@dimen/activity_indicator_margin"
+                    android:text="@string/cancel"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+
+                <TextView
+                    android:id="@+id/textViewDone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/activity_indicator_margin"
+                    android:text="@string/done"
+
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForExerciseList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutForAddExerciseFromList"
+                android:layout_marginLeft="@dimen/activity_indicator_margin"
+                android:layout_marginRight="@dimen/activity_indicator_margin">
+
+                <include
+                    android:id="@+id/exerciseOne"
+                    layout="@layout/add_exercise_list_items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_indicator_margin"
+                    android:layout_marginBottom="@dimen/activity_indicator_margin" />
+
+                <include
+                    android:id="@+id/exerciseTwo"
+                    layout="@layout/add_exercise_list_items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/exerciseOne"
+                    android:layout_marginBottom="@dimen/activity_indicator_margin" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForAddSetLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#3a3a3c"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rLayoutForAddSet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#313133">
+
+                <TextView
+                    android:id="@+id/textViewAddSetFromList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/activity_indicator_margin"
+                    android:layout_marginLeft="@dimen/activity_indicator_margin"
+                    android:text="@string/add_set"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/choose_screen_text_size_small" />
+
+                <TextView
+
+                    android:id="@+id/textViewSetCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/textViewSetDone"
+                    android:paddingTop="@dimen/activity_indicator_margin"
+
+                    android:paddingBottom="@dimen/activity_indicator_margin"
+                    android:text="@string/cancel"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+
+                <TextView
+                    android:id="@+id/textViewSetDone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/activity_indicator_margin"
+
+                    android:text="@string/done"
+
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayoutForAddSetValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutForAddSet"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_indicator_margin"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textViewTempo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/tempo"
+                        android:textColor="@color/headerBGColor" />
+
+                    <EditText
+                        android:id="@+id/editTextTempo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewTempo"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_indicator_margin"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textViewWeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/weight"
+                        android:textColor="@color/headerBGColor" />
+
+                    <EditText
+                        android:id="@+id/editTextWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewWeight"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_indicator_margin"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textViewReps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/reps"
+                        android:textColor="@color/headerBGColor" />
+
+                    <EditText
+                        android:id="@+id/editTextReps"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewReps"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

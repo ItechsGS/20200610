@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rLayoutMain"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:padding="2dp">
+
+
+    <RelativeLayout
+        android:id="@+id/rLayoutForGalleryImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ripple"
+        android:clickable="true"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForLogoImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/rLAyoutForUserImage"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_marginTop="@dimen/normal_margin_set"-->
+            <!--android:background="@drawable/frame">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/imageViewAthelets"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:src="@drawable/logo_f" />-->
+
+            <!--&lt;!&ndash;<ImageView-->
+            <!--android:id="@+id/imageViewAtheletsFrame"-->
+            <!--android:layout_width="@dimen/column_width"-->
+            <!--android:layout_height="@dimen/column_height"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:src="@drawable/logo_frame"-->
+            <!--android:visibility="invisible" />&ndash;&gt;-->
+
+            <!--</RelativeLayout>-->
+            <RelativeLayout
+                android:id="@+id/rLAyoutForUserImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/myframe" />
+
+
+                <com.christophesmet.android.views.maskableframelayout.MaskableFrameLayout
+                    android:id="@+id/your_id"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:mask="@drawable/logo_main"
+
+                    app:porterduffxfermode="DST_IN">
+
+                    <ImageView
+                        android:id="@+id/imageViewAthelets"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY" />
+
+
+                </com.christophesmet.android.views.maskableframelayout.MaskableFrameLayout>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageViewDeleteAthelets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/rLAyoutForUserImage"
+                android:adjustViewBounds="true"
+                android:paddingLeft="@dimen/normal_margin_set"
+                android:paddingBottom="@dimen/normal_margin_set"
+                android:scaleType="center"
+                android:src="@drawable/delete_athlete_red_icon" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rLayoutForPersentAbsent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rLayoutForLogoImage"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:id="@+id/lLayoutForAthleteName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/messageCoach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+
+                        android:layout_gravity="center"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/messages" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textViewAthleteName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/AtlevelCoachScreenDialog"
+                    android:layout_toEndOf="@+id/messageCoach"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:text="Athlete Name Here"
+
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/team_name_textsize" />
+
+                <ImageView
+                    android:id="@+id/AtlevelCoachScreenDialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="15dp"
+                    android:scaleType="center"
+                    android:src="@drawable/down_arrow"
+                    android:tint="@color/textColorYellow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLAyoutForAthleteAttendance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayoutForAthleteName"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/imageViewPresentAbsent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/present" />
+
+                <TextView
+                    android:id="@+id/textViewPresentAbsent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageViewPresentAbsent"
+                    android:paddingLeft="5dp"
+                    android:text="Present"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/text_size_grid_item_name" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cpiz.android.bubbleview.BubbleRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/CardX"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="14dp">
+
+
+    <RelativeLayout
+        android:id="@+id/mainRly"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/rMainDialogLayout"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/ReventName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border_for_2_corner_gray"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/backEventDialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:layout_toLeftOf="@+id/EventName"
+                    android:layout_weight="1"
+                    android:src="@drawable/back_arrow"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/EventName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Muscular System"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/button_text_size" />
+
+                <ImageView
+                    android:id="@+id/addAthleteSave"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/save_training"
+                    android:visibility="invisible" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:background="#9B9B9F">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="4dp"
+
+                    android:background="@drawable/bg_white_semi_rounded"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/SearchIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+
+                        android:layout_margin="10dp"
+                        android:src="@drawable/search" />
+
+                    <EditText
+                        android:id="@+id/EdittextSearchMuscular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/SearchIcon"
+                        android:background="@android:color/transparent" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ReventName"
+                android:background="@drawable/bg_dark_semi_bottom_rounded2forfilters">
+
+                <ListView
+                    android:id="@+id/my_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/dialogBoxRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="165dp"
+                    android:layout_marginBottom="10dp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</com.cpiz.android.bubbleview.BubbleRelativeLayout>

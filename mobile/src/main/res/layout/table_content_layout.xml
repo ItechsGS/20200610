@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lLayoutForBottomView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#3a3a3c"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:id="@+id/tableLayoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:id="@+id/tableRowContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/rLayoutContentColumn1"
+                android:layout_width="@dimen/column_width"
+                android:layout_height="@dimen/column_height"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="#343436">
+
+                <TextView
+                    android:id="@+id/textViewTeamOrAthleteName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="Athlete\nName"
+                    android:textColor="@color/textColorYellow"
+                    android:textSize="@dimen/text_size_grid_palyer_name" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutContentColumnActivation"
+                android:layout_width="@dimen/column_width"
+                android:layout_height="@dimen/column_height"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="#343436">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/activity_indicator_margin"
+                    android:layout_marginRight="@dimen/activity_indicator_margin">
+
+                    <TextView
+                        android:id="@+id/textViewValueActivation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+12m/s"
+                        android:textColor="#00ff00"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                    <TextView
+                        android:id="@+id/textViewAverageActivation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewValueActivation"
+                        android:layout_marginTop="5dp"
+                        android:hint="@string/avg"
+                        android:text="@string/avg"
+                        android:textColor="@color/color_gray_for_toggle_unselected"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <TextView
+                        android:id="@+id/textViewAvgActivationValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewAverageActivation"
+                        android:hint="@string/activation"
+                        android:text="46 m/s"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                    <TextView
+                        android:id="@+id/textViewMaxActivation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewValueActivation"
+                        android:layout_alignLeft="@+id/textViewMaxValueActivation"
+                        android:layout_marginLeft="@dimen/activity_indicator_margin"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:hint="@string/avg"
+                        android:text="@string/max"
+                        android:textColor="@color/color_gray_for_toggle_unselected"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <TextView
+                        android:id="@+id/textViewMaxValueActivation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewMaxActivation"
+                        android:layout_alignParentRight="true"
+                        android:hint="@string/activation"
+                        android:paddingLeft="@dimen/activity_indicator_margin"
+                        android:text="46 m/s"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutContentColumnBuild"
+                android:layout_width="@dimen/column_width"
+                android:layout_height="@dimen/column_height"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="#343436">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/activity_indicator_margin"
+                    android:layout_marginRight="@dimen/activity_indicator_margin">
+
+                    <TextView
+                        android:id="@+id/textViewValueBuild"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+12m/s"
+                        android:textColor="#00ff00"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                    <TextView
+                        android:id="@+id/textViewAverageBuild"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewValueBuild"
+                        android:layout_marginTop="5dp"
+                        android:hint="Average Activation"
+                        android:text="@string/avg"
+                        android:textColor="@color/color_gray_for_toggle_unselected"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <TextView
+                        android:id="@+id/textViewAvgBuildValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewAverageBuild"
+                        android:text="46 m/s"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                    <TextView
+                        android:id="@+id/textViewMaxBuild"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewValueBuild"
+                        android:layout_alignLeft="@+id/textViewMaxValueBuild"
+                        android:layout_marginTop="5dp"
+                        android:hint="@string/avg"
+                        android:paddingLeft="@dimen/activity_indicator_margin"
+                        android:text="@string/max"
+                        android:textColor="@color/color_gray_for_toggle_unselected"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <TextView
+                        android:id="@+id/textViewMaxValueBuild"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewMaxBuild"
+                        android:layout_alignParentRight="true"
+                        android:hint="@string/activation"
+                        android:paddingLeft="@dimen/activity_indicator_margin"
+                        android:text="46 m/s"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutAverageEnergy"
+                android:layout_width="@dimen/column_width"
+                android:layout_height="@dimen/column_height"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="#343436">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/activity_indicator_margin"
+                    android:layout_marginRight="@dimen/activity_indicator_margin">
+
+                    <TextView
+                        android:id="@+id/textViewValueEnergy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+12m/s"
+                        android:textColor="#00ff00"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                    <TextView
+                        android:id="@+id/textViewAverageEnergy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewValueEnergy"
+                        android:layout_marginTop="5dp"
+                        android:hint="Average Activation"
+                        android:text="@string/avg"
+                        android:textColor="@color/color_gray_for_toggle_unselected"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <TextView
+                        android:id="@+id/textViewAvgEnergyValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewAverageEnergy"
+                        android:text="46 m/s"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                    <TextView
+                        android:id="@+id/textViewMaxEnergy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewValueEnergy"
+                        android:layout_alignLeft="@+id/textViewMaxValueEnergy"
+                        android:layout_marginTop="5dp"
+                        android:hint="@string/avg"
+                        android:paddingLeft="@dimen/activity_indicator_margin"
+                        android:text="@string/max"
+                        android:textColor="@color/color_gray_for_toggle_unselected"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <TextView
+                        android:id="@+id/textViewMaxValueEnergy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewMaxEnergy"
+                        android:layout_alignParentRight="true"
+                        android:hint="@string/activation"
+                        android:paddingLeft="@dimen/activity_indicator_margin"
+                        android:text="46 m/s"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutAverageRegen"
+                android:layout_width="@dimen/column_width"
+                android:layout_height="@dimen/column_height"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="#343436"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/activity_indicator_margin"
+                    android:layout_marginRight="@dimen/activity_indicator_margin">
+
+                    <TextView
+                        android:id="@+id/textViewValueRegen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+12m/s"
+                        android:textColor="#00ff00"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                    <TextView
+                        android:id="@+id/textViewAverageRegen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewValueRegen"
+                        android:layout_marginTop="5dp"
+                        android:hint="Average Activation"
+                        android:text="@string/avg"
+                        android:textColor="@color/color_gray_for_toggle_unselected"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <TextView
+                        android:id="@+id/textViewAvgRegenValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewAverageRegen"
+                        android:text="46 m/s"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                    <TextView
+                        android:id="@+id/textViewMaxRegen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewValueRegen"
+                        android:layout_alignLeft="@+id/textViewMaxValueRegen"
+                        android:layout_marginTop="5dp"
+                        android:hint="@string/avg"
+                        android:paddingLeft="@dimen/activity_indicator_margin"
+                        android:text="@string/max"
+                        android:textColor="@color/color_gray_for_toggle_unselected"
+                        android:textSize="@dimen/text_size_grid_item_name" />
+
+                    <TextView
+                        android:id="@+id/textViewMaxValueRegen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewMaxRegen"
+                        android:layout_alignParentRight="true"
+                        android:hint="@string/activation"
+                        android:paddingLeft="@dimen/activity_indicator_margin"
+                        android:text="46 m/s"
+                        android:textColor="@color/textColorYellow"
+                        android:textSize="@dimen/text_size_grid_palyer_name" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

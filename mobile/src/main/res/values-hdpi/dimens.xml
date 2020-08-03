@@ -1,0 +1,39 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_indicator_margin">8dp</dimen>
+    <dimen name="normal_margin_set">7dp</dimen>
+    <dimen name="horizontal_scroll_margin">50dp</dimen>
+    <dimen name="table_content_text_margin">8dp</dimen>
+    <dimen name="margin_drawer_logo">35dp</dimen>
+    <dimen name="text_box_margin">8dp</dimen>
+    <dimen name="margin_between_text_and_other_controls">5dp</dimen>
+
+    <!-- Common Parameters -->
+    <dimen name="button_text_size">20sp</dimen>
+    <dimen name="choose_screen_text_size">18sp</dimen>
+    <dimen name="choose_screen_text_size_small">17sp</dimen>
+    <dimen name="drawer_items_text_size">15sp</dimen>
+    <dimen name="text_size_better">27sp</dimen>
+    <dimen name="text_size_athlete">32sp</dimen>
+    <dimen name="text_size_grid_item_name">12sp</dimen>
+    <dimen name="text_size_grid_palyer_name">14sp</dimen>
+    <dimen name="text_size_setting_items">11sp</dimen>
+    <dimen name="text_size_tap_start_pause">6sp</dimen>
+    <dimen name="dimen_20">6sp</dimen>
+    <dimen name="card_padding">6sp</dimen>
+
+
+    <dimen name="grid_padding">5dp</dimen>
+    <dimen name="small_textsize1">14sp</dimen>
+    <dimen name="small_textsize">11sp</dimen>
+    <dimen name="edit_text_textsize">16sp</dimen>
+    <dimen name="team_name_textsize">16sp</dimen>
+    <dimen name="column_width">111dp</dimen>
+    <dimen name="column_height">58dp</dimen>
+
+    <dimen name="play_icon_width">45dp</dimen>
+    <dimen name="play_icon_height">45dp</dimen>
+    <dimen name="athlete_screen_round_progress_bar">80dp</dimen>
+</resources>

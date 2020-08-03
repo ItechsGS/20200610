@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/color_gray_for_health_profile_button_unselected" />
+    <corners
+        android:topLeftRadius="20dp"
+        android:topRightRadius="20dp" />
+    <padding
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp" />
+</shape>
+
+    
